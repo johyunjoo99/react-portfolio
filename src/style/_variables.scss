@@ -1,0 +1,77 @@
+/* ===== SCSS Variables ===== */
+
+/* Font */
+$font-base: 'Pretendard', 'Malgun Gothic', 'verdana', sans-serif;
+$font-eng: 'Unbounded', 'Pretendard', 'Malgun Gothic', 'verdana', sans-serif;
+
+/* Color */
+$color-main: #E43C13;
+$color-text: #2C2C2C;
+$color-tit: #111;
+
+/* Media Query */
+$media1700: 1700px;
+$media1280: 1280px;
+$media1024: 1024px;
+$media960: 960px;
+$media768: 768px;
+$media640: 640px;
+
+$mediaHeight700: 700px;
+
+
+/* ===== CSS Variables ===== */
+:root {
+    /* Viewport */
+    --vh: 100%;
+    --resizeVH: 100vh;
+
+    /* Layout */
+    --innerGap: 50px;
+    --headerH: 80px;
+
+    /* AOS */
+    --aosP: 60px;
+    --aosM: -60px;
+    --aosT: 700ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :root {
+        /* Layout */
+        --resizeVH: var(--vh);
+    }
+}
+
+@media screen and (max-width: $media1700) {
+    :root {
+        /* Layout */
+        --headerH: 70px;
+    }
+}
+
+@media screen and (max-width: $media1280) {
+    :root {
+        /* Layout */
+        --innerGap: 40px;
+        --headerH: 60px;
+
+        /* AOS */
+        --aosP: 30px;
+        --aosM: -30px;
+    }
+}
+
+@media screen and (max-width: $media960) {
+    :root {
+        /* Layout */
+        --innerGap: 30px;
+    }
+}
+
+@media screen and (max-width: $media640) {
+    :root {
+        /* Layout */
+        --innerGap: 20px;
+    }
+}

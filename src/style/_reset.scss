@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* ===== common ===== */
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+html{ 
+    font-size: 62.5%; 
+}
+
+@include mediaWidth($media1700) {
+    /* common */
+    html {
+        font-size: 50%;
+    }
+}
+
+@include mediaWidth($media1280) {
+    /* common */
+    html {
+        font-size: 40%;
+    }
+}
+
+@include mediaWidth($media960) {
+    /* common */
+    html {
+        font-size: 35%;
+    }
+}
+
+/* ===== a ===== */
+a, 
+a:link, 
+a:active, 
+a:visited, 
+a:hover{ 
+    text-decoration:none; 
+}
+
+a{ 
+    outline: none; 
+}
+
+/* ===== img ===== */
+figure{ 
+    margin: 0; 
+}
+
+img{ 
+    max-width: 100%; 
+    height: auto;
+    vertical-align:top; 
+}
+
+/* ===== form ===== */
+select, 
+input,
+textarea{ 
+    outline: none; 
+}
+
+select, 
+input{ 
+    vertical-align:middle; 
+}
+
+button{ 
+    cursor: pointer; 
+} 
+
+/* ===== list ===== */
+ul, 
+ol, 
+li{ 
+    list-style:none; 
+}
+
+/* ===== table ===== */
+table{ 
+    width:100%; 
+    border: 0; 
+    table-layout:fixed; 
+    border-collapse:collapse; 
+    border-spacing:0; 
+}
