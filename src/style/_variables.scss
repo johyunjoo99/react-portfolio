@@ -28,7 +28,8 @@ $mediaHeight700: 700px;
 
     /* Layout */
     --innerGap: 50px;
-    --headerH: 80px;
+    --headerH: 70px;
+    --navH: 40px;
 
     /* AOS */
     --aosP: 60px;
@@ -43,18 +44,10 @@ $mediaHeight700: 700px;
     }
 }
 
-@media screen and (max-width: $media1700) {
-    :root {
-        /* Layout */
-        --headerH: 70px;
-    }
-}
-
 @media screen and (max-width: $media1280) {
     :root {
         /* Layout */
         --innerGap: 40px;
-        --headerH: 60px;
 
         /* AOS */
         --aosP: 30px;
