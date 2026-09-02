@@ -75,17 +75,17 @@ const Hero = () => {
         <div className="area">
             <div className="trigger">
                 <div className="pin black">
-                    <div className="svg">
+                    <h2 className="svg">
                         <WebPublisher/>
-                    </div>
+                    </h2>
                 </div>
                 <div className="pin white">
                     <div className="bg">
                         <div></div>
                     </div>
-                    <div className="svg">
+                    <h2 className="svg">
                         <WebPublisher/>
-                    </div>
+                    </h2>
                 </div>
             </div>
         </div>

@@ -49,3 +49,7 @@
 - `useRef`와 `requestAnimationFrame`을 활용한 스크롤 인터랙션 구현
 - CSS Custom Properties를 활용한 인터랙션 값 제어
 - 반응형 환경을 고려한 SVG 크기 및 여백 계산
+
+** About 영역 구현 **
+- 컴포넌트 기본 구조 구성
+- 영역 레이아웃 및 스타일 구현

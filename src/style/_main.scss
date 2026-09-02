@@ -30,6 +30,7 @@
 
             .svg{
                 flex-shrink: 0;
+                display: flex;
                 padding-top: var(--svgT);
                 position: relative;
                 top: var(--upPercent);
@@ -64,27 +65,115 @@
                     }
                 }
             }
-        }
 
-        .black{
-            .svg path{
-                fill: $color-tit;
+            &.black{
+                .svg path{
+                    fill: $color-tit;
+                }
             }
-        }
 
-        .white{
-            @include absoluteCover;
-            clip-path: inset(var(--endT) var(--endLR) 0 var(--endLR));
-            -webkit-clip-path: inset(var(--endT) var(--endLR) 0 var(--endLR));
-            
-            .svg{
-                position: relative;
-                z-index: 100;
+            &.white{
+                @include absoluteCover;
+                clip-path: inset(var(--endT) var(--endLR) 0 var(--endLR));
+                -webkit-clip-path: inset(var(--endT) var(--endLR) 0 var(--endLR));
+                
+                .svg{
+                    position: relative;
+                    z-index: 100;
+                }
             }
         }
     }
 
     .dummy{
         height: 250vh;
+    }
+}
+
+
+/* ===== Hero ===== */
+#about{
+    padding: 160px 0 200px;
+
+    .flex-layout{
+        display: flex;
+    }
+
+    .title{
+        flex-shrink: 0;
+        width: 400px;
+        padding-right: 100px;
+
+        h2{
+            font-family: $font-eng;
+            font-size: 20px;
+            font-weight: 400;
+            color: $color-tit;
+        }
+    }
+
+    .contents{
+        flex: 1 1 auto;
+
+        .text{
+            margin-bottom: 80px;
+
+            h3{
+                font-size: 36px;
+                font-weight: 700;
+                color: $color-tit;
+                margin-bottom: 30px;
+            }
+
+            p{
+                font-size: 20px;
+                font-weight: 300;
+                color: $color-text;
+                line-height: 1.7;
+                margin-top: 20px;
+            }
+        }
+
+        .counter-box{
+            display: grid;
+            grid-template-columns: repeat(3, calc(100% / 3));
+            margin: -20px;
+
+            .counter{
+                font-family: $font-eng;
+                font-size: 8rem;
+                font-weight: 400;
+                color: $color-tit; 
+                line-height: 1;   
+                font-variant-numeric: tabular-nums;
+
+                span{
+                    font-size: 26px;
+                }
+            }
+
+            .item{
+                margin: 20px;
+
+                dl{
+                    font-size: 18px;
+                    color: $color-text;
+                    border-top: 1px solid $color-border;
+                    padding-top: 20px;
+                    margin-top: 20px;
+
+                    dt{
+                        font-family: $font-eng;
+                        font-weight: 400;
+                    }
+
+                    dd{
+                        font-weight: 300;
+                        line-height: 1.6;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
     }
 }
