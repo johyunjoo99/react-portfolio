@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import '../src/style/style.scss'
 
+import useViewport from './hooks/useViewport'
 import Header from './component/common/Header'
 import Main from './component/main/Main'
 
 function App() {
+  useViewport();
 
   return (
     <>

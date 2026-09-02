@@ -2,8 +2,8 @@
 @use "mixins" as *;
 
 /* ===== Inner ===== */
-.w1820{
-    max-width: calc(1820px + (var(--innerGap) * 2));
+.w1700{
+    max-width: calc(1700px + (var(--innerGap) * 2));
     width: 100%;
     margin: 0 auto;
     padding: 0 var(--innerGap);

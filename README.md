@@ -23,7 +23,7 @@
 ## Development Log
 
 ### 2026.08.31
-** React Portfolio 프로젝트 환경 구성 **
+** 프로젝트 환경 구성 **
 - Vite 기반 React 프로젝트 생성
 - SCSS 설치 및 기본 파일 구성
 - `src` / `public` 폴더 구조 구성
@@ -31,3 +31,21 @@
 - Open Graph 대표 이미지 설정
 - `index.html` title 및 meta 정보 설정
 - 480px 이하 모바일 viewport 대응
+
+### 2026.09.01
+** Header 구현 **
+- 컴포넌트 구현
+- 레이아웃 및 네비게이션 구성
+
+** Hero 초기 구조 구성 **
+- 컴포넌트 기본 구조 구성
+- SVG 컴포넌트 연결
+- 스크롤 인터랙션을 위한 초기 구조 구성
+
+### 2026.09.02
+** Hero 영역 구현 **
+- 영역 레이아웃 및 스타일 구현
+- SVG 기반 타이포그래피 적용
+- `useRef`와 `requestAnimationFrame`을 활용한 스크롤 인터랙션 구현
+- CSS Custom Properties를 활용한 인터랙션 값 제어
+- 반응형 환경을 고려한 SVG 크기 및 여백 계산
