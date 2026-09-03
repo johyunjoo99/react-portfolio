@@ -1,6 +1,14 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+/* ===== Main Common ===== */
+:root{
+    --sec200: 200px;
+    --sec160: 160px;
+    --sec120: 120px;
+}
+
+
 /* ===== Hero ===== */
 #hero{
     --svgW: 1700;
@@ -93,7 +101,7 @@
 
 /* ===== Hero ===== */
 #about{
-    padding: 160px 0 200px;
+    padding: var(--sec160) 0 var(--sec200);
 
     .flex-layout{
         display: flex;
@@ -147,7 +155,57 @@
                 line-height: 1;   
                 font-variant-numeric: tabular-nums;
 
-                span{
+                .number{
+                    display: inline-flex;
+                    position: relative;
+                    overflow: hidden;
+                    opacity: 1 !important;
+
+                    strong{
+                        font-weight: inherit;
+                        color: transparent;
+                    }
+
+                    .rolling{
+                        display: flex;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+
+                        > div{
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+
+                            &.odd{
+                                top: 0;
+                                transform: translateY(0);
+                            }
+
+                            &.even{
+                                top: 1em;
+                                transform: translateY(-100%);
+                            }
+                        }
+                    }
+
+                    &.aos-animate{
+                        .rolling{
+                            > div{
+                                &.odd{
+                                    animation: counterOdd 2s cubic-bezier(0.16, 1, 0.3, 1) both;
+                                }
+    
+                                &.even{
+                                    animation: counterEven 2s cubic-bezier(0.16, 1, 0.3, 1) both;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .suffix{
                     font-size: 26px;
                 }
             }
