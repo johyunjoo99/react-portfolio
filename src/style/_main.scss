@@ -20,6 +20,7 @@
     --endT: calc((var(--svgT) + var(--svgInitH)) * var(--down) / 100);
     --endLR: calc(var(--svgLR) * var(--down) / 100);
     position: relative;
+    padding-bottom: 100vh;
 
     .area{
         @include absoluteCover;
@@ -136,7 +137,6 @@
             p{
                 font-size: 20px;
                 font-weight: 300;
-                color: $color-text;
                 line-height: 1.7;
                 margin-top: 20px;
             }
@@ -215,7 +215,6 @@
 
                 dl{
                     font-size: 18px;
-                    color: $color-text;
                     border-top: 1px solid $color-border;
                     padding-top: 20px;
                     margin-top: 20px;
@@ -230,6 +229,97 @@
                         line-height: 1.6;
                         margin-top: 10px;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+/* ===== Project ===== */
+#project{
+    // padding-bottom: var(--sec120);
+
+    .area{
+        position: relative;
+    }
+
+    article{
+        --imgW: 480px;
+        height: 100vh;
+    
+        .item{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding-block: calc(var(--headerH) + 20px) var(--headerH);
+
+            .title{
+                flex-shrink: 0;
+                display: flex;
+                border-bottom: 1px solid $color-text;
+                font-family: $font-eng;
+                font-size: 16px;
+                color: $color-tit;
+                padding: 15px 0;
+                margin-bottom: 30px;
+
+                .label{
+                    flex: 1 1 auto;
+                    font-weight: 600;
+                }
+
+                .paging{
+                    flex-shrink: 0;
+                    font-weight: 400;
+                }
+            }
+
+            .contents{
+                flex: 1 1 auto;
+                display: grid;
+                grid-template-columns: calc(100% - var(--imgW)) var(--imgW);
+                grid-template-rows: auto 1fr;
+
+                .skill{
+                    font-family: $font-eng;
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: $color-tit;
+                    line-height: 1.7;
+                }
+
+                .img{
+                    figure{
+                        display: block;
+                        aspect-ratio: 480 / 300;
+                    }
+                }
+
+                .text{
+                    grid-column: auto / span 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    h2{
+                        font-size: 6rem;
+                        font-weight: 700;
+                        color: $color-tit;
+                    }
+
+                    p{
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 1.7;
+                        margin-top: 10px;
+                    }
+                }
+
+                .btns{
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 30px;
                 }
             }
         }

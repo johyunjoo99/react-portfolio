@@ -1,0 +1,82 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+/* ===== viewmore button ===== */
+.viewmore{
+    --size: 60px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-text;
+    text-stroke: 0.015em $color-text;
+    -webkit-text-stroke: 0.014em $color-text;
+    position: relative;
+    transition-duration: $duration-basic;
+    transition-property: color, text-stroke-color;
+
+    &::before{
+        content: "";
+        background: $color-text;
+        @include absoluteCover;
+        clip-path: inset(0 calc(100% - var(--size)) 0 0);
+        -webkit-clip-path: inset(0 calc(100% - var(--size)) 0 0);
+        transition-duration: $duration-basic;
+        transition-property: background, clip-path;
+    }
+
+    i{
+        width: var(--size);
+        height: var(--size);
+        display: inline-block;
+        position: relative;
+        left: 0;
+        z-index: 10;
+        transform: translateX(0);
+        transition-duration: $duration-basic;
+        transition-property: left, transform;
+
+        &::before{
+            content: "";
+            height: 30px;
+            background-image: url("../img/common/icon_viewmore.svg");
+            @include bgContain;
+            @include absoluteBlock;
+        }
+    }
+
+    span{
+        display: inline-block;
+        padding-inline: 20px 40px;
+        position: relative;
+        right: 0;
+        transform: translateX(0);
+        transition-duration: $duration-basic;
+        transition-property: right, transform;
+    }
+
+    @include hover {
+        &:hover{
+            color: #FFF;
+            text-stroke-color: transparent;
+            -webkit-text-stroke-color: transparent;
+    
+            &::before{
+                background: $color-main;
+                clip-path: inset(0 0 0 0);
+                -webkit-clip-path: inset(0 0 0 0);
+            }
+    
+            i{
+                left: 100%;
+                transform: translateX(-100%);
+            }
+    
+            span{
+                right: 100%;
+                transform: translateX(100%);
+            }
+        }
+    }
+}

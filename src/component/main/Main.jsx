@@ -5,6 +5,7 @@ import '../../style/_main.scss'
 
 import Hero from './Hero.jsx'
 import About from './About.jsx'
+import Project from './Project.jsx'
 
 const  Main = () => {
   return (
@@ -12,6 +13,7 @@ const  Main = () => {
       <main>
           <Hero/>
           <About/>
+          <Project/>
       </main>
     </>
   )
