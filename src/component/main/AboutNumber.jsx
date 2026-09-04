@@ -5,7 +5,7 @@ const AboutNumber = ({ number }) => {
 
   return (
     <>
-        <div className="number" data-aos="fade-in">
+        <div className="number" data-aos="fade-in" data-aos-once="false">
             <strong>{number}</strong>
             <div className="rolling" aria-hidden="true">
                 {
