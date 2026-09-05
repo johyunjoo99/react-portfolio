@@ -5,6 +5,7 @@ import '../src/style/style.scss'
 
 import useViewport from './hooks/useViewport'
 import Header from './component/common/Header'
+import Footer from './component/common/Footer'
 import Main from './component/main/Main'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Main/>}/>
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </>
   )

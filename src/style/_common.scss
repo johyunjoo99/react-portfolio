@@ -1,6 +1,12 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+/* ===== Common ===== */
+#wrap{
+    position: relative;
+}
+
+
 /* ===== Inner ===== */
 .w1820{
     max-width: calc(1820px + (var(--innerGap) * 2));
@@ -111,5 +117,64 @@ header{
                 margin-bottom: 6px;
             }
         }
+    }
+}
+
+
+/* ===== Footer ===== */
+footer{
+    background: #000;
+    color: #FFF;
+    padding: 60px 0;
+
+    .logo{
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 50px 0 40px;
+
+        a{
+            display: inline-block;
+
+            img{
+                height: 40px;
+            }
+        }
+    }
+
+    .flex-box{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    address{
+        flex: 1 1 auto;
+        padding-right: 50px;
+
+        > *:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        dl{
+            display: flex;
+            font-family: $font-eng;
+
+            dt{
+                flex-shrink: 0;
+                font-weight: 400;
+                padding-right: 10px;
+            }
+            
+            dd{
+                flex: 1 1 auto;
+                font-weight: 200;
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+
+    .copyright{
+        flex-shrink: 0;
+        font-family: $font-eng;
+        font-weight: 200;
+        color: rgba(255, 255, 255, 0.6);
     }
 }
