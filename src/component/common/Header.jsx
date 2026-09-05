@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import Nav from './Nav'
+
 const Header = () => {
   return (
     <>
@@ -10,14 +12,7 @@ const Header = () => {
           </Link>
         </h1>
       <header>
-        <nav>
-          <ul className="depth01">
-            <li><Link to="#">Home</Link></li>
-            <li><Link to="#">About</Link></li>
-            <li><Link to="#">Work</Link></li>
-            <li><Link to="#">Contact</Link></li>
-          </ul>
-        </nav>
+        <Nav/>
         <a href="https://github.com/johyunjoo99" target="_blank" className="redBtn"><i className="github"></i>GitHUB</a>
         <button className="menuBtn">
           <span></span>
