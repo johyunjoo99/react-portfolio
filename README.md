@@ -89,3 +89,8 @@
 ** Nav 컴포넌트 분리 **
 - Header 내부 Nav 영역 컴포넌트 분리
 - 전체 메뉴에서 재사용할 수 있도록 공통 컴포넌트화
+
+** Floating Menu 구현 **
+- Floating 영역 및 Top 버튼 구현
+- 스크롤 위치에 따른 Top 버튼 노출 처리
+- `#wrap` 기준으로 Floating 영역 적용 범위 설정
