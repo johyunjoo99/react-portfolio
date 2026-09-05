@@ -147,8 +147,10 @@ const ProjectItem = () => {
                                         </figure>
                                     </div>
                                     <div className="text">
-                                        <h2>{item.kor}</h2>
-                                        <p>{item.description}</p>
+                                        <div className="sec-title">
+                                            <h2>{item.kor}</h2>
+                                            <p>{item.description}</p>
+                                        </div>
                                         <div className="btns">
                                             {
                                                 item.link.map((el) => 

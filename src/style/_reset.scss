@@ -16,6 +16,10 @@ html{
     line-height: 1.5; 
 }
 
+body{
+    font-size: 16px;
+}
+
 @include mediaWidth($media1700) {
     /* common */
     html {

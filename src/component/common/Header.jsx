@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <h1 id="logo">
           <Link to="/">
-            <img src="../src/img/common/logo.svg" alt="" />
+            <img src="/img/common/logo.svg" alt="" />
           </Link>
         </h1>
       <header>

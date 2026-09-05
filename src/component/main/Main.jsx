@@ -6,6 +6,7 @@ import '../../style/_main.scss'
 import Hero from './Hero.jsx'
 import About from './About.jsx'
 import Project from './Project.jsx'
+import Contact from './Contact.jsx'
 
 const  Main = () => {
   return (
@@ -14,6 +15,7 @@ const  Main = () => {
           <Hero/>
           <About/>
           <Project/>
+          <Contact/>
       </main>
     </>
   )

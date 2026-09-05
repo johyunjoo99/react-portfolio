@@ -23,8 +23,10 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                             </figure>
                         </div>
                         <div className="text">
-                            <h2>Want To See <br />More Of My Work?</h2>
-                            <p>다양한 분야의 프로젝트와 작업 내용을 <br />더 자세히 확인해보세요.</p>
+                            <div className="sec-title">
+                                <h2>Want To See <br />More Of My Work?</h2>
+                                <p>다양한 분야의 프로젝트와 작업 내용을 <br />더 자세히 확인해보세요.</p>
+                            </div>
                             <div className="btns">
                                 <a href="" target="_blank" rel="noreferrer" className="viewmore">
                                     <i></i>
