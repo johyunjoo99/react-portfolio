@@ -201,8 +201,8 @@ footer{
 }
 
 #top{
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background: $color-main;
     border: none;
     border-radius: 0;
@@ -218,9 +218,47 @@ footer{
     }
 
     i{
-        height: 20px;
-        background-image: url("/img/common/icon_top.svg");
-        @include bgContain;
-        @include absoluteBlock;
+        display: block;
+        height: 24px;
+        position: relative;
+        overflow: hidden;
+
+        &::before,
+        &::after{
+            content: "";
+            display: block;
+            height: 100%;
+            background-image: url("/img/common/icon_top.svg");
+            @include bgContain;
+            @include absoluteBlock;
+        }
+
+        &::before{
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+        }
+
+        &::after{
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            transform: translateY(100%);
+        }
+    }
+
+    @include hover{
+        &:hover{
+            i{
+                &::before{
+                    animation: topBtnBefore $duration-basic both;
+                }
+
+                &::after{
+                    animation: topBtnAfter $duration-basic both;
+                }
+            }
+        }
     }
 }

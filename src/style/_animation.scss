@@ -1,6 +1,34 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+
+/* ===== Top Button Hover ===== */
+@keyframes topBtnBefore{
+    0%{
+        top: 0;
+        transform: translateY(0);
+    }
+
+    100%{
+        top: -10px;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes topBtnAfter{
+    0%{
+        top: 10px;
+        transform: transalteY(100%);
+    }
+
+    100%{
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Number Counter ===== */
 @keyframes counterOdd{
     0%{
         top: 0;

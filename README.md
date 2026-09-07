@@ -94,3 +94,7 @@
 - Floating 영역 및 Top 버튼 구현
 - 스크롤 위치에 따른 Top 버튼 노출 처리
 - `#wrap` 기준으로 Floating 영역 적용 범위 설정
+
+### 2026.09.07
+** TOP 버튼 hover 인터랙션 구현 **
+- CSS keyframes를 활용한 아이콘 전환 애니메이션 적용
