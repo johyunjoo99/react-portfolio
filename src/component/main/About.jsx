@@ -7,7 +7,7 @@ const About = () => {
     <>
         <section id="about">
             <div className="w1700">
-                <div className="flex-layout">
+                <div className="flex-layout" data-aos="fade-in">
                     <div className="title">
                         <h2>About</h2>
                     </div>
