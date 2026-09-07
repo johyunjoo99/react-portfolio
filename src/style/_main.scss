@@ -121,6 +121,19 @@
     .dummy{
         height: 250vh;
     }
+    
+    /* Media Query */
+    @include mediaWidth(1800px){
+        --svgLR: var(--innerGap);
+    }
+
+    @include mediaWidth($media1700){
+        --svgT: calc(var(--headerH) + 70px);
+    }
+
+    @include mediaWidth($media1280){
+        --svgT: calc(var(--headerH) + 40px);
+    }
 }
 
 
