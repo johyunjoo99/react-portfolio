@@ -3,18 +3,15 @@
 
 /* ===== Main Common ===== */
 :root{
-    --sec200: 200px;
     --sec160: 160px;
     --sec120: 120px;
 
     @include mediaWidth($media1700){
-        --sec200: 160px;
         --sec160: 120px;
         --sec120: 100px;
     }
 
     @include mediaWidth($media1280){
-        --sec200: 100px;
         --sec160: 90px;
         --sec120: 70px;
     }
@@ -188,7 +185,7 @@
 
 /* ===== About ===== */
 #about{
-    padding: var(--sec160) 0 var(--sec200);
+    padding: var(--sec160) 0 var(--sec120);
 
     .flex-layout{
         display: flex;
@@ -532,6 +529,12 @@
             }
         }
 
+        &:not(:first-child){
+            .trigger{
+                padding-top: calc((100vh * var(--idx)) + 100px);
+            }
+        }
+
         &:not(:last-child){
             margin-bottom: 100px;
         }
@@ -555,13 +558,16 @@
 
             .title{
                 flex-shrink: 0;
-                display: flex;
-                border-bottom: 1px solid $color-text;
                 font-family: $font-eng;
                 font-size: 16px;
                 color: $color-tit;
-                padding: 15px 0;
                 pointer-events: auto;
+
+                .flex{
+                    display: flex;
+                    border-bottom: 1px solid $color-text;
+                    padding: 15px 0;
+                }
 
                 .label{
                     flex: 1 1 auto;
@@ -580,12 +586,20 @@
 
             .contents{
                 flex: 1 1 auto;
-                display: grid;
-                grid-template-columns: calc(100% - var(--imgW)) var(--imgW);
-                grid-template-rows: auto 1fr;
                 background: #FFF;
                 padding-block: 30px var(--headerH);
                 pointer-events: auto;
+
+                > div,
+                .grid{
+                    height: 100%;
+                }
+
+                .grid{
+                    display: grid;
+                    grid-template-columns: calc(100% - var(--imgW)) var(--imgW);
+                    grid-template-rows: auto 1fr;
+                }
 
                 .skill{
                     font-family: $font-eng;
@@ -631,7 +645,9 @@
 
         &.more{
             .contents{
-                grid-template-columns: 1fr;
+                .grid{
+                    grid-template-columns: 1fr;
+                }
 
                 .sec-title{
                     h2{
@@ -693,7 +709,10 @@
             .item{
                 .title{
                     font-size: 15px;
-                    padding: 10px 0;
+                    
+                    .flex{
+                        padding: 10px 0;
+                    }
                 }
 
                 .contents{
@@ -721,9 +740,12 @@
         article{
             .item{
                 .contents{
-                    grid-template-columns: repeat(1, 100%);
-                    grid-template-rows: unset;
                     padding-block: 15px;
+
+                    .grid{
+                        grid-template-columns: repeat(1, 100%);
+                        grid-template-rows: unset;
+                    }
 
                     .skill{
                         order: 0;
@@ -748,7 +770,9 @@
 
             &.more{
                 .contents{
-                    grid-template-rows: 1fr auto;
+                    .grid{
+                        grid-template-rows: 1fr auto;
+                    }
 
                     .img{
                         figure{

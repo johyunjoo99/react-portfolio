@@ -5,9 +5,7 @@ import ProjectItem from './ProjectItem'
 const Project = () => {
   return (
     <section id="project">
-        <div className="w1700">
-            <ProjectItem/>
-        </div>
+        <ProjectItem/>
     </section>
   )
 }

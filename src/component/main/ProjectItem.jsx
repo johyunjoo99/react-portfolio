@@ -129,38 +129,46 @@ const ProjectItem = () => {
                         <div className="trigger" style={{ '--idx' : index }}>
                             <div className="item">
                                 <div className="title">
-                                    <span className="label">{index < 10 ? `0${index + 1}` : index + 1}. {item.eng}</span>
-                                    <span className="paging">[ {activeIndex + 1} / {projectList.length + 1} ]</span>
+                                    <div className="w1700">
+                                        <div className="flex">
+                                            <span className="label">{index < 10 ? `0${index + 1}` : index + 1}. {item.eng}</span>
+                                            <span className="paging">[ {activeIndex + 1} / {projectList.length + 1} ]</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="contents">
-                                    <div className="skill">
-                                        <ul>
-                                            {
-                                                item.skill.map((el) => 
-                                                    <li key={el}>[{el}]</li>
-                                                )
-                                            }
-                                        </ul>
-                                    </div>
-                                    <div className="img">
-                                        <figure>
-                                            <img src={item.img} alt="" />
-                                        </figure>
-                                    </div>
-                                    <div className="text">
-                                        <div className="sec-title">
-                                            <h2>{item.kor}</h2>
-                                            <p>{item.description}</p>
-                                        </div>
-                                        <div className="btns">
-                                            {
-                                                item.link.map((el) => 
-                                                    <a key={el.url} href={el.url} target="_blank" rel="noreferrer" className="viewmore">
-                                                        <i></i>
-                                                        <span>{el.label || '사이트 보러가기'}</span>
-                                                    </a>
-                                                )
-                                            }
+                                    <div className="w1700">
+                                        <div className="grid">
+                                            <div className="skill">
+                                                <ul>
+                                                    {
+                                                        item.skill.map((el) => 
+                                                            <li key={el}>[{el}]</li>
+                                                        )
+                                                    }
+                                                </ul>
+                                            </div>
+                                            <div className="img">
+                                                <figure>
+                                                    <img src={item.img} alt="" />
+                                                </figure>
+                                            </div>
+                                            <div className="text">
+                                                <div className="sec-title">
+                                                    <h2>{item.kor}</h2>
+                                                    <p>{item.description}</p>
+                                                </div>
+                                                <div className="btns">
+                                                    {
+                                                        item.link.map((el) => 
+                                                            <a key={el.url} href={el.url} target="_blank" rel="noreferrer" className="viewmore">
+                                                                <i></i>
+                                                                <span>{el.label || '사이트 보러가기'}</span>
+                                                            </a>
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
