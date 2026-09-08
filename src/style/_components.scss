@@ -79,4 +79,30 @@
             }
         }
     }
+
+    @include mediaWidth($media1700){
+        --size: 55px;
+        font-size: 19px;
+
+        i{
+            &::before{
+                height: 28px;
+            }
+        }
+    }
+
+    @include mediaWidth($media1280){
+        --size: 50px;
+        font-size: 18px;
+
+        i{
+            &::before{
+                height: 26px;
+            }
+        }
+
+        span{
+            padding-inline: 17px 30px;
+        }
+    }
 }

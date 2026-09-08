@@ -42,6 +42,29 @@
         line-height: 1.7;
         margin-top: 10px;
     }
+
+    @include mediaWidth($media1700){
+        p{
+            font-size: 19px;
+        }
+    }
+
+    @include mediaWidth($media1280){
+        h2,
+        h3{
+            font-size: 5.5rem;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    @include mediaWidth($media960){
+        p{
+            font-size: 17px;
+        }
+    }
 }
 
 
@@ -509,7 +532,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            padding-block: calc(var(--headerH) + 20px) var(--headerH);
+            padding-top: calc(var(--headerH) + 20px);
             opacity: 1 !important;
             position: sticky;
             position: -webkit-sticky;
@@ -547,7 +570,7 @@
                 grid-template-columns: calc(100% - var(--imgW)) var(--imgW);
                 grid-template-rows: auto 1fr;
                 background: #FFF;
-                padding-top: 30px;
+                padding-block: 30px var(--headerH);
                 pointer-events: auto;
 
                 .skill{
@@ -633,6 +656,99 @@
                 .title{
                     .label{
                         opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mediaWidth($media1700){
+        article{
+            --imgW: 400px;
+
+            .item{
+                padding-top: calc(var(--headerH) + 10px);
+            }
+        }
+    }
+
+    @include mediaWidth($media1280){
+        article{
+            --imgW: 340px;
+
+            .item{
+                .title{
+                    font-size: 15px;
+                    padding: 10px 0;
+                }
+
+                .contents{
+                    padding-top: 20px;
+
+                    .skill{
+                        font-size: 14px;
+                    }
+                }
+            }        
+        }
+    }
+
+    @include mediaWidth($media960){
+        article{
+            .item{
+                .title{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @include mediaWidth($media640){
+        article{
+            .item{
+                .contents{
+                    grid-template-columns: repeat(1, 100%);
+                    grid-template-rows: unset;
+                    padding-block: 15px;
+
+                    .skill{
+                        order: 0;
+                        text-align: right;
+                    }
+
+                    .img{
+                        order: 2;
+                    }
+                
+                    .text{
+                        order: 1;
+                        grid-column: unset;
+                        padding-bottom: 20px;
+                    }
+
+                    .btns{
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            &.more{
+                .contents{
+                    grid-template-rows: 1fr auto;
+
+                    .img{
+                        figure{
+                            width: 100%;
+                        }
+                    }
+
+                    .text{
+                        display: block;
+                        padding-block: 15px 30px;
+
+                        h2{
+                            font-size: 5rem;
+                        }
                     }
                 }
             }
