@@ -497,11 +497,15 @@
                 grid-template-columns: repeat(1, 100%);
 
                 .item{
-                    background: #F3F2EF;
+                    background: #F8F7F5;
                     padding: 25px;
                 }
             }
         }
+    }
+
+    @include mediaZFlip{
+
     }
 }
 
@@ -575,6 +579,7 @@
                     opacity: 1;
                     transition-duration: $duration-basic;
                     transition-property: opacity;
+                    will-change: opacity;
                 }
 
                 .paging{
@@ -744,7 +749,7 @@
 
                     .grid{
                         grid-template-columns: repeat(1, 100%);
-                        grid-template-rows: unset;
+                        grid-template-rows: 1fr auto;
                     }
 
                     .skill{
@@ -759,7 +764,7 @@
                     .text{
                         order: 1;
                         grid-column: unset;
-                        padding-bottom: 20px;
+                        padding-bottom: 40px;
                     }
 
                     .btns{
@@ -770,10 +775,6 @@
 
             &.more{
                 .contents{
-                    .grid{
-                        grid-template-rows: 1fr auto;
-                    }
-
                     .img{
                         figure{
                             width: 100%;
@@ -781,14 +782,24 @@
                     }
 
                     .text{
-                        display: block;
-                        padding-block: 15px 30px;
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 15px;
 
-                        h2{
-                            font-size: 5rem;
+                        .sec-title{
+                            flex: 1 0 auto;
+                            text-align: right;
                         }
                     }
                 }
+            }
+        }
+    }
+
+    @include mediaZFlip{
+        article{
+            .item{
+                padding: clamp(100px, 16vh, 160px) 0;
             }
         }
     }
@@ -803,6 +814,7 @@
     color: #FFF;
     position: relative;
     overflow: hidden;
+    margin-bottom: -1px;
 
     &::before{
         content: "";

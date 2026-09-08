@@ -15,6 +15,13 @@
     }
 }
 
+/* Galaxy Z Flip */
+@mixin mediaZFlip{
+    @media screen and (max-width: 640px) and (min-height: 900px){
+        @content;
+    }
+}
+
 /* Hover */
 @mixin hover{
     @media (hover: hover) and (pointer: fine){
