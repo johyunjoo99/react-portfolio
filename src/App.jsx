@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-portfolio">
         <Header/>
         <div id="wrap">
           <Routes>
