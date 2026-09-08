@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../constants/constants'
 
 import Nav from './Nav'
 import Menu from './Menu'
@@ -44,7 +45,7 @@ const Header = () => {
     <>
       <h1 id="logo">
         <Link to="/">
-          <img src="/img/common/logo.svg" alt="" />
+          <img src={`${BASE_URL}img/common/logo.svg`} alt="" />
         </Link>
       </h1>
       <header>

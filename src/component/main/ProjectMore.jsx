@@ -1,4 +1,5 @@
 import React from 'react'
+import { BASE_URL } from '../../constants/constants'
 
 const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
   return (
@@ -19,7 +20,7 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                     <div className="contents">
                         <div className="img">
                             <figure>
-                                <img src="/img/project/project_img05.jpg" alt="" />
+                                <img src={`${BASE_URL}img/project/project_img05.jpg`} alt="" />
                             </figure>
                         </div>
                         <div className="text">

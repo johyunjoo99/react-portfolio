@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../constants/constants'
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className="w1820">
                 <div className="logo">
                     <Link to="#">   
-                        <img src="/img/common/logo.svg" alt="" />
+                        <img src={`${BASE_URL}img/common/logo.svg`} alt="" />
                     </Link>
                 </div>
                 <div className="flex-box">

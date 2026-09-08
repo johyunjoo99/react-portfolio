@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import ProjectMore from './ProjectMore'
+import { BASE_URL } from '../../constants/constants'
 
 const ProjectItem = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -10,7 +11,7 @@ const ProjectItem = () => {
         id: 'lg-hicaresolution',
         kor: 'LG하이케어솔루션',
         eng: 'LG HICARESOLUTION',
-        img: '/img/project/project_img01.jpg',
+        img: `${BASE_URL}img/project/project_img01.jpg`,
         description: <>제품별 케어 서비스와 혜택을 확인하고, <br />필요한 서비스를 신청할 수 있는 웹사이트입니다.</>,
         skill: [
             'JSP',
@@ -31,7 +32,7 @@ const ProjectItem = () => {
         id: 'paldo-global',
         kor: '팔도 글로벌',
         eng: 'PALDO GLOBAL',
-        img: '/img/project/project_img02.jpg',
+        img: `${BASE_URL}img/project/project_img02.jpg`,
         description: <>다양한 제품과 콘텐츠를 소개하는 <br />글로벌 고객을 위한 영문·중문 웹사이트입니다.</>,
         skill: [
             'PHP',
@@ -48,7 +49,7 @@ const ProjectItem = () => {
         id: 'dong-a-st',
         kor: '동아ST',
         eng: 'DONG-A ST',
-        img: '/img/project/project_img03.jpg',
+        img: `${BASE_URL}img/project/project_img03.jpg`,
         description: <>신약개발을 위한 R&D 전략과 <br />주요 파이프라인을 소개하는 웹사이트입니다.</>,
         skill: [
             'ASP',
@@ -65,7 +66,7 @@ const ProjectItem = () => {
         id: 'pyunghwa-holdings',
         kor: '평화홀딩스',
         eng: 'PYUNGHWA HOLDINGS',
-        img: '/img/project/project_img04.jpg',
+        img: `${BASE_URL}img/project/project_img04.jpg`,
         description: <>계열사별 다양한 사업과 제품 정보를 <br />한곳에서 소개하는 통합 웹사이트입니다.</>,
         skill: [
             'ASP',
