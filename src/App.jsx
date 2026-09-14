@@ -7,7 +7,8 @@ import useViewport from './hooks/useViewport'
 import Header from './component/common/Header'
 import Footer from './component/common/Footer'
 import Floating from './component/common/Floating'
-import Main from './component/main/Main'
+import Main from './pages/Main'
+import Work from './pages/Work'
 
 function App() {
   useViewport();
@@ -26,6 +27,7 @@ function App() {
         <div id="wrap">
           <Routes>
             <Route path="/" element={<Main/>}/>
+            <Route path="/work" element={<Work/>}/>
           </Routes>
           <Floating/>
         </div>

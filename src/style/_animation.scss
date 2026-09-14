@@ -28,6 +28,20 @@
 }
 
 
+/* ===== fade ===== */
+@keyframes fadeLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 /* ===== Text Up (Clip-Path) ===== */
 @keyframes textClip{
 	0%{ 
@@ -64,5 +78,36 @@
     100%{
         top: 0;
         transform: translateY(0);
+    }
+}
+
+
+/* ===== sub Hero ===== */
+@keyframes subHeroBefore {
+    0% {
+      transform-origin: right;
+      transform: translateX(1);
+    }
+    100% {
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+}
+
+@keyframes subHeroAfter {
+    0% {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    50% {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    51% {
+      transform-origin: right;
+    }
+    100% {
+      transform-origin: right;
+      transform: scaleX(0);
     }
 }

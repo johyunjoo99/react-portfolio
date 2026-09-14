@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import '../../style/_main.scss'
+import '../style/_main.scss'
 
-import Hero from './Hero.jsx'
-import About from './About.jsx'
-import Project from './Project.jsx'
-import Contact from './Contact.jsx'
+import Hero from '../component/main/Hero.jsx'
+import About from '../component/main/About.jsx'
+import Project from '../component/main/Project.jsx'
+import Contact from '../component/main/Contact.jsx'
 
 const  Main = () => {
   return (

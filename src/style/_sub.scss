@@ -1,0 +1,134 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* ===== Sub Common ===== */
+#sub{
+    padding-top: var(--headerH);
+}
+
+.sub-content{
+    padding-block: var(--subPt) var(--subPb);
+}
+
+
+/* ===== Sub Hero ===== */
+#sub-hero{
+    --animationTF: cubic-bezier(0.86, 0, 0.07, 1);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--headerH));
+    font-family: $font-eng;
+    overflow: hidden;
+
+    .text{
+        flex-shrink: 0;
+        padding-block: 70px 50px;
+
+        .flex-box{
+            display: flex;
+            align-items: flex-end;
+        }
+
+        h2{
+            flex: 1 1 auto;
+            font-size: 11rem;
+            font-weight: 500;
+            color: $color-tit;
+            line-height: 1;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateX(var(--aosP));
+            animation: fadeLeft 1.2s 1s var(--animationTF) both;
+        }
+    }
+
+    .img{
+        flex: 1 0 auto;
+        @include bgCover(center left);
+        position: relative;
+
+        &.img3{
+            background-image: url("/img/sub/bg_work.jpg");
+        }
+
+        &::before,
+        &::after{
+            content: "";
+            @include absoluteCover;
+        }
+
+        &::before{
+            background: #000;
+            transform: scaleX(1);
+            transform-origin: right;
+            animation: subHeroBefore 1.2s 0.5s var(--animationTF) forwards;
+        }
+
+        &::after{
+            background: #FFF;
+            transform-origin: left;
+            transform: scaleX(0);
+            animation: subHeroAfter 1.2s 0.5s var(--animationTF) forwards;
+        }
+    }
+}
+
+
+/* ===== LNB ===== */
+#lnb{
+    flex-shrink: 0;
+    padding-left: 20px;
+    margin-right: -20px;
+    transform: translateY(100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: textClip 1s 1s var(--animationTF) both;
+
+    > ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > li{
+            display: flex;
+            position: relative;
+
+            &::before{
+                content: "";
+                width: 3px;
+                height: 3px;
+                background: $color-text;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, 50%);
+            }
+
+            &:first-child{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }     
+
+    a{
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-text;
+        padding: 0 20px;
+        text-transform: capitalize;
+    }
+
+    .home{
+        i{
+            display: inline-flex;
+            width: 18px;
+            height: 18px;
+            background-image: url("/img/sub/icon_lnb.svg");
+            @include bgContain;
+        }
+    }
+}
