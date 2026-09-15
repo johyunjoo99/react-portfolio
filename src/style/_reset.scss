@@ -82,6 +82,19 @@ button{
     cursor: pointer; 
 } 
 
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend{
+    display: contents;
+    padding: 0;
+    margin: 0;
+}
+
+
 /* ===== list ===== */
 ul, 
 ol, 

@@ -18,7 +18,7 @@
     padding-top: var(--headerH);
 
     .text{
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid $color-tit;
         padding-bottom: var(--headerH);
 
         h2{
@@ -93,6 +93,247 @@
             height: 18px;
             background-image: url("/img/sub/icon_lnb.svg");
             @include bgContain;
+        }
+    }
+}
+
+
+/* ===== Search Box ===== */
+.search-box{
+    --height: 55px;    
+    --padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    
+    *{
+        font-family: $font-base;
+        font-size: 17px;
+    }
+
+    input{
+        width: 100%;
+        height: var(--height);
+        padding-inline: var(--padding) var(--height);
+        border: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        color: $color-text;
+
+        &::placeholder{
+            color: $color-border;
+        }
+    }
+
+    button{
+        height: var(--height);
+        border: none;
+        padding: 0;
+
+        i{
+            @include bgContain;
+        }
+
+        &.filter{
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: $color-text;
+            font-weight: 600;
+            color: #FFF;
+            padding-inline: 20px;
+
+            i{
+                width: 10px;
+                height: 8px;
+                background-image: url("/img/sub/icon_search_arrow.svg");
+            }
+        }
+    }
+
+    .input{
+        width: 360px;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid $color-border;
+        margin-left: auto;
+        position: relative;
+
+        button{
+            width: var(--height);
+            background: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            i{
+                height: 30px;
+                display: block;
+                background-image: url("/img/sub/icon_search.svg");
+            }
+        }
+    }
+}
+
+
+/* ===== Filter Box ===== */
+.filter-box{
+    --height: 55px;
+    border: 1px solid $color-border;
+    padding: 40px;
+    margin-top: 15px;
+
+    fieldset{
+        border-bottom: 1px solid $color-border;
+        padding-bottom: 20px;
+
+        &:not(:first-child){
+            padding-top: 20px;
+        }
+    }
+
+    legend{
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-tit;
+        line-height: 1;
+    }
+
+    ul{
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+
+        li{
+            input{
+                display: none;
+
+                &:checked{
+                    + label{
+                        background: $color-text;
+                        border-color: $color-text;
+                        color: #FFF;
+
+                        &::before{
+                            opacity: 1;
+                        }
+
+                        span{
+                            right: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+
+            label{
+                display: inline-flex;
+                align-items: center;
+                background: transparent;
+                border: 1px solid $color-border;
+                color: #666;
+                padding: 6px 15px;
+                transition-duration: $duration-basic;
+                transition-property: background, border-color, color;
+                will-change: background, border-color, color;
+                cursor: pointer;
+
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url("/img/sub/icon_search_check.svg");
+                    @include bgContain;
+                    margin-right: 10px;
+                    opacity: 0;
+                    transition-duration: $duration-basic;
+                    transition-property: opacity;
+                }
+
+                span{
+                    display: inline-block;
+                    position: relative;
+                    right: 50%;
+                    transform: translateX(50%);
+                    transition-duration: $duration-basic;
+                    transition-property: right, transform;
+                    will-change: right, transform;
+                }
+            }
+
+            @include hover{
+                &:hover{
+                    label{
+                        background: $color-text;
+                        border-color: $color-text;
+                        color: #FFF;
+                        
+                        &::before{
+                            opacity: 1;
+                        }
+    
+                        span{
+                            right: 0;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 20px;
+
+        button{
+            min-width: 140px;
+            height: var(--height);
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-family: $font-base;
+            font-size: 18px;
+            font-weight: 600;
+            padding-inline: 20px;
+
+            i{
+                display: inline-flex;
+                width: 24px;
+                height: 24px;
+                @include maskContain;
+            }
+
+            &[type="reset"]{
+                background: #EDEDED;
+                color: #999;
+
+                i{
+                    background: #999;
+                    mask-image: url("/img/sub/icon_form_reset.svg");
+                    -webkit-mask-image: url("/img/sub/icon_form_reset.svg");
+                }
+            }
+
+            &[type="submit"]{
+                background: $color-main;
+                color: #FFF;
+
+                i{
+                    background: #FFF;
+                    mask-image: url("/img/sub/icon_form_submit.svg");
+                    -webkit-mask-image: url("/img/sub/icon_form_submit.svg");
+                }
+            }
         }
     }
 }
