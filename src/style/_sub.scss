@@ -13,62 +13,28 @@
 
 /* ===== Sub Hero ===== */
 #sub-hero{
-    --animationTF: cubic-bezier(0.86, 0, 0.07, 1);
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - var(--headerH));
     font-family: $font-eng;
-    overflow: hidden;
+    text-align: center;
+    padding-top: var(--headerH);
 
     .text{
-        flex-shrink: 0;
-        padding-block: 70px 50px;
-
-        .flex-box{
-            display: flex;
-            align-items: flex-end;
-        }
+        border-bottom: 1px solid $color-border;
+        padding-bottom: var(--headerH);
 
         h2{
-            flex: 1 1 auto;
-            font-size: 11rem;
-            font-weight: 500;
+            font-size: 10rem;
+            font-weight: 700;
             color: $color-tit;
             line-height: 1;
             text-transform: uppercase;
-            opacity: 0;
-            transform: translateX(var(--aosP));
-            animation: fadeLeft 1.2s 1s var(--animationTF) both;
-        }
-    }
 
-    .img{
-        flex: 1 0 auto;
-        @include bgCover(center left);
-        position: relative;
-
-        &.img3{
-            background-image: url("/img/sub/bg_work.jpg");
-        }
-
-        &::before,
-        &::after{
-            content: "";
-            @include absoluteCover;
-        }
-
-        &::before{
-            background: #000;
-            transform: scaleX(1);
-            transform-origin: right;
-            animation: subHeroBefore 1.2s 0.5s var(--animationTF) forwards;
-        }
-
-        &::after{
-            background: #FFF;
-            transform-origin: left;
-            transform: scaleX(0);
-            animation: subHeroAfter 1.2s 0.5s var(--animationTF) forwards;
+            .char{
+                display: inline-block;
+                transform: translateY(100%); 
+                clip-path: inset(0 0 100% 0);
+                -webkit-clip-path: inset(0 0 100% 0);
+                animation: textUpClip 0.5s calc(var(--idx) * 50ms + 500ms) both; 
+            }
         }
     }
 }
@@ -76,13 +42,11 @@
 
 /* ===== LNB ===== */
 #lnb{
-    flex-shrink: 0;
-    padding-left: 20px;
-    margin-right: -20px;
-    transform: translateY(100%); 
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    animation: textClip 1s 1s var(--animationTF) both;
+    margin-bottom: 40px;
+    transform: translateY(-100%); 
+    clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0); 
+    animation: textDownClip 0.5s 500ms both; 
 
     > ul{
         display: flex;

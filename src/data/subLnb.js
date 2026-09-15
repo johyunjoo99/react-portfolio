@@ -1,23 +1,23 @@
 const subLnb = {
     home: {
-        title: "Home",
         link: "/",
-        idx: 1,
+        title: "Home",
+        num: 1,
     },
     about: {
-        title: "About",
         link: "/about",
-        idx: 2,
+        title: "About",
+        num: 2,
     },
     work: {
-        title: "Work",
+        num: 3,
         link: "/work",
-        idx: 3,
+        title: "Work",
     },
     contact: {
-        title: "Contact",
+        num: 4,
         link: "/contact",
-        idx: 4,
+        title: "Contact",
     }
 }
 

@@ -124,9 +124,9 @@
 
                     path{
                         transform: translateY(100%); 
-                        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-                        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
-                        animation: textClip 0.5s calc((var(--idx) * 50ms) + 500ms) both;
+                        clip-path: inset(0 0 100% 0);
+                        -webkit-clip-path: inset(0 0 100% 0); 
+                        animation: textUpClip 0.5s calc((var(--idx) * 50ms) + 500ms) both;
                         transform-box: content-box;
                         transform-origin: center;
                     }

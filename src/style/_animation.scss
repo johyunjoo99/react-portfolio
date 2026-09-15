@@ -42,18 +42,32 @@
 }
 
 
-/* ===== Text Up (Clip-Path) ===== */
-@keyframes textClip{
+/* ===== Text Clip-Path ===== */
+@keyframes textUpClip{
 	0%{ 
         transform: translateY(100%); 
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+        clip-path: inset(0 0 100% 0);
+        -webkit-clip-path: inset(0 0 100% 0); 
     }
 
 	100%{
         transform: translateY(0); 
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: inset(0 0 0 0); 
+        -webkit-clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes textDownClip{
+	0%{ 
+        transform: translateY(-100%); 
+        clip-path: inset(100% 0 0 0);
+        -webkit-clip-path: inset(100% 0 0 0); 
+    }
+
+	100%{
+        transform: translateY(0); 
+        clip-path: inset(0 0 0 0); 
+        -webkit-clip-path: inset(0 0 0 0);
     }
 }
 
@@ -78,36 +92,5 @@
     100%{
         top: 0;
         transform: translateY(0);
-    }
-}
-
-
-/* ===== sub Hero ===== */
-@keyframes subHeroBefore {
-    0% {
-      transform-origin: right;
-      transform: translateX(1);
-    }
-    100% {
-      transform-origin: right;
-      transform: scaleX(0);
-    }
-}
-
-@keyframes subHeroAfter {
-    0% {
-      transform-origin: left;
-      transform: scaleX(0);
-    }
-    50% {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-    51% {
-      transform-origin: right;
-    }
-    100% {
-      transform-origin: right;
-      transform: scaleX(0);
     }
 }
