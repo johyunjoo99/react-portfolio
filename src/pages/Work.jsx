@@ -3,8 +3,9 @@ import { useState } from 'react'
 import '../style/_sub.scss'
 
 import SubLayout from '../component/sub/SubLayout'
-import SearchBox from '../component/work/SearchBox'
-import SearchFilter from '../component/work/SearchFilter'
+import SearchBox from '../component/board/SearchBox'
+import SearchFilter from '../component/board/SearchFilter'
+import ProjectBoard from '../component/work/ProjectBoard'
 
 const Work = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -22,6 +23,7 @@ const Work = () => {
                 isFilterOpen={isFilterOpen}
               />
             </form>
+            <ProjectBoard/>
           </div>
         </SubLayout>
     </>
