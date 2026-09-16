@@ -512,15 +512,11 @@
                 grid-template-columns: repeat(1, 100%);
 
                 .item{
-                    background: $color-gray;
+                    border: 1px solid $color-border;
                     padding: 25px;
                 }
             }
         }
-    }
-
-    @include mediaZFlip{
-
     }
 }
 

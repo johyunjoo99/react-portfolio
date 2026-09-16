@@ -148,6 +148,15 @@
                 width: 10px;
                 height: 8px;
                 background-image: url("/img/sub/icon_search_arrow.svg");
+                transform: rotate(-180deg);
+                transition-duration: $duration-basic;
+                transition-property: transform;
+            }
+
+            &.is-open{
+                i{
+                    transform: rotate(0);
+                }
             }
         }
     }
@@ -180,9 +189,16 @@
 /* ===== Filter Box ===== */
 .filter-box{
     --height: 55px;
-    border: 1px solid $color-border;
-    padding: 40px;
-    margin-top: 15px;
+    overflow: hidden;
+    transition-duration: $duration-basic;
+    transition-property: height;
+    will-change: height;
+
+    .wrap{
+        margin-top: 15px;
+        border: 1px solid $color-border;
+        padding: 40px;
+    }
 
     fieldset{
         border-bottom: 1px solid $color-border;
@@ -212,6 +228,14 @@
             input{
                 display: none;
 
+                &[type="radio"]{
+                    + label{
+                        &::before{
+                            background-image: url("/img/sub/icon_search_radio.svg");
+                        }
+                    }
+                }
+
                 &:checked{
                     + label{
                         background: $color-text;
@@ -240,6 +264,9 @@
                 transition-duration: $duration-basic;
                 transition-property: background, border-color, color;
                 will-change: background, border-color, color;
+                -webkit-tap-highlight-color: transparent;
+                -webkit-touch-callout: none;
+                user-select: none; 
                 cursor: pointer;
 
                 &::before{

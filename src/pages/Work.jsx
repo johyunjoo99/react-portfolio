@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 import '../style/_sub.scss'
 
@@ -7,13 +7,20 @@ import SearchBox from '../component/work/SearchBox'
 import SearchFilter from '../component/work/SearchFilter'
 
 const Work = () => {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
   return (
     <>
         <SubLayout id="work">
           <div className="w1700">
             <form action="">
-              <SearchBox/>
-              <SearchFilter/>
+              <SearchBox
+                isFilterOpen={isFilterOpen}
+                setIsFilterOpen={setIsFilterOpen}
+              />
+              <SearchFilter
+                isFilterOpen={isFilterOpen}
+              />
             </form>
           </div>
         </SubLayout>
