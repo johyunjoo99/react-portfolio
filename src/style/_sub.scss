@@ -100,5 +100,128 @@
 
 /* ===== Project Board ===== */
 .project-board{
+    --size: 34px;
+
+    table{
+        font-family: $font-eng;
+        font-size: 15px;
+
+        colgroup{
+            col{
+                &.s{
+                    width: var(--size);
+                }
+
+                &.m{
+                    width: 120px;
+                }
+
+                &.l{
+                    width: 300px;
+                }
+            }
+        }
+
+        tr{
+            border-bottom: 1px solid $color-border;
+
+            > *{
+                &:not(:last-child){
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        th,
+        td{
+            padding-block: 10px;
+        }
+
+        thead{
+            text-align: left;
+
+            tr{
+                border-width: 1px;
+                border-color: $color-border;
+            }
+
+            th{
+                font-weight: 400;
+                color: $color-border;
+                padding-top: 0;
+
+                &:nth-of-type(2){
+                    text-align: center;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                cursor: pointer;
+
+                @include hover{
+                    &:hover{
+                        td{
+                            color: $color-text;
+
+                            .arrow{
+                                background: $color-text;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            td{
+                font-weight: 400;
+                color: $color-border;
+                transition-duration: $duration-basic;
+                transition-property: color;
+
+                .num{
+                    font-variant-numeric: tabular-nums;
+                    vertical-align: middle;
+                }
+
+                a{
+                    display: block;
+                    font-family: $font-base;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: inherit;
+                }
+
+                .arrow{
+                    display: block;
+                    width: calc(var(--size) - 5px);
+                    height: calc(var(--size) - 5px);
+                    background: $color-border;
+                    mask-image: url("/img/common/icon_viewmore.svg");
+                    -webkit-mask-image: url("/img/common/icon_viewmore.svg");
+                    @include maskContain;
+                    transform: rotate(0deg);
+                    transition-duration: $duration-basic;
+                    transition-property: background, transform;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .color{
+            display: block;
+            width: var(--size);
+            aspect-ratio: 1 / 1;
+            margin: auto;
+        }
+
+        .skill{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            font-size: 14px;
+        }
+    }
     
 }

@@ -108,6 +108,103 @@
 }
 
 
+/* ===== Sort Select ===== */
+.sort-select{
+    &__single-value,
+    &__option{
+        font-size: 17px;
+        font-weight: 400;
+        color: $color-text !important;
+    }
+
+    &__control{
+        border: none !important;
+        border-bottom: 1px solid $color-border !important;
+        border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    &__value-container{
+        width: 120px;
+        padding: 0 14px !important;
+    }
+
+    &__single-value{
+        margin: 0 !important;
+    }
+
+    &__input-container{
+        padding: 0;
+        margin: 0;
+    }
+
+    &__indicator-separator{
+        display: none;
+    }
+
+    &__indicator{
+        flex-shrink: 0;
+        width: auto;
+        height: 45px;
+        padding: 14px !important;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::after{
+            content: "";
+            width: 9px;
+            height: 7px;
+            display: inline-block;
+            background: $color-text;
+            mask-image: url("/img/sub/icon_search_arrow.svg");
+            -webkit-mask-image: url("/img/sub/icon_search_arrow.svg");
+            @include maskContain;
+        }
+
+        svg{
+            display: none;
+        }
+    }
+
+    &__menu{
+        border: 1px solid $color-border !important;
+        border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+        box-shadow: none !important;
+        top: calc(100% - 1px) !important;
+        margin: 0 !important;
+    }
+
+    &__menu-list{
+        padding: 3px 10px !important;
+    }
+
+    &__option{
+        padding: 7px 5px !important;
+        background: none !important;
+        cursor: pointer;
+
+        &:not(:last-child){
+            border-bottom: 1px solid $color-border !important;
+        }
+    }
+
+    &__option--is-focused{
+        color: $color-main !important;
+    }
+
+    /* Menu Open */
+    &__control--menu-is-open{
+        .sort-select__indicator{
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+
 /* ===== Search Box ===== */
 .search-box{
     --height: 55px;    
@@ -148,6 +245,7 @@
             flex-shrink: 0;
             display: inline-flex;
             align-items: center;
+            height: var(--height);
             gap: 12px;
             background: $color-text;
             font-weight: 600;
@@ -171,12 +269,21 @@
         }
     }
 
+    .sort-select{
+        &__value-container{
+            width: 100px;
+        }
+
+        &__indicator{
+            height: var(--height);
+        }
+    }
+
     .input{
         width: 360px;
         display: flex;
         justify-content: flex-end;
         border-bottom: 1px solid $color-border;
-        margin-left: auto;
         position: relative;
 
         button{
@@ -302,25 +409,6 @@
                     will-change: right, transform;
                 }
             }
-
-            @include hover{
-                &:hover{
-                    label{
-                        background: $color-text;
-                        border-color: $color-text;
-                        color: #FFF;
-                        
-                        &::before{
-                            opacity: 1;
-                        }
-    
-                        span{
-                            right: 0;
-                            transform: translateX(0);
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -382,8 +470,10 @@
 
     .board-info{
         display: flex;
+        align-items: center;
         font-size: 18px;
         font-weight: 500;
+        margin-bottom: 25px;
 
         .total{
             flex: 1 1 auto;
@@ -392,96 +482,6 @@
             strong{
                 font-weight: 700;
                 color: $color-main;
-            }
-        }
-
-        .sort-select{
-
-            &__single-value,
-            &__option{
-                font-size: 17px;
-                font-weight: 400;
-                color: $color-text;
-            }
-
-            &__control{
-                border: none !important;
-                border-bottom: 1px solid $color-border !important;
-                border-radius: 0;
-                -webkit-border-radius: 0;
-                box-shadow: none !important;
-                cursor: pointer;
-            }
-
-            &__value-container{
-                width: 120px;
-                padding: 0 10px;
-            }
-
-            &__input-container{
-                padding: 0;
-                margin: 0;
-            }
-
-            &__indicator-separator{
-                display: none;
-            }
-
-            &__indicator{
-                width: auto;
-                height: auto;
-                padding: 20px;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-
-                &::after{
-                    content: "";
-                    height: 7px;
-                    background: $color-text;
-                    mask-image: url("/img/sub/icon_search_arrow.svg");
-                    -webkit-mask-image: url("/img/sub/icon_search_arrow.svg");
-                    @include maskContain;
-                    @include absoluteBlock;
-                }
-
-                svg{
-                    display: none;
-                }
-            }
-
-            &__menu{
-                border: 1px solid $color-border;
-                border-radius: 0;
-                -webkit-border-radius: 0;
-                box-shadow: none;
-                top: calc(100% - 1px);
-                margin: 0;
-            }
-
-            &__menu-list{
-                padding: 3px 10px;
-            }
-
-            &__option{
-                padding: 7px 5px;
-                background: none !important;
-                cursor: pointer;
-
-                &:not(:last-child){
-                    border-bottom: 1px solid $color-border;
-                }
-            }
-
-            &__option--is-focused{
-                color: $color-main;
-            }
-
-            /* Menu Open */
-            &__control--menu-is-open{
-                .sort-select__indicator{
-                    transform: rotate(-180deg);
-                }
             }
         }
     }

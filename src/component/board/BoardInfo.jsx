@@ -8,12 +8,12 @@ const sortOptions = [
     { value: 'title-desc', label: '제목 Z-A' },
 ]
 
-const BoardInfo = () => {
+const BoardInfo = ({ Data }) => {
   const [sort, setSort] = useState(sortOptions[0]);
 
   return (
     <div className="board-info">
-        <p className="total">총 <strong>52</strong>개</p>
+        <p className="total">총 <strong>{Data.length}</strong>개</p>
         <Select
             classNamePrefix={"sort-select"}
             options={sortOptions}

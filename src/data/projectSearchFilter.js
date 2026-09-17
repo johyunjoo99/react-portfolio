@@ -22,7 +22,7 @@ const projectSearchFilter = {
         green: "Green",
         blue: "Blue",
         navy: "Navy",
-        purple: "Purle",
+        purple: "Purple",
         mono: "Mono",
     },
 };
