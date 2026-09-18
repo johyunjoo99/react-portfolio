@@ -40,7 +40,7 @@ const SearchFilter = ({ isFilterOpen }) => {
                 </ul>
             </fieldset>
             <fieldset>
-                <legend>다국어</legend>
+                <legend>지원 언어</legend>
                 <ul>
                     {Object.entries(FilterData.language).map(([key, value]) => (
                         <li key={key}>

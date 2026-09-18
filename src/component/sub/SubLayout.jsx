@@ -1,6 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
+import '../../style/_sub.scss'
+
 import subLnb from '../../data/subLnb'
 import SubHero from './SubHero'
 
@@ -11,10 +13,10 @@ const SubLayout = ({ children, id }) => {
 
   return (
     <main id="sub">
-        <SubHero page={currentPage}/>
-        <div id={id} className="sub-content">
-            {children}
-        </div>
+      <SubHero page={currentPage}/>
+      <div id={id} className="sub-content">
+          {children}
+      </div>
     </main>
   )
 }

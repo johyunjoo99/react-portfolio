@@ -11,11 +11,11 @@ import Contact from '../component/main/Contact.jsx'
 const  Main = () => {
   return (
     <>
-      <main>
-          <Hero/>
-          <About/>
-          <Project/>
-          <Contact/>
+      <main id="main">
+        <Hero/>
+        <About/>
+        <Project/>
+        <Contact/>
       </main>
     </>
   )

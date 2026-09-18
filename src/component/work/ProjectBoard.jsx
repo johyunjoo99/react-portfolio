@@ -11,7 +11,7 @@ const ProjectBoard = () => {
       <div className="project-board">
         <table>
           <colgroup>
-            <col className="m"/>
+            <col className="s"/>
             <col className="m" />
             <col />
             <col className="l" />

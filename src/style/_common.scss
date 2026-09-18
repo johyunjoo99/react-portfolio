@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.eng{
+    font-family: $font-eng;
+}
+
 /* ===== Inner ===== */
 .w1820{
     max-width: calc(1820px + (var(--innerGap) * 2));
