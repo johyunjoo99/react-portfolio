@@ -647,6 +647,12 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-end;
+
+                        .sec-title{
+                            p{
+                                white-space: pre-line;
+                            }
+                        }
                     }
 
                     .btns{

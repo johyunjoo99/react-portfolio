@@ -1,16 +1,16 @@
 import React from 'react'
 import { BASE_URL } from '../../constants/constants'
 
-import MouseMove from './MouseMove'
+import ProjectCardLayout from './ProjectCardLayout'
+import ProjectListLayout from './ProjectListLayout'
 import ViewMore from '../common/ViewMore'
 
-const ProjectPopup = ({ popupClose }) => {
-
+const ProjectPopup = ({ project, popupClose }) => {
   return (
-    <article style={{ '--pointColor' : '#C6004D' }}>
+    <article style={{ '--pointColor' : project?.colorCode }}>
         <div className="head">
             <h3 className="logo">
-                <img src={`${BASE_URL}/img/project/logo_lg-hicare-solution.svg`} alt="" />
+                <img src={`${BASE_URL}${project?.logo}`} alt="" />
             </h3>
             <button className="popup-close" onClick={popupClose}>
               <i></i>
@@ -18,127 +18,118 @@ const ProjectPopup = ({ popupClose }) => {
         </div>
         <div className="body scroll-content">
             <div className="title">
-                <span>LG HICARESOLUTION</span>
-                <h4>LG하이케어솔루션</h4>
-                <p>제품별 케어 서비스와 혜택을 확인하고, <br />필요한 서비스를 신청할 수 있는 웹사이트입니다.</p>
+                <span>{project?.eng}</span>
+                <h4>{project?.kor}</h4>
+                <p>{project?.description}</p>
             </div>
             <section>
                 <div className="card-layout">
-                    <MouseMove className="box">
-                        <dl>
-                            <dt>개발 환경</dt>
-                            <dd className="eng">JSP</dd>
-                        </dl>
-                    </MouseMove>
-                    <MouseMove className="box">
-                        <dl>
-                            <dt>사용 기술</dt>
-                            <dd className="eng">
-                                <ul>
-                                    <li>[HTML5]</li>
-                                    <li>[CSS3]</li>
-                                    <li>[jQuery]</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </MouseMove>
-                    <MouseMove className="box">
-                        <dl>
-                            <dt>지원 언어</dt>
-                            <dd className="eng">
-                                <ul>
-                                    <li>[KOR]</li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </MouseMove>
+                    <ProjectCardLayout title="개발 환경">
+                        {project?.environment}
+                    </ProjectCardLayout>
+                    <ProjectCardLayout title="사용 기술">
+                        <ul>
+                            {
+                                project?.skill.map((item) => (
+                                    <li key={item}>[{item}]</li>
+                                ))
+                            }
+                        </ul>
+                    </ProjectCardLayout>
+                    <ProjectCardLayout title="지원 언어">
+                        <ul>
+                            {
+                                project?.language.map((item) => (
+                                    <li key={item}>[{item}]</li>
+                                ))
+                            }
+                        </ul>
+                    </ProjectCardLayout>
                 </div>
             </section>
             <section>
-                <div className="list-layout">
-                    <div className="num">01</div> 
-                    <div className="tit">
-                        <h5>기본 정보</h5>
-                    </div>
-                    <div className="content">
-                        <ul>
-                            <li>
-                                <dl>
-                                    <dt>사이트 유형</dt>
-                                    <dd>기업 사이트</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>작업 기간</dt>
-                                    <dd>2022.11.18 - 2024.06.10</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>담당 업무</dt>
-                                    <dd>웹 퍼블리싱</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>참여도</dt>
-                                    <dd>
-                                        <div className="gauge">
-                                            <div style={{ "--width" : "100%" }}>
-                                                <div>
-                                                    <span>메인 100%</span>
-                                                </div>
-                                            </div>
+                <ProjectListLayout
+                    num="01"
+                    title="기본 정보"
+                >
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>사이트 유형</dt>
+                                <dd>{project?.type}</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>작업 기간</dt>
+                                <dd>{project?.period.start} - {project?.period.end}</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>담당 업무</dt>
+                                <dd>{project?.detail.responsibility}</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>참여도</dt>
+                                <dd>
+                                    <div className="gauge">
+                                        <div style={{ "--width" : `${project?.detail.participation.main}%` }}>
                                             <div>
-                                                <div style={{ "--width" : "100%" }}>
-                                                    <span>서브 100%</span>
-                                                </div>
+                                                <span>메인 {project?.detail.participation.main}%</span>
                                             </div>
                                         </div>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="list-layout">
-                    <div className="num">02</div> 
-                    <div className="tit">
-                        <h5>주요 작업</h5>
-                    </div>
-                    <div className="content">
-                        <ul>
-                            <li>유지보수를 고려한 화면 구조 설계 및 퍼블리싱</li>
-                            <li>반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응</li>
-                            <li>인터랙션 및 UI 동작 구현</li>
-                            <li>시맨틱 마크업 및 웹 표준을 고려한 페이지 구성</li>
-                            <li>크로스 브라우징을 고려한 스타일 및 기능 대응</li>
-                            <li>PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="list-layout">
-                    <div className="num">03</div> 
-                    <div className="tit">
-                        <h5>작업 특징</h5>
-                    </div>
-                    <div className="content">
-                        <ul>
-                            <li>작업 중 기업·서비스 신청 통합 사이트가 2개 사이트로 분리되어 변경된 범위에 맞춰 퍼블리싱 대응</li>
-                            <li>내부 개발 인력 부재로 퍼블리싱 완료 후 외부 개발자와 소통하며 개발 연계 작업 진행</li>
-                        </ul>
-                    </div>
-                </div>
+                                        <div>
+                                            <div style={{ "--width" : `${project?.detail.participation.sub}%` }}>
+                                                <span>서브 {project?.detail.participation.sub}%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </ProjectListLayout>
+                <ProjectListLayout
+                    num="02"
+                    title="주요 작업"
+                >
+                    <ul>
+                        {
+                            project?.detail.tasks.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </ProjectListLayout>
+                <ProjectListLayout
+                    num="03"
+                    title="작업 특징"
+                >
+                    <ul>
+                        {
+                            project?.detail.features.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </ProjectListLayout>
             </section>
             <div className="btns">
-                <ViewMore
-                    href="#"
-                    external
-                    targetBlank
-                >
-                    공식 사이트
-                </ViewMore>                
+                {
+                    project?.link.map((item) => (
+                        <ViewMore
+                            key={item.url}
+                            href={item.url}
+                            external
+                            targetBlank
+                        >
+                            {item.label || '사이트 보러가기'}
+                        </ViewMore>
+                    ))
+                }                
             </div>
         </div>
     </article>

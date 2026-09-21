@@ -4,7 +4,11 @@ import ProjectData from '../../data/projectData'
 import BoardInfo from '../board/BoardInfo'
 import ProjectItem from './ProjectItem'
 
-const ProjectBoard = () => {
+const ProjectBoard = ({ popupRef, setSelectedProject }) => {
+  const sortedProjectData = [...ProjectData].sort((a, b) => (
+    new Date(b.period.end) - new Date(a.period.end)
+  ))
+
   return (
     <div className="board-ctn">
       <BoardInfo Data={ProjectData}/>
@@ -29,7 +33,11 @@ const ProjectBoard = () => {
             </tr>
           </thead>
           <tbody>
-            <ProjectItem ProjectData={ProjectData}/>
+            <ProjectItem 
+              ProjectData={sortedProjectData} 
+              popupRef={popupRef}
+              setSelectedProject={setSelectedProject}
+            />
           </tbody>
         </table>
       </div> 

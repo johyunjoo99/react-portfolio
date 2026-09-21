@@ -246,7 +246,7 @@
                 .logo{
                     img{
                         width: auto;
-                        height: 36px;
+                        height: 40px;
                     }
                 }
 
@@ -270,7 +270,7 @@
 
             .scroll-content{
                 max-height: 80vh;
-                padding-block: 70px 100px;
+                padding-block: 80px 100px;
                 overflow-x: clip;
                 overflow-y: auto;
 
@@ -327,6 +327,7 @@
                         font-weight: 300;
                         color: $color-text;
                         line-height: 1.7;
+                        white-space: pre-line;
                         margin-top: 30px;
                     }
                 }
@@ -398,6 +399,7 @@
                             font-size: 20px;
                             font-weight: 600;
                             color: $color-tit;
+                            margin-bottom: 10px;
                         }
 
                         dd{
@@ -528,10 +530,6 @@
                         @include hover{
                             &:hover{
                                 &::before{
-                                    background: var(--pointColor);
-                                }
-
-                                i{
                                     background: var(--pointColor);
                                 }
                             }
