@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            const path = window.location.pathname;
+            const repo = '/react-portfolio';
+
+            if (path.startsWith(repo)) {
+            const redirectPath = path.slice(repo.length);
+
+            sessionStorage.redirect = redirectPath + window.location.search;
+            window.location.replace(repo + '/');
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

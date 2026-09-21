@@ -15,6 +15,22 @@
     <!-- 대표이미지 -->
 
     <script>
+      const redirect = sessionStorage.redirect;
+    
+      if (redirect) {
+        delete sessionStorage.redirect;
+    
+        const base = '/react-portfolio';
+    
+        window.history.replaceState(
+          null,
+          null,
+          base + redirect
+        );
+      }
+    </script>
+
+    <script>
       //screen scale
       let windowWidth = window.screen.width;
       setViewPort(windowWidth);
