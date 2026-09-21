@@ -497,6 +497,15 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: $duration-basic;
+    transition-property: opacity;
+
+    &.is-open{
+        opacity: 1;
+        pointer-events: auto;
+    }
 
     .blank{
         width: 100%;

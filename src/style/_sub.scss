@@ -270,7 +270,7 @@
 
             .scroll-content{
                 max-height: 80vh;
-                padding-block: 70px;
+                padding-block: 70px 100px;
                 overflow-x: clip;
                 overflow-y: auto;
 
@@ -336,12 +336,62 @@
                     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
                     gap: 20px;
 
-                    dl{
-                        display: flex;
-                        flex-direction: column;
+                    .box{
                         min-height: 250px;
                         background: $color-gray;
                         padding: 20px;
+                        position: relative;
+                        overflow: hidden;
+
+                        .hover{
+                            width: 0;
+                            background: var(--pointColor);
+                            border-radius: 50%;
+                            aspect-ratio: 1 / 1;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            transform: translate(-50%, -50%);
+                            transition-duration: 0.8s;
+                            transition-property: width;
+                            will-change: width;
+                        }
+
+                        @include hover{
+                            &:hover{
+                                .hover{
+                                    width: 1000%;
+                                }
+
+                                dl{
+                                    > *{
+                                        transition-delay: unset;
+                                    }
+
+                                    dt{
+                                        color: #FFF;
+                                    }
+
+                                    dd{
+                                        color: rgba(255, 255, 255, 0.8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    dl{
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        z-index: 10;
+
+                        > *{
+                            transition-duration: 0.3s;
+                            transition-delay: 0.5s;
+                            transition-property: color;
+                        }
 
                         dt{
                             flex: 1 0 auto;
@@ -471,8 +521,22 @@
                 .btns{
                     display: flex;
                     justify-content: center;
-                    margin-top: 60px;
+                    margin-top: 70px;
                     gap: 20px;
+
+                    .viewmore{
+                        @include hover{
+                            &:hover{
+                                &::before{
+                                    background: var(--pointColor);
+                                }
+
+                                i{
+                                    background: var(--pointColor);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

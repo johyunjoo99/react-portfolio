@@ -9,12 +9,12 @@ const Menu = ({ activeSection, isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <>
-        <div id="menu">
-            <div className="blank" onClick={closeMenu}></div>
-            <div className="inner">
-                <Nav onMenuClose={closeMenu} activeSection={activeSection}/>
-            </div>
-        </div>
+      <div id="menu">
+          <div className="blank" onClick={closeMenu}></div>
+          <div className="inner">
+              <Nav onMenuClose={closeMenu} activeSection={activeSection}/>
+          </div>
+      </div>
     </>
   )
 }

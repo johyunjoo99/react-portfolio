@@ -1,14 +1,18 @@
 import React from 'react'
 import { BASE_URL } from '../../constants/constants'
 
-const ProjectPopup = () => {
+import MouseMove from './MouseMove'
+import ViewMore from '../common/ViewMore'
+
+const ProjectPopup = ({ popupClose }) => {
+
   return (
     <article style={{ '--pointColor' : '#C6004D' }}>
         <div className="head">
             <h3 className="logo">
                 <img src={`${BASE_URL}/img/project/logo_lg-hicare-solution.svg`} alt="" />
             </h3>
-            <button className="popup-close">
+            <button className="popup-close" onClick={popupClose}>
               <i></i>
             </button>
         </div>
@@ -20,28 +24,34 @@ const ProjectPopup = () => {
             </div>
             <section>
                 <div className="card-layout">
-                    <dl>
-                        <dt>개발 환경</dt>
-                        <dd className="eng">JSP</dd>
-                    </dl>
-                    <dl>
-                        <dt>사용 기술</dt>
-                        <dd className="eng">
-                            <ul>
-                                <li>[HTML5]</li>
-                                <li>[CSS3]</li>
-                                <li>[jQuery]</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>지원 언어</dt>
-                        <dd className="eng">
-                            <ul>
-                                <li>[KOR]</li>
-                            </ul>
-                        </dd>
-                    </dl>
+                    <MouseMove className="box">
+                        <dl>
+                            <dt>개발 환경</dt>
+                            <dd className="eng">JSP</dd>
+                        </dl>
+                    </MouseMove>
+                    <MouseMove className="box">
+                        <dl>
+                            <dt>사용 기술</dt>
+                            <dd className="eng">
+                                <ul>
+                                    <li>[HTML5]</li>
+                                    <li>[CSS3]</li>
+                                    <li>[jQuery]</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </MouseMove>
+                    <MouseMove className="box">
+                        <dl>
+                            <dt>지원 언어</dt>
+                            <dd className="eng">
+                                <ul>
+                                    <li>[KOR]</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </MouseMove>
                 </div>
             </section>
             <section>
@@ -122,24 +132,13 @@ const ProjectPopup = () => {
                 </div>
             </section>
             <div className="btns">
-                <a 
-                    href="" 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="viewmore"
+                <ViewMore
+                    href="#"
+                    external
+                    targetBlank
                 >
-                    <i></i>
-                    <span>공식 사이트</span>
-                </a>
-                <a 
-                    href="" 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="viewmore"
-                >
-                    <i></i>
-                    <span>접수 사이트</span>
-                </a>
+                    공식 사이트
+                </ViewMore>                
             </div>
         </div>
     </article>

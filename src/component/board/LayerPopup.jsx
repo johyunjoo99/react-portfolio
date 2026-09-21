@@ -1,12 +1,18 @@
-import React from 'react'
+import { useState, cloneElement } from 'react'
 
 const LayerPopup = ({ children, id }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  function popupClose(){
+    setIsPopupOpen(false);
+  }
+
   return (
-    <div id={id} className="layer-popup">
-        <div className="blank"></div>
-        <div className="inner">
-            {children}
-        </div>
+    <div id={id} className={`layer-popup ${isPopupOpen ? 'is-open' : ''}`}>
+      <div className="blank" onClick={popupClose}></div>
+      <div className="inner">
+        {cloneElement(children, { popupClose })}
+      </div>
     </div>
   )
 }

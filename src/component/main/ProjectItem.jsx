@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
-import ProjectMore from './ProjectMore'
 import { BASE_URL } from '../../constants/constants'
+
+import ViewMore from '../common/ViewMore'
+import ProjectMore from './ProjectMore'
 
 const ProjectItem = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -161,10 +163,14 @@ const ProjectItem = () => {
                                                 <div className="btns">
                                                     {
                                                         item.link.map((el) => 
-                                                            <a key={el.url} href={el.url} target="_blank" rel="noreferrer" className="viewmore">
-                                                                <i></i>
-                                                                <span>{el.label || '사이트 보러가기'}</span>
-                                                            </a>
+                                                            <ViewMore 
+                                                                key={el.url}
+                                                                href={el.url}
+                                                                external
+                                                                targetBlank
+                                                            >
+                                                                {el.label || '사이트 보러가기'}
+                                                            </ViewMore> 
                                                         )
                                                     }
                                                 </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { BASE_URL } from '../../constants/constants'
 
+import ViewMore from '../common/ViewMore'
+
 const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
   return (
     <>
@@ -35,10 +37,13 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                                         <p>다양한 분야의 프로젝트와 작업 내용을 <br />더 자세히 확인해보세요.</p>
                                     </div>
                                     <div className="btns">
-                                        <a href={`${BASE_URL}/file/조현주_경력기술서.pdf`} target="_blank" rel="noreferrer" className="viewmore">
-                                            <i></i>
-                                            <span>전체 프로젝트 보러 가기</span>
-                                        </a>
+                                        <ViewMore
+                                            href={`${BASE_URL}/file/조현주_경력기술서.pdf`}
+                                            external
+                                            targetBlank
+                                        >
+                                            전체 프로젝트 보러 가기
+                                        </ViewMore> 
                                     </div>
                                 </div>
                             </div>
