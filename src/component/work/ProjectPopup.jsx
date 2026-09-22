@@ -36,7 +36,7 @@ const ProjectPopup = ({ project, popupClose }) => {
                             }
                         </ul>
                     </ProjectCardLayout>
-                    <ProjectCardLayout title="지원 언어">
+                    <ProjectCardLayout title="작업 언어">
                         <ul>
                             {
                                 project?.language.map((item) => (
@@ -104,18 +104,22 @@ const ProjectPopup = ({ project, popupClose }) => {
                         }
                     </ul>
                 </ProjectListLayout>
-                <ProjectListLayout
-                    num="03"
-                    title="작업 특징"
-                >
-                    <ul>
-                        {
-                            project?.detail.features.map((item) => (
-                                <li key={item}>{item}</li>
-                            ))
-                        }
-                    </ul>
-                </ProjectListLayout>
+                {
+                    project?.detail.features?.length > 0 && (
+                        <ProjectListLayout
+                            num="03"
+                            title="작업 특징"
+                        >
+                            <ul>
+                                {
+                                    project?.detail.features.map((item) => (
+                                        <li key={item}>{item}</li>
+                                    ))
+                                }
+                            </ul>
+                        </ProjectListLayout>
+                    )
+                }
             </section>
             <div className="btns">
                 {
