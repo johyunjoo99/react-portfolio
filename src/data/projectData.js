@@ -506,14 +506,14 @@ const projectData = [
                 'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
             ],
             features: [
-                '메인 페이지의 2분할 배경 이미지에 background-attachment를 활용한 인터랙션을 적용하고, 유지보수를 고려하여 하나의 이미지로 구현',
-                '품질 프로세스 메뉴의 탭과 자동 재생 콘텐츠를 슬라이드 형태로 구성하고, 모바일 환경에서는 탭과 본문을 하나의 단위로 묶어 가독성을 고려한 레이아웃으로 대응',
-                '모바일 레이아웃의 안정성과 가독성을 고려하여 별도 레이아웃 구성 시 .clone()을 활용하고, 콘텐츠 수정에 따른 유지보수 부담을 줄일 수 있도록 구현'
+                '모바일 별도 레이아웃 구성 시 .clone()을 활용하여 유지보수 효율을 고려한 구조로 구현', 
+                '유지보수를 고려하여 2분할 배경 이미지를 하나의 이미지로 구성하고 인터랙션 구현',
+                '서브 히어로 영역의 2차 메뉴 이동 시 다음 페이지의 히어로 영역을 건너뛰고 콘텐츠 영역으로 바로 이동하도록 구현'
             ]
         },
         link: [
             {
-                url: 'http://estenergy.kr/',
+                url: 'https://2isys.com/kr/',
             }
         ],
     },{
@@ -599,6 +599,7 @@ const projectData = [
                 'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
             ],
             features: [
+                '수출바우처 사업으로 정해진 기간 내 프로젝트 완료가 필수인 환경에서 일정에 맞춰 퍼블리싱 진행',
                 '영문 리뉴얼 프로젝트로 헤더·푸터·메인·제품 페이지를 재작업하고, 그 외 페이지는 리뉴얼된 디자인에 맞춰 반응형 및 일부 콘텐츠 수정',
                 '업체 요청에 따라 제품명을 BI 이미지로 적용하되, 검색 및 브라우저 인식을 고려하여 텍스트를 함께 삽입하고 CSS로 비노출 처리'
             ]
@@ -652,6 +653,480 @@ const projectData = [
         link: [
             {
                 url: 'https://www.hyunam21.co.kr/',
+            }
+        ],
+    },{
+        id: 'mkl',
+        kor: '엠케이엘',
+        eng: 'MKL',
+        logo: '/img/project/logo_mkl.svg',
+        description: '글로벌 물류 서비스와 다양한 운송 솔루션을 \n소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'red',
+        colorCode: '#E60012',
+        period: {
+            start: '2025.06.11',
+            end: '2025.09.26'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '글로벌 네트워크의 대륙별 거점 정보를 보여주는 영역에 카운트 전환 인터랙션 구현',
+                '반응형 환경에서의 레이아웃 안정성을 고려하여 스크롤 구간에 따른 수치 변화를 CSS 변수로 제어하는 방식으로 서브 페이지 히어로 영역의 스크롤 인터랙션 구현',
+                '글로벌 네트워크 지도에 SVG를 활용한 애니메이션 구현',
+                '외부 물류 시스템 및 화물 추적 서비스 연결을 위한 링크 버튼 구현',
+                '외부 물류 시스템 연결로 인해 자동 생성되는 안내 메시지와 하단 고정 버튼이 겹치지 않도록 위치 및 레이아웃 대응'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.mklkorea.com/kr/',
+            }
+        ],
+    },{
+        id: 'migun-architects',
+        kor: '미건종합건축사사무소',
+        eng: 'MIGUN ARCHITECTS',
+        logo: '/img/project/logo_migun-architects.svg',
+        description: '다양한 건축 프로젝트와 설계 서비스를 \n소개하는 건축사사무소 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'mono',
+        colorCode: '#111111',
+        period: {
+            start: '2025.06.02',
+            end: '2025.07.14'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG를 활용하여 사이트 메인 페이지 접속 시 노출되는 인트로 애니메이션 구현',
+                '메인 및 서브 페이지에서 동일하게 사용되는 프로젝트 리스트를 별도 파일로 분리하고, include를 활용하여 공통 영역으로 구성'
+            ]
+        },
+        link: [
+            {
+                url: 'https://migunarchitects.com/',
+            }
+        ],
+    },{
+        id: 'stonev-studio',
+        kor: '스톤브이스튜디오',
+        eng: 'STONEV STUDIO',
+        logo: '/img/project/logo_stonev-studio.svg',
+        description: 'VFX 및 다양한 디지털 콘텐츠 제작 프로젝트와 \n서비스를 소개하는 크리에이티브 스튜디오 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'yellow',
+        colorCode: '#F9A819',
+        period: {
+            start: '2025.05.26',
+            end: '2025.08.26'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'Vimeo IFrame을 활용하여 메인 히어로 영역에 영상 삽입 및 재생·정지 버튼을 통한 영상 제어 구현',
+                '풀페이지 구조에서 스크롤에 따라 히어로 영상의 크기와 위치가 변화하고, 축소된 영상이 우측 하단에 정렬되도록 스크롤 인터랙션 구현',
+                '히어로 영상의 상태에 따라 재생·정지 버튼의 노출을 제어하고, 영상이 축소된 상태에서 정지 후 전체 화면으로 전환될 경우 자동 재생되도록 동작 연계',
+                '스크롤 및 키보드의 Home, End, Page Up, Page Down 입력을 통한 페이지 이동을 지원하고, 방향키를 통한 이동은 제한하여 풀페이지 인터랙션에 맞게 입력 방식 대응'
+            ]
+        },
+        link: [
+            {
+                url: 'https://stonevstudio.com/',
+            }
+        ],
+    },{
+        id: 'hb-holdings',
+        kor: 'HB지주',
+        eng: 'HB HOLDINGS',
+        logo: '/img/project/logo_hb-holdings.svg',
+        description: '첨단제조·투자·무역 분야의 사업과 \n그룹사 정보를 소개하는 지주사 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'blue',
+        colorCode: '#1A3B92',
+        period: {
+            start: '2025.04.15',
+            end: '2025.07.10'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '메인 및 서브 페이지에서 position: sticky를 활용하여 콘텐츠가 겹쳐 올라오거나 배경 이미지가 고정된 상태에서 콘텐츠가 fade로 전환되는 등 스크롤 인터랙션 구현',
+                '글로벌 네트워크 지도에 SVG를 활용한 애니메이션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.hb-holdings.co.kr/',
+            }
+        ],
+    },{
+        id: 'sl-power',
+        kor: '에스엘파워',
+        eng: 'SL POWER',
+        logo: '/img/project/logo_sl-power.svg',
+        description: '이차전지 배터리팩과 로봇·모빌리티·에너지 분야의 \n제품 및 기술을 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'red',
+        colorCode: '#E60012',
+        period: {
+            start: '2025.03.25',
+            end: '2026.01.22'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '제조공정 서브 페이지에 공통 레이아웃을 적용하고, 슬라이드 및 탭 클릭을 통한 단계별 콘텐츠 전환 구현',
+                'URL 파라미터를 활용하여 접속 경로에 따라 해당 단계의 콘텐츠가 초기 활성화되도록 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.slpower.co.kr/kr/',
+            }
+        ],
+    },{
+        id: 'the-house-concert',
+        kor: '더하우스콘서트',
+        eng: 'THE HOUSE CONCERT',
+        logo: '/img/project/logo_the-house-concert.svg',
+        description: '하우스콘서트와 다양한 공연·페스티벌 및 \n문화예술 프로젝트를 소개하는 공연 콘텐츠 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'red',
+        colorCode: '#981B1F',
+        period: {
+            start: '2025.03.19',
+            end: '2025.06.25'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG를 활용하여 사이트 최초 접속 시 노출되는 인트로 애니메이션 구현',
+                '무채색과 명조 계열 서체를 활용한 디자인에 맞춰 슬라이드 전환 인터랙션 구현',
+                '소개 페이지에서 최초 스크롤 시에만 적용되는 스크롤 인터랙션 구현', 
+                '공연 캘린더, 회원가입, 로그인, 마이페이지 및 티켓 구매 관련 페이지 레이아웃 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.thehouseconcert.com/',
+            }
+        ],
+    },{
+        id: 'aizen-global',
+        kor: '에이젠글로벌',
+        eng: 'AIZEN GLOBAL',
+        logo: '/img/project/logo_aizen-global.svg',
+        description: 'AI 기술을 기반으로 한 금융 플랫폼과 \n핀테크 서비스를 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'ENG',
+        ],
+        color: 'blue',
+        colorCode: '#00A0DF',
+        period: {
+            start: '2025.02.17',
+            end: '2025.08.21'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '수출바우처 사업으로 정해진 기간 내 프로젝트 완료가 필수인 환경에서 일정에 맞춰 퍼블리싱 진행'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.aizenglobal.com/en/',
+            }
+        ],
+    },{
+        id: 'steg',
+        kor: '에스티이지',
+        eng: 'STEG',
+        logo: '/img/project/logo_steg.svg',
+        description: 'IT 서비스 관리(ITSM) 솔루션과 다양한 기업용 \n플랫폼 및 서비스를 소개하는 IT 전문기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+        ],
+        color: 'red',
+        colorCode: '#C30813',
+        period: {
+            start: '2025.01.21',
+            end: '2025.03.31'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG를 활용하여 사이트 최초 접속 시 노출되는 인트로 애니메이션 구현',
+                '빠른 사이트 오픈 요청에 따라 완료 기한에 맞춰 퍼블리싱 진행',
+                '다양한 형태의 도식을 하드코딩으로 구현하고, 구현이 어려운 도식은 이미지로 적용하여 모바일에서 클릭 시 새 창으로 확대할 수 있도록 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://steg.co.kr/kr/',
+            }
+        ],
+    },{
+        id: 'sukgyung-at',
+        kor: '석경에이티',
+        eng: 'SUKGYUNG AT',
+        logo: '/img/project/logo_sukgyung-at.svg',
+        description: '초미립자 무기화합물과 다양한 산업용 소재 및 \n연구개발 기술을 소개하는 첨단 소재 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+            'CHN',
+            'JPN'
+        ],
+        color: 'blue',
+        colorCode: '#035EFF',
+        period: {
+            start: '2025.01.09',
+            end: '2025.06.12'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG를 활용하여 사이트 최초 접속 시 노출되는 인트로 애니메이션 구현',
+                '메인에서 섹션이 겹쳐 올라가는 스크롤 인터랙션 구현',
+                '메인 최초 스크롤 시에만 콘텐츠가 전환되는 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.sukgyung.com/kr/',
+            }
+        ],
+    },{
+        id: 'creativity-accounting-firm',
+        kor: '창의회계법인',
+        eng: 'CREATIVITY ACCOUNTING FIRM',
+        logo: '/img/project/logo_creativity-accounting-firm.svg',
+        description: '회계·세무·재무·경영컨설팅 등 다양한 \n전문 서비스를 소개하는 회계법인 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'blue',
+        colorCode: '#00508F',
+        period: {
+            start: '2024.12.06',
+            end: '2025.03.07'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG를 활용하여 사이트 최초 접속 시 노출되는 인트로 애니메이션 구현',
+                'ScrollTrigger를 활용한 사명 스크롤 인터랙션 구현',
+            ]
+        },
+        link: [
+            {
+                url: 'https://changeui.co.kr/',
             }
         ],
     },
