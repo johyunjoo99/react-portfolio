@@ -493,7 +493,6 @@
 
 
                                 > div{
-                                    padding: 0 10px 3px;
                                     position: relative;
 
                                     &::before{
@@ -508,12 +507,23 @@
                                 }
 
                                 span{
+                                    display: block;
                                     font-size: 15px;
-                                    font-weight: 500;
+                                    font-weight: 400;
                                     color: #FFF;
+                                    padding: 3px 10px;
+                                    clip-path: inset(0 calc(100% - var(--width)) 0 0);
+                                    -webkit-clip-path: inset(0 calc(100% - var(--width)) 0 0);
                                     position: relative;
                                     z-index: 10;
-                                    mix-blend-mode: exclusion;
+
+                                    &.black{
+                                        font-weight: 600;
+                                        color: $color-text;
+                                        clip-path: inset(0 0 0 var(--width));
+                                        -webkit-clip-path: inset(0 0 0 var(--width));
+                                        @include absoluteCover;
+                                    }
                                 }
                             }
                         }

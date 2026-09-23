@@ -79,11 +79,13 @@ const ProjectPopup = ({ project, popupClose }) => {
                                         <div style={{ "--width" : `${project?.detail.participation.main}%` }}>
                                             <div>
                                                 <span>메인 {project?.detail.participation.main}%</span>
+                                                <span className="black">메인 {project?.detail.participation.main}%</span>
                                             </div>
                                         </div>
                                         <div>
                                             <div style={{ "--width" : `${project?.detail.participation.sub}%` }}>
                                                 <span>서브 {project?.detail.participation.sub}%</span>
+                                                <span className="black">서브 {project?.detail.participation.sub}%</span>
                                             </div>
                                         </div>
                                     </div>
