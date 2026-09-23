@@ -97,6 +97,7 @@ const ProjectItem = () => {
                                         <div className="grid">
                                             <div className="skill">
                                                 <ul>
+                                                    <li>[{item.environment}]</li>
                                                     {
                                                         item.skill.map((el) => 
                                                             <li key={el}>[{el}]</li>
