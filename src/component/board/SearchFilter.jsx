@@ -8,7 +8,19 @@ const SearchFilter = ({ isFilterOpen }) => {
     useLayoutEffect(() => {
         if(!filterRef.current) return;
 
-        filterRef.current.style.height = isFilterOpen ? '0px' : `${filterRef.current.scrollHeight}px`;
+        const updateHeight = () => {
+            filterRef.current.style.height = isFilterOpen 
+            ? '0px' 
+            : `${filterRef.current.scrollHeight}px`;
+        }
+
+        updateHeight();
+
+        window.addEventListener('resize', updateHeight);
+
+        return () => {
+            window.removeEventListener('resize', updateHeight);
+        }
     }, [isFilterOpen]);
 
     return (

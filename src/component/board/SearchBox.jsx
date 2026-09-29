@@ -13,6 +13,7 @@ const SearchBox = ({ isFilterOpen, setIsFilterOpen }) => {
   return (
     <div className="search-box">
       <Select
+        className="select"
         classNamePrefix={"sort-select"}
         options={sortOptions}
         value={sort}

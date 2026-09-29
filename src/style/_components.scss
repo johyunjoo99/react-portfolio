@@ -112,7 +112,7 @@
 .sort-select{
     &__single-value,
     &__option{
-        font-size: 17px;
+        font-size: 17px !important;
         font-weight: 400;
         color: $color-text !important;
     }
@@ -202,6 +202,17 @@
             transform: rotate(-180deg);
         }
     }
+
+    @include mediaWidth($media1280){
+        &__single-value,
+        &__option{
+            font-size: 16px !important;
+        }
+
+        &__value-container{
+            width: 100px;
+        }
+    }
 }
 
 
@@ -244,6 +255,7 @@
         &.filter{
             flex-shrink: 0;
             display: inline-flex;
+            justify-content: center;
             align-items: center;
             height: var(--height);
             gap: 12px;
@@ -297,6 +309,53 @@
                 height: 30px;
                 display: block;
                 background-image: url("/img/sub/icon_search.svg");
+            }
+        }
+    }
+
+    @include mediaWidth($media1280){
+        --height: 50px;  
+        --padding: 10px;
+
+        *{
+            font-size: 16px;
+        }
+
+        button{
+            &.filter{
+                padding-inline: 17px;
+
+                i{
+                    width: 8px;
+                    height: 6px;
+                }
+            }
+        }
+
+        .input{
+            button{
+                i{
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+    @include mediaWidth($media768){
+        flex-wrap: wrap;
+
+        .select{
+            width: 120px;
+        }
+
+        .input{
+            width: calc(100% - 135px);
+        }
+
+        button{
+            &.filter{
+                width: 100%;
+                gap: 16px;
             }
         }
     }
@@ -461,6 +520,79 @@
             }
         }
     }
+
+    @include mediaWidth($media1280){
+        --height: 50px;
+
+        .wrap{
+            padding: 30px;
+        }
+
+        legend{
+            font-size: 17px;
+        }
+
+        ul{
+            li{
+                label{
+                    padding-inline: 13px;
+
+                    &::before{
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .buttons{
+            button{
+                min-width: 130px;
+                font-size: 17px;
+                padding-inline: 17px;
+
+                i{
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+    }
+
+    @include mediaWidth($media768){
+        .wrap{
+            padding: 25px;
+        }
+    }
+
+    @include mediaWidth($media640){
+        .wrap{
+            padding: 20px;
+        }
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            li{
+                label{
+                    justify-content: center;
+                    width: 100%;
+                    text-align: center;
+
+                    span{
+                        right: 11px;
+                        transform: unset !important;
+                    }
+                }
+            }
+        }
+
+        .buttons{
+            button{
+                flex: 1 1 auto;
+            }
+        }
+    }
 }
 
 
@@ -484,6 +616,14 @@
                 color: $color-main;
             }
         }
+    }
+
+    @include mediaWidth($media1280){
+        margin-top: 40px;
+    }
+
+    @include mediaWidth($media960){
+        margin-top: 30px;
     }
 }
 

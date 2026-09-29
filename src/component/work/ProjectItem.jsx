@@ -16,10 +16,10 @@ const ProjectItem = ({ ProjectData, popupRef, setSelectedProject }) => {
             <td>
             <Link to="">{item.kor}</Link>
             </td>
-            <td>
+            <td data-th="Period : ">
                 <span className="num">{item.period.start} - {item.period.end}</span>
             </td>
-            <td>
+            <td data-th="Skill : ">
                 <ul className="skill">
                     <li>[{item.environment}]</li>
                     {
