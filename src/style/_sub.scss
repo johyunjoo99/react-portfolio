@@ -203,13 +203,21 @@
                     cursor: pointer;
 
                     @include hover{
+                        td{
+                            a{
+                                color: inherit;
+                            }
+                        }
+
                         &:hover{
                             td{
                                 color: $color-text;
 
                                 .arrow{
-                                    background: $color-text;
-                                    transform: rotate(-45deg);
+                                    &::before{
+                                        background: $color-text;
+                                        transform: rotate(-45deg);
+                                    }
                                 }
                             }
                         }
@@ -232,21 +240,29 @@
                         font-family: $font-base;
                         font-size: 18px;
                         font-weight: 600;
-                        color: inherit;
+                        color: $color-tit;
                     }
 
                     .arrow{
-                        display: block;
-                        width: calc(var(--size) - 5px);
-                        height: calc(var(--size) - 5px);
-                        background: $color-border;
-                        mask-image: url("/img/common/icon_viewmore.svg");
-                        -webkit-mask-image: url("/img/common/icon_viewmore.svg");
-                        @include maskContain;
-                        transform: rotate(0deg);
-                        transition-duration: $duration-basic;
-                        transition-property: background, transform;
-                        margin-left: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        vertical-align: middle;
+
+                        &::before{
+                            content: "";
+                            display: inline-block;
+                            width: calc(var(--size) - 5px);
+                            height: calc(var(--size) - 5px);
+                            background: $color-border;
+                            mask-image: url("/img/common/icon_viewmore.svg");
+                            -webkit-mask-image: url("/img/common/icon_viewmore.svg");
+                            @include maskContain;
+                            transform: rotate(0deg);
+                            transition-duration: $duration-basic;
+                            transition-property: background, transform;
+                            margin-left: auto;
+                        }
                     }
                 }
             }
@@ -265,7 +281,129 @@
                 font-size: 14px;
             }
         }
+        
+        @include mediaWidth($media1280){
+            --size: 30px;
 
+            table{
+                font-size: 14px;
+
+                colgroup{
+                    col{
+                        &.s{
+                            width: 40px;
+                        }
+
+                        &.m{
+                            width: 120px;
+                        }
+
+                        &.l{
+                            width: 280px;
+                        }
+                    }
+                }
+
+                tbody{
+                    td{
+                        a{
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mediaWidth(1060px){
+            table,
+            tbody{
+                display: block;
+            }
+
+            table{
+                border-top: 2px solid $color-tit;
+
+                colgroup,
+                thead{
+                    display: none;
+                }
+
+                tr{
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: calc(var(--size) + 15px) minmax(0, 1fr) 60px;
+                    width: 100%;
+                    padding: 15px 10px;
+
+                    @include hover{
+                        &:hover{
+                            .arrow{
+                                border-color: $color-text;
+                            }
+                        }
+                    }
+
+                    td{
+                        display: flex;
+                        align-items: baseline;
+                        gap: 5px;
+                        padding-bottom: 0;
+
+                        &:nth-of-type(1){
+                            display: none;
+                        }
+
+                        &:nth-of-type(2){
+                            order: 0;
+                            padding-top: 0;
+                            padding-right: 15px;
+                        }
+
+                        &:nth-of-type(3){
+                            order: 1;
+                            padding-top: 0;
+                        }
+
+                        &:nth-of-type(4), 
+                        &:nth-of-type(5){
+                            order: 4;
+                            grid-column: auto / span 2;
+
+                            &::before{
+                                content: attr(data-th);
+                                flex-shrink: 0;
+                                vertical-align: middle;
+                            }
+                        }
+
+                        &:nth-of-type(6){
+                            order: 3;
+                            grid-row: span 3;
+                            padding-top: 0;
+                        }
+
+                        a{
+                            font-size: 18px;
+                        }
+
+                        .arrow{
+                            width: 100%;
+                            aspect-ratio: 1 / 1;
+                            border: 1px solid $color-border;
+                            border-radius: 50%;
+                            transition-duration: $duration-basic;
+                            transition-property: border-color;
+
+                            &::before{
+                                width: calc(var(--size) - 2px);
+                                height: calc(var(--size) - 2px);
+                                margin: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
