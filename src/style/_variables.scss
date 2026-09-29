@@ -51,12 +51,22 @@ $mediaHeight700: 700px;
     }
 }
 
+@media screen and (max-width: $media1700){
+    :root{
+        /* Layout */
+        --subPt: 80px;
+        --subPb: 120px;
+    }
+}
+
 @media screen and (max-width: $media1280) {
     :root {
         /* Layout */
         --innerGap: 40px;
         --headerH: 60px;
         --navH: 36px;
+        --subPt: 60px;
+        --subPb: 100px;
 
         /* AOS */
         --aosP: 30px;
