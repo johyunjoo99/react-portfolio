@@ -2,6 +2,12 @@
 @use "mixins" as *;
 
 /* ===== Common ===== */
+body{
+    &.lock{
+        overflow: hidden;
+    }
+}
+
 #wrap{
     position: relative;
 }

@@ -449,12 +449,14 @@
             }
 
             .scroll-content{
-                max-height: 80vh;
+                max-height: 80dvh;
                 padding-block: 80px 100px;
                 overflow-x: clip;
                 overflow-y: auto;
+                -ms-overflow-style: none;
 
                 &::-webkit-scrollbar{ 
+                    display: none;
                     width: 7px; 
                 }
                 
@@ -472,6 +474,12 @@
                     border: 3px solid transparent;
                     border-top-width: 20px;
                     border-bottom-width: 20px;
+                }
+
+                @include hover{
+                    &::-webkit-scrollbar{ 
+                        display: block;
+                    }
                 }
             }
 
@@ -902,7 +910,7 @@
                         }
 
                         p{
-                            font-size: 18px;
+                            font-size: 17px;
                             margin-top: 15px;
                         }
                     }
@@ -945,8 +953,17 @@
 
             @include mediaWidth($media640){
                 .body{
+                    padding-inline: 15px;
+
                     .btns{
                         gap: 10px;
+
+                        .viewmore{
+
+                            span{
+                                padding-right: 20px;
+                            }
+                        }
                     }
                 }
             }

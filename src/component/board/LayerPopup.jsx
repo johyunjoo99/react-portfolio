@@ -1,14 +1,17 @@
 import { useState, useEffect, cloneElement, forwardRef, useImperativeHandle } from 'react'
 
 const LayerPopup = forwardRef(({ children, id }, ref) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const body = document.body;
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   function popupOpen(){
-    setIsPopupOpen(true)
+    body.classList.add('lock');
+    setIsPopupOpen(true);
   }
 
   function popupClose(){
-    setIsPopupOpen(false)
+    body.classList.remove('lock');
+    setIsPopupOpen(false);
   }
 
   useImperativeHandle(ref, () => ({
