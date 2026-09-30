@@ -727,6 +727,229 @@
                     }
                 }
             }
+
+            @include mediaWidth($media1700){
+                .head{
+                    padding-block: 15px;
+                }
+
+                .body{
+                    .title{
+                        margin-bottom: 60px;
+                    }
+
+                    .list-layout{
+                        --tit: 160px;
+                    }
+                }
+            }
+
+            @include mediaWidth($media1280){
+                .inner{
+                    padding-inline: 20px;
+                }
+
+                .head{
+                    .logo{
+                        img{
+                            height: 38px;
+                        }
+                    }
+
+                    .popup-close{
+                        i{
+                            width: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+
+                .scroll-content{
+                    padding-block: 60px 80px;
+                }
+
+                .body{
+                    .title{
+                        margin-bottom: 40px;
+
+                        > span{
+                            font-size: 13px;
+                            margin-bottom: 12px;
+                        }
+
+                        p{
+                            font-size: 18px;
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .card-layout{
+                        .box{
+                            min-height: 200px;
+                        }
+
+                        dl{
+                            dt{
+                                font-size: 19px;
+                            }
+                        }
+                    }
+
+                    .list-layout{
+                        --tit: 140px;
+                        font-size: 17px;
+
+                        .num{
+                            font-size: 16px;   
+                        }
+                    }
+                }
+            }
+
+            @include mediaWidth($media960){
+                .body{
+                    section + section{
+                        padding-top: 60px;
+                    }
+
+                    .card-layout{
+                        grid-template-columns: repeat(1, 100%);
+
+                        .box{
+                            min-height: 160px;
+                            padding: 15px;
+                        }
+                    }
+
+                    .list-layout{
+                        grid-template-columns: 40px auto;
+                        align-items: baseline;
+                        border: none;
+                        padding-top: 0;
+
+                        &:not(:last-child){
+                            margin-bottom: 60px;
+                        }
+
+                        .num{
+                            font-variant-numeric: tabular-nums;
+
+                            &::after{
+                                content: ".";
+                                margin: 0 2px;
+                            }
+                        }
+
+                        .content{
+                            grid-column: span 2;
+                            border-top: 1px solid $color-text;
+                            text-align: left;
+                            margin-top: var(--listGap);
+                            padding-top: var(--listGap);
+
+                            > ul{
+                                > li{
+                                    &:last-child{
+                                        border-bottom: 1px solid $color-border;
+                                        padding-bottom: var(--listGap);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btns{
+                        margin-top: 40px;
+                    }
+                }
+            }
+
+            @include mediaWidth($media768){
+                .inner{
+                    padding-inline: 15px;
+                }
+
+                .head{
+                    padding-block: 12px;
+
+                    .logo{
+                        img{
+                            height: 36px;
+                        }
+                    }
+
+                    .popup-close{
+                        i{
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+
+                .scroll-content{
+                    padding-block: 40px 60px;
+                }
+
+                .body{
+                    .title{
+                        > span{
+                            font-size: 12px;
+                            margin-bottom: 9px;
+                        }
+
+                        h4{
+                            font-size: 4.7rem;
+                        }
+
+                        p{
+                            font-size: 18px;
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .card-layout{
+                        .box{
+                            min-height: 140px;
+                        }
+
+                        dl{
+                            dt{
+                                font-size: 17px;
+                            }
+
+                            dd{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .list-layout{
+                        --tit: 120px;
+
+                        .content{
+                            font-size: 16px;
+
+                            dl{
+                                dt{
+                                    padding-right: 20px;
+                                }
+                            }
+
+                            .gauge{
+                                grid-template-columns: repeat(1, 100%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include mediaWidth($media640){
+                .body{
+                    .btns{
+                        gap: 10px;
+                    }
+                }
+            }
         }
     }
 }
