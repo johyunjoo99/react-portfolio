@@ -12,15 +12,27 @@ const Work = () => {
   const popupRef = useRef(null);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [searchType, setSearchType] = useState('all');
+  const [inputKeyword, setInputKeyword] = useState('');
+  const [searchKeyword, setSearchKeyword] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchKeyword(inputKeyword.trim());
+  }
 
   return (
     <>
       <SubLayout id="work">
         <div className="w1700">
-          <form action="">
+          <form onSubmit={handleSearch}>
             <SearchBox
               isFilterOpen={isFilterOpen}
               setIsFilterOpen={setIsFilterOpen}
+              searchType={searchType}
+              setSearchType={setSearchType}
+              inputKeyword={inputKeyword}
+              setInputKeyword={setInputKeyword}
             />
             <SearchFilter
               isFilterOpen={isFilterOpen}
@@ -29,6 +41,8 @@ const Work = () => {
           <ProjectBoard 
             popupRef={popupRef} 
             setSelectedProject={setSelectedProject}
+            searchType={searchType}
+            searchKeyword={searchKeyword}
           />
         </div>
         <LayerPopup id={"project"} ref={popupRef}>

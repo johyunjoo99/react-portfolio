@@ -4,9 +4,38 @@ import ProjectData from '../../data/projectData'
 import BoardInfo from '../board/BoardInfo'
 import ProjectItem from './ProjectItem'
 
-const ProjectBoard = ({ popupRef, setSelectedProject }) => {
-  const sortedProjectData = [...ProjectData].sort((a, b) => (
-    new Date(b.period.end) - new Date(a.period.end)
+const ProjectBoard = ({ 
+  popupRef, 
+  setSelectedProject,
+  searchType,
+  searchKeyword, 
+}) => {
+  const filteredProjectData = ProjectData.filter((project) => {
+    if(!searchKeyword) return true
+
+    const keyword = searchKeyword.toLowerCase();
+    const title = project.kor.toLowerCase();
+    const contents = [
+      project.description,
+      ...(project.detail?.tasks || []),
+      ...(project.detail?.features || [])
+    ].filter(Boolean).join(' ').toLowerCase();
+
+    if(searchType === "title"){
+      return title.includes(keyword);
+    }
+
+    if(searchType === 'contents'){
+      return contents.includes(keyword);
+    }
+
+    return (
+      title.includes(keyword) || contents.includes(keyword)
+    )
+  });
+
+  const sortedProjectData = [...filteredProjectData].sort((a, b) => (
+    new Date(b.period.end.replace(/\./g, '-')) - new Date(a.period.end.replace(/\./g, '-'))
   ))
 
   return (
