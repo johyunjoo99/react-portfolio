@@ -8,17 +8,15 @@ const sortOptions = [
     { value: 'title-desc', label: '제목 Z-A' },
 ]
 
-const BoardInfo = ({ Data }) => {
-  const [sort, setSort] = useState(sortOptions[0]);
-
+const BoardInfo = ({ Data, sort, setSort }) => {
   return (
     <div className="board-info">
         <p className="total">총 <strong>{Data.length}</strong>개</p>
         <Select
             classNamePrefix={"sort-select"}
             options={sortOptions}
-            value={sort}
-            onChange={setSort}
+            value={sortOptions.find(option => option.value === sort)}
+            onChange={(option) => setSort(option.value)}
             isSearchable={false}
         />
     </div>

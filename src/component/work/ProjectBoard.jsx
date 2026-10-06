@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 import ProjectData from '../../data/projectData'
 import BoardInfo from '../board/BoardInfo'
@@ -11,7 +11,9 @@ const ProjectBoard = ({
   searchKeyword, 
   filters
 }) => {
-  //SearchBox
+  //BoardInfo
+  const [sort, setSort] = useState('latest');
+
   const filteredProjectData = ProjectData.filter((project) => {
     //SearchFilter
     const environmentMatch = filters.environment === 'all' || project.environment.toLowerCase() === filters.environment;
@@ -52,13 +54,34 @@ const ProjectBoard = ({
     )
   });
 
-  const sortedProjectData = [...filteredProjectData].sort((a, b) => (
-    new Date(b.period.end.replace(/\./g, '-')) - new Date(a.period.end.replace(/\./g, '-'))
-  ))
+  //BoardInfo
+  const sortedProjectData = [...filteredProjectData].sort((a, b) => {
+    if(sort === 'latest'){
+      return new Date(b.period.end.replace(/\./g, '-')) - new Date(a.period.end.replace(/\./g, '-'));
+    }  
+
+    if(sort === 'oldest'){
+      return new Date(a.period.end.replace(/\./g, '-')) - new Date(b.period.end.replace(/\./g, '-'))
+    }
+
+    if(sort === 'title-asc'){
+      return a.kor.localeCompare(b.kor);
+    }
+
+    if(sort === 'title-desc'){
+      return b.kor.localeCompare(a.kor);
+    }
+
+    return 0;
+  })
 
   return (
     <div className="board-ctn">
-      <BoardInfo Data={ProjectData}/>
+      <BoardInfo
+       Data={filteredProjectData}
+       sort={sort}
+       setSort={setSort}
+      />
       <div className="project-board">
         <table>
           <colgroup>
