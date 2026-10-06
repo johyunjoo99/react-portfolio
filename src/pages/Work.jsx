@@ -16,10 +16,18 @@ const Work = () => {
   const [inputKeyword, setInputKeyword] = useState('');
   const [searchKeyword, setSearchKeyword] = useState('');
 
+  //SearchBox
   const handleSearch = (e) => {
     e.preventDefault();
     setSearchKeyword(inputKeyword.trim());
   }
+
+  //SearchFilter
+  const [filters, setFilters] = useState({
+    environment: 'all',
+    language: ['kor', 'eng', 'chn', 'jpn'],
+    color: 'all',
+  });
 
   return (
     <>
@@ -36,6 +44,8 @@ const Work = () => {
             />
             <SearchFilter
               isFilterOpen={isFilterOpen}
+              filters={filters}
+              setFilters={setFilters}
             />
           </form>
           <ProjectBoard 
@@ -43,6 +53,7 @@ const Work = () => {
             setSelectedProject={setSelectedProject}
             searchType={searchType}
             searchKeyword={searchKeyword}
+            filters={filters}
           />
         </div>
         <LayerPopup id={"project"} ref={popupRef}>

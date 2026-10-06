@@ -377,11 +377,10 @@
     }
 
     fieldset{
-        border-bottom: 1px solid $color-border;
-        padding-bottom: 20px;
-
-        &:not(:first-child){
-            padding-top: 20px;
+        &:not(:last-child){
+            border-bottom: 1px solid $color-border;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
     }
 
@@ -471,55 +470,55 @@
         }
     }
 
-    .buttons{
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-top: 20px;
+    // .buttons{
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     gap: 10px;
+    //     margin-top: 20px;
 
-        button{
-            min-width: 140px;
-            height: var(--height);
-            display: inline-flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-            border: none;
-            font-family: $font-base;
-            font-size: 18px;
-            font-weight: 600;
-            padding-inline: 20px;
+    //     button{
+    //         min-width: 140px;
+    //         height: var(--height);
+    //         display: inline-flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //         gap: 10px;
+    //         border: none;
+    //         font-family: $font-base;
+    //         font-size: 18px;
+    //         font-weight: 600;
+    //         padding-inline: 20px;
 
-            i{
-                display: inline-flex;
-                width: 24px;
-                height: 24px;
-                @include maskContain;
-            }
+    //         i{
+    //             display: inline-flex;
+    //             width: 24px;
+    //             height: 24px;
+    //             @include maskContain;
+    //         }
 
-            &[type="reset"]{
-                background: #EDEDED;
-                color: #999;
+    //         &[type="reset"]{
+    //             background: #EDEDED;
+    //             color: #999;
 
-                i{
-                    background: #999;
-                    mask-image: url("/img/sub/icon_form_reset.svg");
-                    -webkit-mask-image: url("/img/sub/icon_form_reset.svg");
-                }
-            }
+    //             i{
+    //                 background: #999;
+    //                 mask-image: url("/img/sub/icon_form_reset.svg");
+    //                 -webkit-mask-image: url("/img/sub/icon_form_reset.svg");
+    //             }
+    //         }
 
-            &[type="submit"]{
-                background: $color-main;
-                color: #FFF;
+    //         &[type="submit"]{
+    //             background: $color-main;
+    //             color: #FFF;
 
-                i{
-                    background: #FFF;
-                    mask-image: url("/img/sub/icon_form_submit.svg");
-                    -webkit-mask-image: url("/img/sub/icon_form_submit.svg");
-                }
-            }
-        }
-    }
+    //             i{
+    //                 background: #FFF;
+    //                 mask-image: url("/img/sub/icon_form_submit.svg");
+    //                 -webkit-mask-image: url("/img/sub/icon_form_submit.svg");
+    //             }
+    //         }
+    //     }
+    // }
 
     @include mediaWidth($media1280){
         --height: 50px;
@@ -544,18 +543,18 @@
             }
         }
 
-        .buttons{
-            button{
-                min-width: 130px;
-                font-size: 17px;
-                padding-inline: 17px;
+        // .buttons{
+        //     button{
+        //         min-width: 130px;
+        //         font-size: 17px;
+        //         padding-inline: 17px;
 
-                i{
-                    width: 21px;
-                    height: 21px;
-                }
-            }
-        }
+        //         i{
+        //             width: 21px;
+        //             height: 21px;
+        //         }
+        //     }
+        // }
     }
 
     @include mediaWidth($media768){
@@ -587,11 +586,11 @@
             }
         }
 
-        .buttons{
-            button{
-                flex: 1 1 auto;
-            }
-        }
+        // .buttons{
+        //     button{
+        //         flex: 1 1 auto;
+        //     }
+        // }
     }
 }
 

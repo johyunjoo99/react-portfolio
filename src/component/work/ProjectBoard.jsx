@@ -9,10 +9,28 @@ const ProjectBoard = ({
   setSelectedProject,
   searchType,
   searchKeyword, 
+  filters
 }) => {
+  //SearchBox
   const filteredProjectData = ProjectData.filter((project) => {
-    if(!searchKeyword) return true
+    //SearchFilter
+    const environmentMatch = filters.environment === 'all' || project.environment.toLowerCase() === filters.environment;
 
+    const languageMatch = filters.language.some((language) => (
+      project.language.includes(language.toUpperCase())
+    ));
+
+    const colorMatch = filters.color === 'all' || project.color === filters.color;
+
+    if(!environmentMatch || !languageMatch || !colorMatch){
+      return false;
+    }
+
+    //SearchBox
+    if(!searchKeyword){
+      return true;
+    }
+    
     const keyword = searchKeyword.toLowerCase();
     const title = project.kor.toLowerCase();
     const contents = [

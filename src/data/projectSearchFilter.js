@@ -7,11 +7,10 @@ const projectSearchFilter = {
     },
 
     language: {
-        all: "전체",
-        ko: "국문",
-        en: "영문",
-        zh: "중문",
-        jp: "일문",
+        kor: "국문",
+        eng: "영문",
+        chn: "중문",
+        jpn: "일문",
     },
 
     color: {
