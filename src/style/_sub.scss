@@ -573,12 +573,13 @@
 
                     .box{
                         min-height: 250px;
-                        background: $color-gray;
+                        background: var(--pointColor);
                         padding: 20px;
                         position: relative;
                         overflow: hidden;
 
                         .hover{
+                            display: none;
                             width: 0;
                             background: var(--pointColor);
                             border-radius: 50%;
@@ -593,6 +594,22 @@
                         }
 
                         @include hover{
+                            background: $color-gray;
+
+                            .hover{
+                                display: block;
+                            }
+
+                            dl{
+                                dt{
+                                    color: $color-tit;
+                                }
+
+                                dd{
+                                    color: $color-text;
+                                }
+                            }
+
                             &:hover{
                                 .hover{
                                     width: 1000%;
@@ -632,13 +649,13 @@
                             flex: 1 0 auto;
                             font-size: 20px;
                             font-weight: 600;
-                            color: $color-tit;
+                            color: #FFF;
                             margin-bottom: 10px;
                         }
 
                         dd{
                             font-size: 15px;
-                            color: $color-text;
+                            color: rgba(255, 255, 255, 0.8);
                             text-align: right;
                         }
                     }
@@ -771,7 +788,15 @@
                     gap: 20px;
 
                     .viewmore{
+                        &::before{
+                            background: var(--pointColor);
+                        }
+
                         @include hover{
+                            &::before{
+                                background: $color-text;
+                            }
+
                             &:hover{
                                 &::before{
                                     background: var(--pointColor);

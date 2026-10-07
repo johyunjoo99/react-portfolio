@@ -3,7 +3,7 @@ const projectData = [
         id: 'lg-hicaresolution',
         kor: 'LG하이케어솔루션',
         eng: 'LG HICARESOLUTION',
-        logo: '/img/project/logo_lg-hicare-solution.svg',
+        logo: 'img/project/logo_lg-hicare-solution.svg',
         description: '제품별 케어 서비스와 혜택을 확인하고, \n필요한 서비스를 신청할 수 있는 웹사이트입니다.',
         environment: 'JSP',
         skill: [
@@ -54,7 +54,7 @@ const projectData = [
         id: 'paldo-global',
         kor: '팔도 글로벌',
         eng: 'PALDO GLOBAL',
-        logo: '/img/project/logo_paldo-global.svg',
+        logo: 'img/project/logo_paldo-global.svg',
         description: '다양한 제품과 콘텐츠를 소개하는 \n글로벌 고객을 위한 영문·중문 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -102,7 +102,7 @@ const projectData = [
         id: 'dong-a-st',
         kor: '동아ST',
         eng: 'DONG-A ST',
-        logo: '/img/project/logo_donga-st.svg',
+        logo: 'img/project/logo_donga-st.svg',
         description: '신약개발을 위한 R&D 전략과 \n주요 파이프라인을 소개하는 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -150,7 +150,7 @@ const projectData = [
         id: 'pyunghwa-holdings',
         kor: '평화홀딩스',
         eng: 'PYUNGHWA HOLDINGS',
-        logo: '/img/project/logo_pyunghwa-holdings.svg',
+        logo: 'img/project/logo_pyunghwa-holdings.svg',
         description: '계열사별 다양한 사업과 제품 정보를 \n한곳에서 소개하는 통합 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -200,8 +200,8 @@ const projectData = [
         id: 'samwoo-tax-accounting-corp',
         kor: '삼우세무법인 강남지점',
         eng: 'SAMWOO TAX ACCOUNTING CORP',
-        logo: '/img/project/logo_samwoo-tax-accounting-corp.svg',
-        description: '세무 전문 서비스와 성공사례를 소개하고 \n상담 및 세무 관련 정보를 제공하는 웹사이트입니다.',
+        logo: 'img/project/logo_samwoo-tax-accounting-corp.svg',
+        description: '세무 전문 서비스와 성공사례를 소개하고 \n상담 및 세무 관련 정보를 제공하는 세무법인 웹사이트입니다.',
         environment: 'PHP',
         skill: [
             'HTML5',
@@ -247,7 +247,7 @@ const projectData = [
         id: 'mkd',
         kor: '엠케이디',
         eng: 'MKD',
-        logo: '/img/project/logo_mkd.svg',
+        logo: 'img/project/logo_mkd.svg',
         description: '글로벌 트레이딩과 무역 컨설팅 등 \n다양한 사업 영역을 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -289,7 +289,7 @@ const projectData = [
         id: 'fns-mall',
         kor: '에프엔에스 판매 사이트',
         eng: 'FNS MALL',
-        logo: '/img/project/logo_fns-mall.svg',
+        logo: 'img/project/logo_fns-mall.svg',
         description: '제품 정보를 확인하고 관심 제품을 담아 \n제품 문의 및 거래 상담을 진행할 수 있는 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -336,7 +336,7 @@ const projectData = [
         id: 'kumkang-transformer',
         kor: '금강변압기',
         eng: 'KUMKANG TRANSFORMER',
-        logo: '/img/project/logo_kumkang-transformer.svg',
+        logo: 'img/project/logo_kumkang-transformer.svg',
         description: '다양한 변압기 제품과 전력 솔루션을 소개하고 \n프로젝트 문의 및 견적 상담을 제공하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -382,7 +382,7 @@ const projectData = [
         id: 'ds-navcours',
         kor: '덕산넵코어스',
         eng: 'DS NAVCOURS',
-        logo: '/img/project/logo_ds-navcours.svg',
+        logo: 'img/project/logo_ds-navcours.svg',
         description: '항법·항재밍 기술을 기반으로 한 \n방위·우주·민수 분야의 사업과 제품을 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -430,8 +430,8 @@ const projectData = [
         id: 'est-energy',
         kor: '이에스티에너지',
         eng: 'EST ENERGY',
-        logo: '/img/project/logo_est-energy.svg',
-        description: '탄소중립과 자원순환을 위한 기술을 연구·개발하고 \n지속 가능한 에너지 산업의 미래를 만들어가는 기업 웹사이트입니다.',
+        logo: 'img/project/logo_est-energy.svg',
+        description: '탄소중립과 자원순환을 위한 기술 연구·개발과 \n지속 가능한 에너지 사업을 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
             'HTML5',
@@ -474,7 +474,7 @@ const projectData = [
         id: '2isys',
         kor: '투아이시스',
         eng: '2ISYS',
-        logo: '/img/project/logo_2isys.svg',
+        logo: 'img/project/logo_2isys.svg',
         description: '철도시설물 및 차량의 자동검측·결함진단 솔루션과 \n관련 기술 및 사업 분야를 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -522,7 +522,7 @@ const projectData = [
         id: 'thedonee',
         kor: '더도니',
         eng: 'THEDONEE',
-        logo: '/img/project/logo_thedonee.svg',
+        logo: 'img/project/logo_thedonee.svg',
         description: '첨단 의료기기와 바이오 기술을 개발하고 \n주요 제품 및 연구개발 분야를 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -568,8 +568,8 @@ const projectData = [
         id: 'curiosis',
         kor: '큐리오시스',
         eng: 'CURIOSIS',
-        logo: '/img/project/logo_curiosis.svg',
-        description: '생명과학 연구를 위한 실험 장비와 솔루션을 소개하고 \n주요 제품 및 기술 정보를 제공하는 기업 웹사이트입니다.',
+        logo: 'img/project/logo_curiosis.svg',
+        description: '생명과학 연구용 실험 장비와 솔루션, \n주요 제품 및 기술 정보를 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
             'HTML5',
@@ -616,7 +616,7 @@ const projectData = [
         id: 'hyunam-construction',
         kor: '현암건설산업',
         eng: 'HYUNAM CONSTRUCTION',
-        logo: '/img/project/logo_hyunam-construction.svg',
+        logo: 'img/project/logo_hyunam-construction.svg',
         description: '구조물 해체공사와 다양한 해체 공법 및 \n시공 실적을 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -662,7 +662,7 @@ const projectData = [
         id: 'mkl',
         kor: '엠케이엘',
         eng: 'MKL',
-        logo: '/img/project/logo_mkl.svg',
+        logo: 'img/project/logo_mkl.svg',
         description: '글로벌 물류 서비스와 다양한 운송 솔루션을 \n소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -712,7 +712,7 @@ const projectData = [
         id: 'migun-architects',
         kor: '미건종합건축사사무소',
         eng: 'MIGUN ARCHITECTS',
-        logo: '/img/project/logo_migun-architects.svg',
+        logo: 'img/project/logo_migun-architects.svg',
         description: '다양한 건축 프로젝트와 설계 서비스를 \n소개하는 건축사사무소 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -758,7 +758,7 @@ const projectData = [
         id: 'stonev-studio',
         kor: '스톤브이스튜디오',
         eng: 'STONEV STUDIO',
-        logo: '/img/project/logo_stonev-studio.svg',
+        logo: 'img/project/logo_stonev-studio.svg',
         description: 'VFX 및 다양한 디지털 콘텐츠 제작 프로젝트와 \n서비스를 소개하는 크리에이티브 스튜디오 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -806,7 +806,7 @@ const projectData = [
         id: 'hb-holdings',
         kor: 'HB지주',
         eng: 'HB HOLDINGS',
-        logo: '/img/project/logo_hb-holdings.svg',
+        logo: 'img/project/logo_hb-holdings.svg',
         description: '첨단제조·투자·무역 분야의 사업과 \n그룹사 정보를 소개하는 지주사 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -852,7 +852,7 @@ const projectData = [
         id: 'sl-power',
         kor: '에스엘파워',
         eng: 'SL POWER',
-        logo: '/img/project/logo_sl-power.svg',
+        logo: 'img/project/logo_sl-power.svg',
         description: '이차전지 배터리팩과 로봇·모빌리티·에너지 분야의 \n제품 및 기술을 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -899,7 +899,7 @@ const projectData = [
         id: 'the-house-concert',
         kor: '더하우스콘서트',
         eng: 'THE HOUSE CONCERT',
-        logo: '/img/project/logo_the-house-concert.svg',
+        logo: 'img/project/logo_the-house-concert.svg',
         description: '하우스콘서트와 다양한 공연·페스티벌 및 \n문화예술 프로젝트를 소개하는 공연 콘텐츠 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -947,7 +947,7 @@ const projectData = [
         id: 'aizen-global',
         kor: '에이젠글로벌',
         eng: 'AIZEN GLOBAL',
-        logo: '/img/project/logo_aizen-global.svg',
+        logo: 'img/project/logo_aizen-global.svg',
         description: 'AI 기술을 기반으로 한 금융 플랫폼과 \n핀테크 서비스를 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -992,7 +992,7 @@ const projectData = [
         id: 'steg',
         kor: '에스티이지',
         eng: 'STEG',
-        logo: '/img/project/logo_steg.svg',
+        logo: 'img/project/logo_steg.svg',
         description: 'IT 서비스 관리(ITSM) 솔루션과 다양한 기업용 \n플랫폼 및 서비스를 소개하는 IT 전문기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -1041,8 +1041,8 @@ const projectData = [
         id: 'sukgyung-at',
         kor: '석경에이티',
         eng: 'SUKGYUNG AT',
-        logo: '/img/project/logo_sukgyung-at.svg',
-        description: '초미립자 무기화합물과 다양한 산업용 소재 및 \n연구개발 기술을 소개하는 첨단 소재 기업 웹사이트입니다.',
+        logo: 'img/project/logo_sukgyung-at.svg',
+        description: '초미립자 무기화합물과 산업용 소재, \n연구개발 기술을 소개하는 첨단 소재 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
             'HTML5',
@@ -1091,7 +1091,7 @@ const projectData = [
         id: 'creativity-accounting-firm',
         kor: '창의회계법인',
         eng: 'CREATIVITY ACCOUNTING FIRM',
-        logo: '/img/project/logo_creativity-accounting-firm.svg',
+        logo: 'img/project/logo_creativity-accounting-firm.svg',
         description: '회계·세무·재무·경영컨설팅 등 다양한 \n전문 서비스를 소개하는 회계법인 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -1137,7 +1137,7 @@ const projectData = [
         id: 'hucord-bio',
         kor: '휴코드바이오',
         eng: 'HUCORD BIO',
-        logo: '/img/project/logo_hucord-bio.svg',
+        logo: 'img/project/logo_hucord-bio.svg',
         description: '제대혈 보관과 줄기세포 R&D, 배양액(HSCM) 사업을 \n소개하는 바이오 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -1185,7 +1185,7 @@ const projectData = [
         id: 'kyungsung-mt',
         kor: '경성엠티',
         eng: 'KYUNGSUNG MT',
-        logo: '/img/project/logo_kyungsung-mt.svg',
+        logo: 'img/project/logo_kyungsung-mt.svg',
         description: '지상 무기체계 부품 제조와 창정비, 시험장비 등 \n방산 분야의 사업과 기술력을 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -1228,6 +1228,247 @@ const projectData = [
         link: [
             {
                 url: 'https://www.kyungsungmt.com/',
+            }
+        ],
+    },{
+        id: 'hankook-special-gas',
+        kor: '한국특수가스',
+        eng: 'HANKOOK SPECIAL GAS',
+        logo: 'img/project/logo_hankook-special-gas.svg',
+        description: '산업용 특수가스 제품과 공급방식, \n사업 분야를 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'green',
+        colorCode: '#00A550',
+        period: {
+            start: '2024.09.20',
+            end: '2025.04.01'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '사이트 전반에 풀페이지 스크롤 적용',
+                '메인 페이지 일부 영역에 페이드 전환 인터랙션 구현',
+                '게시판·문의폼·상세 페이지 등 일부 서브 페이지 영역은 일반 스크롤로 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.hksg.co.kr/',
+            }
+        ],
+    },{
+        id: 'korea-semipermanent-makeup-association',
+        kor: '한국반영구화장협회',
+        eng: 'KSMA',
+        logo: 'img/project/logo-korea-semipermanent-makeup-association.svg',
+        description: '반영구화장·왁싱·속눈썹 등 뷰티 교육과정과 \n자격증 정보를 소개하는 협회 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'mono',
+        colorCode: '#000000',
+        period: {
+            start: '2024.08.21',
+            end: '2024.10.16'
+        },
+        type: "협회 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '리뉴얼 프로젝트로 기존 URL 유지를 위해 기존 메뉴는 동일한 파일 경로·파일명으로 작업',
+                '로그인·회원가입·마이페이지 등 회원 관련 주요 UI 구현',
+                '전 페이지 공통 폼을 파일 하나로 구성하고 include로 삽입하여 유지보수 효율 고려',
+                'thead가 있는 table의 반응형 레이아웃 대응'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.kpa365.com/',
+            }
+        ],
+    },{
+        id: 'ninano-company',
+        kor: '니나노컴퍼니',
+        eng: 'NINANO COMPANY',
+        logo: 'img/project/logo-ninano-company.svg',
+        description: '드론 기반 무인항공기 제품과 산업별 솔루션, \n기술력을 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'red',
+        colorCode: '#FF8672',
+        period: {
+            start: '2024.07.24',
+            end: '2024.12.23'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '최초 접속 시 노출되는 SVG 인트로 애니메이션 구현',
+                '제품 이미지 위 버튼 클릭 시 해당 부품 정보가 나타나는 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.ninano.company/',
+            }
+        ],
+    },{
+        id: 'hnj-corporation',
+        kor: '에이치엔제이코프',
+        eng: 'H&J CORPORATION',
+        logo: 'img/project/logo-hnj-corporation.svg',
+        description: '반도체 장비와 소재·부품, Foundry Service, \nPCB 가공 사업을 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'blue',
+        colorCode: '#0F206C',
+        period: {
+            start: '2024.07.08',
+            end: '2024.09.20'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '최초 접속 시 노출되는 SVG 인트로 애니메이션 구현',
+                '풀페이지 스크롤 구조 내 일반 스크롤 인터랙션 구현',
+                '고정된 텍스트와 스크롤되는 콘텐츠가 겹치는 구간에 mix-blend-mode 적용',
+                '제품 상세 페이지 콘텐츠 퍼블리싱'   
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.hnjcorp.co.kr/',
+            }
+        ],
+    },{
+        id: 'hlb-therapeutics',
+        kor: '에이치엘비테라퓨틱스',
+        eng: 'HLB THERAPEUTICS',
+        logo: 'img/project/logo-hlb-therapeutics.svg',
+        description: '',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'orange',
+        colorCode: '#F57D21',
+        period: {
+            start: '2024.06.17',
+            end: '2024.09.02'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '풀페이지 스크롤 구조 내 일반 스크롤 인터랙션 구현',
+                '호버 시 마우스 진입 방향에 따라 배경색이 퍼지는 인터랙션 구현',
+                '서브 페이지 최상단은 다크 모드, 스크롤 시 화이트 모드로 전환되는 인터랙션 구현',
+                '파이프라인 임상단계 게이지가 차오르는 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://hlbtherapeutics.co.kr/',
             }
         ],
     },
