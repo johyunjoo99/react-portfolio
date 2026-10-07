@@ -103,11 +103,19 @@ const ProjectBoard = ({
             </tr>
           </thead>
           <tbody>
-            <ProjectItem 
-              ProjectData={sortedProjectData} 
-              popupRef={popupRef}
-              setSelectedProject={setSelectedProject}
-            />
+            {
+              !filteredProjectData.length 
+              ? <tr className="noData">
+                  <td colSpan="6">
+                    <p>검색 결과가 없습니다.</p>
+                  </td>
+                </tr>
+              : <ProjectItem 
+                  ProjectData={sortedProjectData} 
+                  popupRef={popupRef}
+                  setSelectedProject={setSelectedProject}
+                />
+            }
           </tbody>
         </table>
       </div> 

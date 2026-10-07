@@ -510,7 +510,7 @@ const projectData = [
             features: [
                 '모바일 별도 레이아웃을 .clone()으로 구성하여 유지보수 효율 고려', 
                 '2분할 배경을 단일 이미지로 구성하여 인터랙션 구현',
-                '2차 메뉴 이동 시 서브 히어로를 건너뛰고 콘텐츠 영역으로 바로 이동하도록 구현'
+                '서브 히어로의 2차 메뉴 버튼 이동 시 히어로 영역을 건너뛰고 콘텐츠 영역으로 바로 이동하도록 구현'
             ]
         },
         link: [
@@ -839,7 +839,7 @@ const projectData = [
                 'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
             ],
             features: [
-                'position: sticky 기반 콘텐츠 겹침 및 배경 고정 후 fade 전환 스크롤 인터랙션 구현',
+                'position: sticky; 기반 콘텐츠 겹침 및 배경 고정 후 fade 전환 스크롤 인터랙션 구현',
                 '글로벌 네트워크 지도 SVG 애니메이션 구현'
             ]
         },
@@ -1028,7 +1028,8 @@ const projectData = [
             features: [
                 '최초 접속 시 노출되는 SVG 인트로 애니메이션 구현',
                 '빠른 사이트 오픈 요청에 맞춰 일정 내 퍼블리싱 완료',
-                '도식은 하드코딩으로 구현하되, 복잡한 도식은 이미지로 적용하고 모바일에서 새 창 확대 지원'
+                '다양한 도식을 하드코딩으로 직접 구현', 
+                '구현이 복잡한 도식은 이미지로 적용하고, 모바일에서는 새 탭으로 열어 확대해 볼 수 있도록 대응'
             ]
         },
         link: [
@@ -1130,6 +1131,103 @@ const projectData = [
         link: [
             {
                 url: 'https://changeui.co.kr/',
+            }
+        ],
+    },{
+        id: 'hucord-bio',
+        kor: '휴코드바이오',
+        eng: 'HUCORD BIO',
+        logo: '/img/project/logo_hucord-bio.svg',
+        description: '제대혈 보관과 줄기세포 R&D, 배양액(HSCM) 사업을 \n소개하는 바이오 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'green',
+        colorCode: '#009944',
+        period: {
+            start: '2024.10.29',
+            end: '2025.02.05'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '시안에 없던 두 가지 포인트 폰트 활용 인터랙션을 직접 판단하여 추가 구현',
+                '메인 히어로 영역에 ScrollTrigger 기반 인터랙션 구현', 
+                '서브 페이지에 화면 고정 효과를 기본으로 다양한 스크롤 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://hucord.com/',
+            }
+        ],
+    },{
+        id: 'kyungsung-mt',
+        kor: '경성엠티',
+        eng: 'KYUNGSUNG MT',
+        logo: '/img/project/logo_kyungsung-mt.svg',
+        description: '지상 무기체계 부품 제조와 창정비, 시험장비 등 \n방산 분야의 사업과 기술력을 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'blue',
+        colorCode: '#2E3092',
+        period: {
+            start: '2024.09.26',
+            end: '2025.06.26'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '최초 접속 시 노출되는 SVG 인트로 애니메이션 구현',
+                'Notice 아이템 호버 시 이미지와 텍스트가 겹치는 구간에 mix-blend-mode를 적용한 인터랙션 구현',
+                '사업분야 영역의 + 버튼 클릭 시 아이템이 퍼지는 인터랙션 구현',
+                'ESG 페이지의 다양한 도식 퍼블리싱'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.kyungsungmt.com/',
             }
         ],
     },

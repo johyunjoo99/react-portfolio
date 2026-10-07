@@ -167,6 +167,18 @@
             tr{
                 border-bottom: 1px solid $color-border;
 
+                &.noData{
+                    cursor: unset;
+
+                    p{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $color-border;
+                        text-align: center;
+                        padding-block: 80px;
+                    }
+                }
+
                 > *{
                     &:not(:last-child){
                         padding-right: 10px;
@@ -221,7 +233,7 @@
                                 }
                             }
                         }
-                    }
+                    }                    
                 }
 
                 td{
@@ -304,6 +316,15 @@
                     }
                 }
 
+                tr{
+                    &.noData{
+                        p{
+                            font-size: 19px;
+                            padding-block: 60px;
+                        }
+                    }
+                }
+
                 tbody{
                     td{
                         a{
@@ -334,6 +355,18 @@
                     grid-template-columns: calc(var(--size) + 15px) minmax(0, 1fr) 60px;
                     width: 100%;
                     padding: 15px 10px;
+
+                    &.noData{
+                        display: block;
+
+                        td{
+                            padding: 0;
+
+                            &:nth-of-type(1){
+                                display: block;
+                            }
+                        }
+                    }
 
                     @include hover{
                         &:hover{
@@ -399,6 +432,19 @@
                                 height: calc(var(--size) - 2px);
                                 margin: unset;
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mediaWidth($media768){
+            table{
+                tr{
+                    &.noData{
+                        p{
+                            font-size: 18px;
+                            padding-block: 40px;
                         }
                     }
                 }
