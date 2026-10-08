@@ -21,6 +21,7 @@ const projectSearchFilter = {
         green: "Green",
         blue: "Blue",
         purple: "Purple",
+        brown: "Brown",
         mono: "Mono",
     },
 };

@@ -916,7 +916,7 @@ const projectData = [
             start: '2025.03.19',
             end: '2025.06.25'
         },
-        type: "기업 사이트",
+        type: "공연 사이트",
         detail: {
             responsibility: '웹 퍼블리싱',
             participation: {
@@ -1282,7 +1282,7 @@ const projectData = [
         id: 'korea-semipermanent-makeup-association',
         kor: '한국반영구화장협회',
         eng: 'KSMA',
-        logo: 'img/project/logo-korea-semipermanent-makeup-association.svg',
+        logo: 'img/project/logo_korea-semipermanent-makeup-association.svg',
         description: '반영구화장·왁싱·속눈썹 등 뷰티 교육과정과 \n자격증 정보를 소개하는 협회 웹사이트입니다.',
         environment: 'ASP',
         skill: [
@@ -1330,7 +1330,7 @@ const projectData = [
         id: 'ninano-company',
         kor: '니나노컴퍼니',
         eng: 'NINANO COMPANY',
-        logo: 'img/project/logo-ninano-company.svg',
+        logo: 'img/project/logo_ninano-company.svg',
         description: '드론 기반 무인항공기 제품과 산업별 솔루션, \n기술력을 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -1377,7 +1377,7 @@ const projectData = [
         id: 'hnj-corporation',
         kor: '에이치엔제이코프',
         eng: 'H&J CORPORATION',
-        logo: 'img/project/logo-hnj-corporation.svg',
+        logo: 'img/project/logo_hnj-corporation.svg',
         description: '반도체 장비와 소재·부품, Foundry Service, \nPCB 가공 사업을 소개하는 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -1426,8 +1426,8 @@ const projectData = [
         id: 'hlb-therapeutics',
         kor: '에이치엘비테라퓨틱스',
         eng: 'HLB THERAPEUTICS',
-        logo: 'img/project/logo-hlb-therapeutics.svg',
-        description: '',
+        logo: 'img/project/logo_hlb-therapeutics.svg',
+        description: '신약 파이프라인과 임상 단계, 연구개발 현황을 \n소개하는 바이오 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
             'HTML5',
@@ -1469,6 +1469,334 @@ const projectData = [
         link: [
             {
                 url: 'https://hlbtherapeutics.co.kr/',
+            }
+        ],
+    },{
+        id: 'spident',
+        kor: '스피덴트',
+        eng: 'SPIDENT',
+        logo: 'img/project/logo_spident.svg',
+        description: '복합레진·접착재·근관치료재 등 \n다양한 치과 재료 제품을 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'green',
+        colorCode: '#1CA538',
+        period: {
+            start: '2024.06.03',
+            end: '2024.12.23'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.spident.co.kr/',
+            }
+        ],
+    },{
+        id: 'sanil',
+        kor: '산일전기',
+        eng: 'SANIL',
+        logo: 'img/project/logo_sanil.svg',
+        description: '특수변압기와 리액터 등 주요 제품과 \n사업 분야를 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+            'JPN'
+        ],
+        color: 'blue',
+        colorCode: '#004FA2',
+        period: {
+            start: '2024.05.03',
+            end: '2024.07.19'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '사업분야 페이지 풀페이지 구성 및 하위 메뉴 클릭 시 해당 섹션 이동 구현',
+                '메인 히어로 강조 단어 순차 페이드 및 텍스트 색 채움 타이포 애니메이션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.sanil.co.kr/',
+            }
+        ],
+    },{
+        id: 'korea-sinto',
+        kor: '한국신동공업',
+        eng: 'KOREA SINTO',
+        logo: 'img/project/logo_korea-sinto.svg',
+        description: '금속 주조 설비 등 주요 제품과 \n사업 분야를 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+        ],
+        color: 'red',
+        colorCode: '#E10012',
+        period: {
+            start: '2024.04.11',
+            end: '2024.06.28'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 0,
+                sub: 96
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '담당자 퇴사 후 인계받은 프로젝트로, 메인·인사말 페이지를 제외한 전체 페이지 퍼블리싱 담당'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.koreasinto.com/',
+            }
+        ],
+    },{
+        id: 'encell',
+        kor: '이엔셀',
+        eng: 'ENCELL',
+        logo: 'img/project/logo_encell.svg',
+        description: '세포·유전자치료제 CDMO 사업과 \n신약 파이프라인을 소개하는 바이오 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+        ],
+        color: 'blue',
+        colorCode: '#0E91E2',
+        period: {
+            start: '2024.04.04',
+            end: '2024.12.26'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '상장 일정에 맞춰 퍼블리싱 완료',
+                '메인 스크롤 잠금 중 커버가 페이드 아웃되며 콘텐츠가 드러나는 인터랙션 구현',
+                '호버 시 카드 플립 인터랙션 구현',
+                'SVG 기반 호버 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.encellinc.com/',
+            }
+        ],
+    },{
+        id: 'mpyc',
+        kor: '강원문화재단',
+        eng: 'MUSIC IN PYEONGCHANG',
+        logo: 'img/project/logo_mpyc.svg',
+        description: '콘서트와 찾아가는 음악회, 대관령아카데미 등 \n음악제 프로그램과 공연 일정을 소개하는 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG',
+        ],
+        color: 'brown',
+        colorCode: '#231815',
+        period: {
+            start: '2024.02.16',
+            end: '2024.06.03'
+        },
+        type: "공연 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '로그인·회원가입·마이페이지·공연 일정 캘린더 등 주요 UI 구현',
+                '오픈 이후 메인 페이지 개편 및 퀵메뉴 추가 등 다수의 유지보수 담당'
+            ]
+        },
+        link: [
+            {
+                url: 'https://mpyc.kr/',
+            }
+        ],
+    },{
+        id: 'kuksung',
+        kor: '국성건설엔지니어링',
+        eng: 'KUKSUNG CONSTRUCTION ENGINEERING',
+        logo: 'img/project/logo_kuksung.svg',
+        description: '수자원과 도로단지, 교통 등 국토개발 분야의 \n종합 엔지니어링 서비스를 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'blue',
+        colorCode: '#09536A',
+        period: {
+            start: '2024.01.31',
+            end: '2024.03.18'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'position: sticky; 기반 스크롤 인터랙션 구현',
+                '안정적인 레이아웃을 위해 모바일에서만 슬라이드 인터랙션 적용'
+            ]
+        },
+        link: [
+            {
+                url: 'http://www.kuksung.co.kr/',
+            }
+        ],
+    },{
+        id: 'pia-investment-management',
+        kor: '피아이에이자산운용',
+        eng: 'PIA INVESTMENT MANAGEMENT',
+        logo: 'img/project/logo_pia-investment-management.svg',
+        description: '부동산·인프라·에너지 등 대체투자 분야의 \n사업과 운용 현황을 소개하는 자산운용사 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'mono',
+        colorCode: '#000000',
+        period: {
+            start: '2024.01.23',
+            end: '2024.05.20'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '서브 페이지의 블랙·화이트 배경에 맞춰 헤더·서브 히어로 공통 영역 디자인 구분 대응'
+            ]
+        },
+        link: [
+            {
+                url: 'http://piagp.com/kr/',
             }
         ],
     },
