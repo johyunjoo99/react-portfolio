@@ -1799,6 +1799,506 @@ const projectData = [
                 url: 'http://piagp.com/kr/',
             }
         ],
+    },{
+        id: 'taesan-lawfirm',
+        kor: '법무법인 태산',
+        eng: 'TAESAN LAWFIRM ',
+        logo: 'img/project/logo_taesan-lawfirm.svg',
+        description: '개인회생·파산 등 회생파산 분야의 법률 서비스와 \n성공사례를 소개하는 법무법인 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'green',
+        colorCode: '#083220',
+        period: {
+            start: '2023.12.01',
+            end: '2024.02.20'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '금액 카운팅 인터랙션 구현',
+                'ScrollTrigger·sticky 기반 다양한 스크롤 인터랙션 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://taesan-bankruptcy.com/',
+            }
+        ],
+    },{
+        id: 'revation',
+        kor: '리베이션',
+        eng: 'REVATION ',
+        logo: 'img/project/logo_revation.svg',
+        description: '친환경 패키지 원스톱 솔루션과 소재·제품, \n포트폴리오를 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'green',
+        colorCode: '#43564A',
+        period: {
+            start: '2023.09.22',
+            end: '2024.03.15'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '탄소 절감량 카운팅 인터랙션 구현',
+                'ScrollTrigger 기반 사명 스크롤 및 가로 스크롤 인터랙션 구현',
+                '업체 제공 개발 정의서의 관리자 연동 요건을 반영하여 퍼블리싱'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.revation.co.kr/',
+            }
+        ],
+    },{
+        id: 'shinsung-cnp',
+        kor: '신성씨앤피',
+        eng: 'SHIN SUNG C&P',
+        logo: 'img/project/logo_shinsung-cnp.svg',
+        description: '리튬 분쇄·건조 시스템과 이차전지 소재 플랜트, \n세라믹 라이닝 배관 사업을 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'ENG'
+        ],
+        color: 'red',
+        colorCode: '#D61C18',
+        period: {
+            start: '2023.08.28',
+            end: '2023.10.24'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                
+            ]
+        },
+        link: [
+            {
+                url: 'http://sscnp.kr/',
+            }
+        ],
+    },{
+        id: 'everyoung-korea',
+        kor: '에버영코리아',
+        eng: 'EVERYOUNG KOREA',
+        logo: 'img/project/logo_everyoung-korea.svg',
+        description: '시니어 고용 확대를 위한 콘텐츠운영·교육·스마트솔루션 \n사업을 소개하는 사회혁신기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'green',
+        colorCode: '#006557',
+        period: {
+            start: '2023.07.21',
+            end: '2023.10.17'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '인재뱅크·채용공고·지원 조회 등 자체 채용 시스템 퍼블리싱',
+                '이력서·학력 및 자격증·자기소개서 등 단계별로 구성된 지원서 접수 폼 퍼블리싱'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.everyoungkorea.com/',
+            }
+        ],
+    },{
+        id: 'incenia-therapeutics',
+        kor: '인제니아테라퓨틱스',
+        eng: 'INGENIA THERAPEUTICS',
+        logo: 'img/project/logo_incenia-therapeutics.svg',
+        description: '미세혈관 질환 항체 신약 파이프라인과 \n연구개발 현황을 소개하는 바이오 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'red',
+        colorCode: '#BF1E2E',
+        period: {
+            start: '2023.06.26',
+            end: '2023.09.01'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '오픈 이후 상장으로 메인·서브 페이지가 대규모 개편됨'
+            ]
+        },
+        link: [
+            
+        ],
+    },{
+        id: 'bonif',
+        kor: '본아이에프 (본죽&비빔밥)',
+        eng: 'BONIF',
+        logo: 'img/project/logo_bonif.svg',
+        description: '본죽&비빔밥의 가맹 상담과 매장 양도 신청, \n추천점 안내를 위한 POS 화면입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'green',
+        colorCode: '#678441',
+        period: {
+            start: '2023.06.26',
+            end: '2023.09.01'
+        },
+        type: "가맹점 문의 시스템",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '인터랙션 및 UI 동작 구현',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '가맹 상담신청·매장 양도 신청·추천점 안내 등 가맹점 문의 POS 화면 퍼블리싱'
+            ]
+        },
+        link: [
+            
+        ],
+    },{
+        id: 'higen-rnm',
+        kor: '하이젠알앤엠',
+        eng: 'HIGEN RNM',
+        logo: 'img/project/logo_higen-rnm.svg',
+        description: '로봇·모빌리티 구동모듈과 서보 시스템, 산업용 모터 등 \n모터 제품과 기술을 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'blue',
+        colorCode: '#00387F',
+        period: {
+            start: '2023.04.25',
+            end: '2024.10.24'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 96
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '제품 상세 페이지 콘텐츠 퍼블리싱',
+                '카카오지도 연동 영업소/서비스·산업용전문점·서보전문점 검색 화면 퍼블리싱',
+                '지도 마커 이미지 변경 및 클릭 시 정보 레이아웃 적용'
+            ]
+        },
+        link: [
+            {
+                url: 'https://higenrnm.com/',
+            }
+        ],
+    },{
+        id: 'malong-company',
+        kor: '마롱컴퍼니',
+        eng: 'MALONG COMPANY',
+        logo: 'img/project/logo_malong-company.svg',
+        description: '조형물·벽화·그림·미디어 아트 등 B2B 미술 프로젝트의 \n제작 사례와 서비스를 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'blue',
+        colorCode: '#00264B',
+        period: {
+            start: '2023.03.21',
+            end: '2024.01.16'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                'SVG 기반 드로잉 애니메이션 구현',
+                '육각형 형태의 탭·버튼 등 다양한 UI 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.malongcompany.co.kr/',
+            }
+        ],
+    },{
+        id: 'swualu',
+        kor: '서울여대총동문회',
+        eng: 'SEOUL WOMENS UNIVERSITY ALUMNI ASSO',
+        logo: 'img/project/logo_swualu.svg',
+        description: '서울여자대학교 총동문회의 소개와 종합소식, \n동문 회원 서비스를 제공하는 동문회 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'red',
+        colorCode: '#ab3030',
+        period: {
+            start: '2023.03.21',
+            end: '2023.05.17'
+        },
+        type: "동문회 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '빠른 사이트 오픈 요청에 맞춰 일정 내 퍼블리싱 완료',
+                '로그인·회원가입·마이페이지 등 주요 UI 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.swualu.co.kr/',
+            }
+        ],
+    },{
+        id: 'bsc',
+        kor: '비에스씨',
+        eng: 'BSC',
+        logo: 'img/project/logo_bsc.svg',
+        description: '서울여자대학교 총동문회의 소개와 종합소식, \n동문 회원 서비스를 제공하는 동문회 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'blue',
+        colorCode: '#3F579E',
+        period: {
+            start: '2023.02.15',
+            end: '2023.06.05'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '메인 페이지 ScrollTrigger 기반 스크롤 인터랙션 구현',
+                '오픈 이후 업체 자체 유지보수로 서브 페이지가 대규모 개편됨'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.bschr.com/',
+            }
+        ],
+    },{
+        id: 'theyoon-hanbok',
+        kor: '더윤한복',
+        eng: 'THE YOON HANBOK',
+        logo: 'img/project/logo_theyoon-hanbok.svg',
+        description: '맞춤·대여 한복의 지점 안내와 신부·신랑, 혼주, 돌잔치 \n갤러리를 소개하는 한복 전문점 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'brown',
+        colorCode: '#B8926E',
+        period: {
+            start: '2023.02.01',
+            end: '2023.08.17'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '계열 브랜드인 한올명주·비단빔한복 사이트의 레이아웃을 활용해 구성'
+            ]
+        },
+        link: [
+            {
+                url: 'http://theyoonhanbok.com/',
+            }
+        ],
     },
 ]
 

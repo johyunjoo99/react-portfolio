@@ -123,9 +123,9 @@ const ProjectPopup = ({ project, popupClose }) => {
                     )
                 }
             </section>
-            <div className="btns">
-                {
-                    project?.link.map((item) => (
+            {
+                project?.link.map((item) => (
+                    <div className="btns">
                         <ViewMore
                             key={item.url}
                             href={item.url}
@@ -134,9 +134,9 @@ const ProjectPopup = ({ project, popupClose }) => {
                         >
                             {item.label || '사이트 보러가기'}
                         </ViewMore>
-                    ))
-                }                
-            </div>
+                    </div>
+                ))
+            }      
         </div>
     </article>
   )
