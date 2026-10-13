@@ -3,35 +3,32 @@ import { useLocation } from 'react-router-dom'
 
 const Floating = () => {
   const [showTop, setShowTop] = useState(false)
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     function handleScroll(){
       let top = window.scrollY > 0;
 
-      if(location.pathname === '/'){
+      if(pathname === '/'){
         // Main
         const hero = document.querySelector("#hero");
-        
+
         if(hero){
           top = window.scrollY >= hero.offsetHeight - window.innerHeight;
         }
       }
 
-      if(top){
-        setShowTop(true);
-      }else{
-        setShowTop(false)
-      }
+      setShowTop(top);
     }
 
-    window.addEventListener('scroll', handleScroll)
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  }, [location.pathname]);
-    
+  }, [pathname]);
+
   function scrollTop(){
     window.scrollTo({
       top: 0,
@@ -40,15 +37,20 @@ const Floating = () => {
   }
 
   return (
-    <>
-        <div id="floating">
-            <div className="float">
-              <button onClick={scrollTop} id="top" className={showTop ? 'show' : ''}>
-                <i></i>
-              </button>
-            </div>
+    <div id="floating">
+        <div className="float">
+          <button
+            type="button"
+            id="top"
+            className={showTop ? 'show' : ''}
+            aria-label="페이지 맨 위로 이동"
+            inert={!showTop}
+            onClick={scrollTop}
+          >
+            <i aria-hidden="true"></i>
+          </button>
         </div>
-    </>
+    </div>
   )
 }
 

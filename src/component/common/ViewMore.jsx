@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ViewMore = ({
@@ -9,21 +8,24 @@ const ViewMore = ({
 }) => {
   if(external){
     return(
-      <a 
+      <a
         href={href}
         target={targetBlank ? '_blank' : undefined}
-        rel={targetBlank ? 'noreferrer' : undefined}
+        rel={targetBlank ? 'noopener noreferrer' : undefined}
         className="viewmore"
       >
-          <i></i>
-          <span>{children}</span>
+          <i aria-hidden="true"></i>
+          <span>
+            {children}
+            {targetBlank && <span className="blind">(새 창 열림)</span>}
+          </span>
       </a>
     )
   }
 
   return (
     <Link to={href} className="viewmore">
-      <i></i>
+      <i aria-hidden="true"></i>
       <span>{children}</span>
     </Link>
   )

@@ -1,11 +1,9 @@
-import React from 'react'
 import { BASE_URL } from '../../constants/constants'
 
 import ViewMore from '../common/ViewMore'
 
 const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
   return (
-    <>
         <article className={
             [
                 'more', 
@@ -18,8 +16,8 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                     <div className="title">
                         <div className="w1700">
                             <div className="flex">
-                                <span className="label">{total < 10 ? `0${total + 1}` : total + 1}. VIEW MORE</span>
-                                <span className="paging">[ {total + 1} / {total + 1} ]</span>
+                                <span className="label">{String(total + 1).padStart(2, '0')}. VIEW MORE</span>
+                                <span className="paging" aria-hidden="true">[ {total + 1} / {total + 1} ]</span>
                             </div>
                         </div>
                     </div>
@@ -38,7 +36,7 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                                     </div>
                                     <div className="btns">
                                         <ViewMore
-                                            href={`${BASE_URL}/file/조현주_경력기술서.pdf`}
+                                            href={`${BASE_URL}file/조현주_경력기술서.pdf`}
                                             external
                                             targetBlank
                                         >
@@ -52,7 +50,6 @@ const ProjectMore = ({ total, activeIndex, isProjectActive }) => {
                 </div>
             </div>
         </article>
-    </>
   )
 }
 

@@ -1,6 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
 import '../style/_main.scss'
 
 import Hero from '../component/main/Hero.jsx'
@@ -8,16 +5,14 @@ import About from '../component/main/About.jsx'
 import Project from '../component/main/Project.jsx'
 import Contact from '../component/main/Contact.jsx'
 
-const  Main = () => {
+const Main = () => {
   return (
-    <>
-      <main id="main">
-        <Hero/>
-        <About/>
-        <Project/>
-        <Contact/>
-      </main>
-    </>
+    <main id="main">
+      <Hero/>
+      <About/>
+      <Project/>
+      <Contact/>
+    </main>
   )
 }
 

@@ -1,36 +1,48 @@
-import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
+const navItems = [
+  { id: 'hero', title: 'Home' },
+  { id: 'about', title: 'About' },
+  { id: 'project', title: 'Work' },
+  { id: 'contact', title: 'Contact' },
+]
 
 const Nav = ({ activeSection, onMenuClose }) => {
-  const handleClick = (e) => {
-    const link = e.target.closest('a');
+  const { pathname } = useLocation();
 
-    if(!link) return;
+  const handleClick = (e, id) => {
+    // 메인: 해당 섹션으로 부드럽게 스크롤
+    // 서브: Link 기본 동작으로 메인(/#id) 이동 후 ScrollManager에서 스크롤 처리
+    if(pathname === '/'){
+      e.preventDefault();
 
-    e.preventDefault();
-
-    const target = document.querySelector(link.getAttribute('href'));
-
-    if(target){
-      target.scrollIntoView({
+      document.getElementById(id)?.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-      })
+      });
     }
 
     onMenuClose?.();
   }
 
   return (
-    <>
-        <nav onClick={handleClick}>
-          <ul className="depth01">
-            <li className={activeSection === 'hero' ? 'on' : ''}><a href="#hero">Home</a></li>
-            <li className={activeSection === 'about' ? 'on' : ''}><a href="#about">About</a></li>
-            <li className={activeSection === 'project' ? 'on' : ''}><a href="#project">Work</a></li>
-            <li className={activeSection === 'contact' ? 'on' : ''}><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-    </>
+    <nav>
+      <ul className="depth01">
+        {
+          navItems.map((item) => (
+            <li key={item.id} className={activeSection === item.id ? 'on' : ''}>
+              <Link
+                to={{ pathname: '/', hash: `#${item.id}` }}
+                aria-current={activeSection === item.id ? 'true' : undefined}
+                onClick={(e) => handleClick(e, item.id)}
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
   )
 }
 

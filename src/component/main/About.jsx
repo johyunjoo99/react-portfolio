@@ -1,5 +1,3 @@
-import React from 'react'
-
 import AboutCounter from './AboutCounter'
 
 const About = () => {

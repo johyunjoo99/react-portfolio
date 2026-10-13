@@ -1,11 +1,9 @@
-import React from 'react'
-
-import ProjectItem from './ProjectItem'
+import ProjectList from './ProjectList'
 
 const Project = () => {
   return (
     <section id="project">
-        <ProjectItem/>
+        <ProjectList/>
     </section>
   )
 }

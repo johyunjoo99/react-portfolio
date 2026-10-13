@@ -12,6 +12,18 @@ body{
     position: relative;
 }
 
+/* 화면에는 숨기고 스크린리더에는 읽히는 텍스트 */
+.blind{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .eng{
     font-family: $font-eng;
 }
@@ -360,6 +372,10 @@ footer{
                 flex: 1 1 auto;
                 font-weight: 200;
                 color: rgba(255, 255, 255, 0.8);
+
+                a{
+                    color: inherit;
+                }
             }
         }
     }
