@@ -1,4 +1,3 @@
-import React from 'react'
 import MouseMove from './MouseMove'
 
 const ProjectCardLayout = ({ title, children }) => {

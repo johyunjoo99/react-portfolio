@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation } from 'react-router-dom'
 
 import '../../style/_sub.scss'
@@ -13,7 +12,7 @@ const SubLayout = ({ children, id }) => {
 
   return (
     <main id="sub">
-      <SubHero page={currentPage}/>
+      {currentPage && <SubHero page={currentPage}/>}
       <div id={id} className="sub-content">
           {children}
       </div>

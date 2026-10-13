@@ -2,13 +2,12 @@ import { useState } from 'react'
 
 import ProjectData from '../../data/projectData'
 import BoardInfo from '../board/BoardInfo'
-import ProjectItem from './ProjectItem'
+import ProjectRow from './ProjectRow'
 
-const ProjectBoard = ({ 
-  popupRef, 
-  setSelectedProject,
+const ProjectBoard = ({
+  onSelect,
   searchType,
-  searchKeyword, 
+  searchKeyword,
   filters
 }) => {
   //BoardInfo
@@ -32,7 +31,7 @@ const ProjectBoard = ({
     if(!searchKeyword){
       return true;
     }
-    
+
     const keyword = searchKeyword.toLowerCase();
     const title = project.kor.toLowerCase();
     const contents = [
@@ -55,13 +54,14 @@ const ProjectBoard = ({
   });
 
   //BoardInfo
+  // 날짜가 'YYYY.MM.DD' 고정 형식이라 문자열 비교로 정렬
   const sortedProjectData = [...filteredProjectData].sort((a, b) => {
     if(sort === 'latest'){
-      return new Date(b.period.end.replace(/\./g, '-')) - new Date(a.period.end.replace(/\./g, '-'));
-    }  
+      return b.period.end.localeCompare(a.period.end);
+    }
 
     if(sort === 'oldest'){
-      return new Date(a.period.end.replace(/\./g, '-')) - new Date(b.period.end.replace(/\./g, '-'))
+      return a.period.end.localeCompare(b.period.end);
     }
 
     if(sort === 'title-asc'){
@@ -76,14 +76,15 @@ const ProjectBoard = ({
   })
 
   return (
-    <div className="board-ctn">
+    <div className="board-ctn" data-aos="fade-up">
       <BoardInfo
-       Data={filteredProjectData}
+       total={filteredProjectData.length}
        sort={sort}
        setSort={setSort}
       />
       <div className="project-board">
         <table>
+          <caption className="blind">프로젝트 목록 (제목 선택 시 상세 팝업 열림)</caption>
           <colgroup>
             <col className="s"/>
             <col className="m" />
@@ -94,31 +95,34 @@ const ProjectBoard = ({
           </colgroup>
           <thead>
             <tr>
-              <th>No.</th>
-              <th>Color</th>
-              <th>Title</th>
-              <th>Period</th>
-              <th>Skill</th>
-              <th></th>
+              <th scope="col">No.</th>
+              <th scope="col">Color</th>
+              <th scope="col">Title</th>
+              <th scope="col">Period</th>
+              <th scope="col">Skill</th>
+              <th scope="col"><span className="blind">상세 보기</span></th>
             </tr>
           </thead>
           <tbody>
             {
-              !filteredProjectData.length 
+              !sortedProjectData.length
               ? <tr className="noData">
                   <td colSpan="6">
                     <p>검색 결과가 없습니다.</p>
                   </td>
                 </tr>
-              : <ProjectItem 
-                  ProjectData={sortedProjectData} 
-                  popupRef={popupRef}
-                  setSelectedProject={setSelectedProject}
-                />
+              : sortedProjectData.map((project, idx) => (
+                  <ProjectRow
+                    key={project.id}
+                    project={project}
+                    num={idx + 1}
+                    onSelect={onSelect}
+                  />
+                ))
             }
           </tbody>
         </table>
-      </div> 
+      </div>
     </div>
   )
 }

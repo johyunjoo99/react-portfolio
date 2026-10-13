@@ -47,13 +47,15 @@
     }
 
     span{
-        display: inline-block;
-        padding-inline: 20px 40px;
-        position: relative;
-        right: 0;
-        transform: translateX(0);
-        transition-duration: $duration-basic;
-        transition-property: right, transform;
+        &:not(.blind){
+            display: inline-block;
+            padding-inline: 20px 40px;
+            position: relative;
+            right: 0;
+            transform: translateX(0);
+            transition-duration: $duration-basic;
+            transition-property: right, transform;
+        }
     }
 
     @include hover {
@@ -268,14 +270,13 @@
                 width: 10px;
                 height: 8px;
                 background-image: url("/img/sub/icon_search_arrow.svg");
-                transform: rotate(-180deg);
                 transition-duration: $duration-basic;
                 transition-property: transform;
             }
 
             &.is-open{
                 i{
-                    transform: rotate(0);
+                    transform: rotate(-180deg);
                 }
             }
         }
@@ -585,12 +586,6 @@
                 }
             }
         }
-
-        // .buttons{
-        //     button{
-        //         flex: 1 1 auto;
-        //     }
-        // }
     }
 }
 

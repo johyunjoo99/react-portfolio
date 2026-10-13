@@ -1,14 +1,15 @@
-import React from 'react'
-
-const animateText = ({ children }) => {
+// 글자 단위로 분리해 순차 등장 애니메이션 적용
+// 스크린리더에는 분리된 글자 대신 전체 텍스트를 한 번에 읽도록 처리
+const AnimateText = ({ children }) => {
   const text = String(children);
 
   return (
     <>
+        <span className="blind">{text}</span>
         {
-            text.split("").map((char, index) => (
-                <span className="char" key={`${char}-${index}`} style={{ "--idx" : index }}>
-                    {char === " " ? "\u00A0" : char}
+            Array.from(text).map((char, index) => (
+                <span className="char" key={index} style={{ "--idx" : index }} aria-hidden="true">
+                    {char === " " ? " " : char}
                 </span>
             ))
         }
@@ -16,4 +17,4 @@ const animateText = ({ children }) => {
   )
 }
 
-export default animateText
+export default AnimateText

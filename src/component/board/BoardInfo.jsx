@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Select from 'react-select'
 
 const sortOptions = [
@@ -8,12 +7,13 @@ const sortOptions = [
     { value: 'title-desc', label: '제목 Z-A' },
 ]
 
-const BoardInfo = ({ Data, sort, setSort }) => {
+const BoardInfo = ({ total, sort, setSort }) => {
   return (
     <div className="board-info">
-        <p className="total">총 <strong>{Data.length}</strong>개</p>
+        <p className="total" aria-live="polite">총 <strong>{total}</strong>개</p>
         <Select
             classNamePrefix={"sort-select"}
+            aria-label="정렬 기준"
             options={sortOptions}
             value={sortOptions.find(option => option.value === sort)}
             onChange={(option) => setSort(option.value)}

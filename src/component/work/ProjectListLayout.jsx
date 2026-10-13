@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ProjectListLayout = ({ num, title,children }) => {
   return (
     <div className="list-layout">

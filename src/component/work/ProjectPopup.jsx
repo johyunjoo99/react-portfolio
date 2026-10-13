@@ -1,36 +1,38 @@
-import React from 'react'
 import { BASE_URL } from '../../constants/constants'
 
 import ProjectCardLayout from './ProjectCardLayout'
 import ProjectListLayout from './ProjectListLayout'
 import ViewMore from '../common/ViewMore'
 
-const ProjectPopup = ({ project, popupClose }) => {
+const ProjectPopup = ({ project, titleId, onClose }) => {
+  const { detail } = project;
+
   return (
-    <article style={{ '--pointColor' : project?.colorCode }}>
+    <article style={{ '--pointColor' : project.colorCode }}>
         <div className="head">
             <h3 className="logo">
-                <img src={`${BASE_URL}${project?.logo}`} alt="" />
+                <img src={`${BASE_URL}${project.logo}`} alt={`${project.kor} 로고`} />
             </h3>
-            <button className="popup-close" onClick={popupClose}>
-              <i></i>
+            <button type="button" className="popup-close" aria-label="팝업 닫기" onClick={onClose}>
+              <i aria-hidden="true"></i>
             </button>
         </div>
-        <div className="body scroll-content">
+        {/* 키보드로도 내부 스크롤이 가능하도록 tabIndex 지정 */}
+        <div className="body scroll-content" tabIndex={0}>
             <div className="title">
-                <span>{project?.eng}</span>
-                <h4>{project?.kor}</h4>
-                <p>{project?.description}</p>
+                <span>{project.eng}</span>
+                <h4 id={titleId}>{project.kor}</h4>
+                <p>{project.description}</p>
             </div>
             <section>
                 <div className="card-layout">
                     <ProjectCardLayout title="개발 환경">
-                        {project?.environment}
+                        {project.environment}
                     </ProjectCardLayout>
                     <ProjectCardLayout title="사용 기술">
                         <ul>
                             {
-                                project?.skill.map((item) => (
+                                project.skill.map((item) => (
                                     <li key={item}>[{item}]</li>
                                 ))
                             }
@@ -39,7 +41,7 @@ const ProjectPopup = ({ project, popupClose }) => {
                     <ProjectCardLayout title="작업 언어">
                         <ul>
                             {
-                                project?.language.map((item) => (
+                                project.language.map((item) => (
                                     <li key={item}>[{item}]</li>
                                 ))
                             }
@@ -56,36 +58,37 @@ const ProjectPopup = ({ project, popupClose }) => {
                         <li>
                             <dl>
                                 <dt>사이트 유형</dt>
-                                <dd>{project?.type}</dd>
+                                <dd>{project.type}</dd>
                             </dl>
                         </li>
                         <li>
                             <dl>
                                 <dt>작업 기간</dt>
-                                <dd>{project?.period.start} - {project?.period.end}</dd>
+                                <dd>{project.period.start} - {project.period.end}</dd>
                             </dl>
                         </li>
                         <li>
                             <dl>
                                 <dt>담당 업무</dt>
-                                <dd>{project?.detail.responsibility}</dd>
+                                <dd>{detail.responsibility}</dd>
                             </dl>
                         </li>
                         <li>
                             <dl>
                                 <dt>참여도</dt>
                                 <dd>
+                                    {/* 게이지 위 글자색 반전을 위해 같은 텍스트를 겹쳐 표시 (.black은 시각용 복제) */}
                                     <div className="gauge">
-                                        <div style={{ "--width" : `${project?.detail.participation.main}%` }}>
+                                        <div style={{ "--width" : `${detail.participation.main}%` }}>
                                             <div>
-                                                <span>메인 {project?.detail.participation.main}%</span>
-                                                <span className="black">메인 {project?.detail.participation.main}%</span>
+                                                <span>메인 {detail.participation.main}%</span>
+                                                <span className="black" aria-hidden="true">메인 {detail.participation.main}%</span>
                                             </div>
                                         </div>
                                         <div>
-                                            <div style={{ "--width" : `${project?.detail.participation.sub}%` }}>
-                                                <span>서브 {project?.detail.participation.sub}%</span>
-                                                <span className="black">서브 {project?.detail.participation.sub}%</span>
+                                            <div style={{ "--width" : `${detail.participation.sub}%` }}>
+                                                <span>서브 {detail.participation.sub}%</span>
+                                                <span className="black" aria-hidden="true">서브 {detail.participation.sub}%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -100,21 +103,21 @@ const ProjectPopup = ({ project, popupClose }) => {
                 >
                     <ul>
                         {
-                            project?.detail.tasks.map((item) => (
+                            detail.tasks.map((item) => (
                                 <li key={item}>{item}</li>
                             ))
                         }
                     </ul>
                 </ProjectListLayout>
                 {
-                    project?.detail.features?.length > 0 && (
+                    detail.features?.length > 0 && (
                         <ProjectListLayout
                             num="03"
                             title="작업 특징"
                         >
                             <ul>
                                 {
-                                    project?.detail.features.map((item) => (
+                                    detail.features.map((item) => (
                                         <li key={item}>{item}</li>
                                     ))
                                 }
@@ -124,19 +127,23 @@ const ProjectPopup = ({ project, popupClose }) => {
                 }
             </section>
             {
-                project?.link.map((item) => (
+                project.link.length > 0 && (
                     <div className="btns">
-                        <ViewMore
-                            key={item.url}
-                            href={item.url}
-                            external
-                            targetBlank
-                        >
-                            {item.label || '사이트 보러가기'}
-                        </ViewMore>
+                        {
+                            project.link.map((item) => (
+                                <ViewMore
+                                    key={item.url}
+                                    href={item.url}
+                                    external
+                                    targetBlank
+                                >
+                                    {item.label || '사이트 보러가기'}
+                                </ViewMore>
+                            ))
+                        }
                     </div>
-                ))
-            }      
+                )
+            }
         </div>
     </article>
   )

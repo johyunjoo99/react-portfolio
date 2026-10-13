@@ -1,17 +1,20 @@
-import { useRef, useEffect, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 
 import FilterData from '../../data/projectSearchFilter'
 
 const SearchFilter = ({ isFilterOpen, filters, setFilters }) => {
     const filterRef = useRef(null);
-    
+
+    // 콘텐츠 높이(scrollHeight) 기준으로 펼침/접힘 높이 계산
     useLayoutEffect(() => {
-        if(!filterRef.current) return;
+        const filterBox = filterRef.current;
+
+        if(!filterBox) return;
 
         const updateHeight = () => {
-            filterRef.current.style.height = isFilterOpen 
-            ? '0px' 
-            : `${filterRef.current.scrollHeight}px`;
+            filterBox.style.height = isFilterOpen
+            ? `${filterBox.scrollHeight}px`
+            : '0px';
         }
 
         updateHeight();
@@ -50,13 +53,13 @@ const SearchFilter = ({ isFilterOpen, filters, setFilters }) => {
         }))
     }
 
+    // 접혀 있을 때는 inert로 키보드 포커스 차단
     return (
-    <div 
+    <div
         ref={filterRef}
+        id="search-filter"
         className={`filter-box ${isFilterOpen ? 'is-open' : ''}`}
-        style={{
-            height: isFilterOpen ? '0px' : `${filterRef.current?.scrollHeight}px`
-        }}
+        inert={!isFilterOpen}
     >
         <div className="wrap">
             <fieldset>
@@ -135,10 +138,6 @@ const SearchFilter = ({ isFilterOpen, filters, setFilters }) => {
                     ))}
                 </ul>
             </fieldset>
-            {/* <div className="buttons">
-                <button type="reset">초기화<i></i></button>
-                <button type="submit">적용<i></i></button>
-            </div> */}
         </div>
     </div>
   )
