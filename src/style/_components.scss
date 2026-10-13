@@ -16,6 +16,16 @@
     transition-duration: $duration-basic;
     transition-property: color, text-stroke-color;
 
+    // button 태그로 사용할 때 기본 스타일 초기화
+    &:is(button){
+        background: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        font-family: inherit;
+        cursor: pointer;
+    }
+
     &::before{
         content: "";
         background: $color-text;
@@ -612,12 +622,26 @@
         }
     }
 
+    .board-more{
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+
     @include mediaWidth($media1280){
         margin-top: 40px;
+
+        .board-more{
+            margin-top: 60px;
+        }
     }
 
     @include mediaWidth($media960){
         margin-top: 30px;
+
+        .board-more{
+            margin-top: 40px;
+        }
     }
 }
 
