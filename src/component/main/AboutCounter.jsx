@@ -1,8 +1,10 @@
+import projectData from '../../data/projectData'
 import AboutNumber from './AboutNumber'
 
 const counterData = [
   {
-      number: '52',
+      // AboutNumber가 글자 단위로 분리하므로 문자열로 전달
+      number: String(projectData.length),
       title: 'Projects',
       suffix: '',
       description: <>다양한 산업 분야의 프로젝트를 수행하며 <br />웹 환경에 맞는 UI를 구현해왔습니다.</>

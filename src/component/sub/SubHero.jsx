@@ -22,6 +22,7 @@ const SubHero = ({ page }) => {
                 </nav>
                 <div className="text">
                     <h2><AnimateText>{page.title}</AnimateText></h2>
+                    {page.description && <p>{page.description}</p>}
                 </div>
             </div>
         </div>
