@@ -2299,6 +2299,141 @@ const projectData = [
                 url: 'http://theyoonhanbok.com/',
             }
         ],
+    },{
+        id: 'daraevision',
+        kor: '다래비젼',
+        eng: 'DARAEVISION',
+        logo: 'img/project/logo_daraevision.svg',
+        description: '카메라·렌즈·3D 센서 등 머신 비전 시스템 제품과 \n기술 지원 서비스를 소개하는 기업 웹사이트입니다.',
+        environment: 'ASP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+        ],
+        color: 'red',
+        colorCode: '#E60012',
+        period: {
+            start: '2023.01.03',
+            end: '2023.05.17'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '제품 검색 필터에 범위(range) 슬라이더 적용'
+            ]
+        },
+        link: [
+            {
+                url: 'https://www.daraevision.co.kr/',
+            }
+        ],
+    },{
+        id: 'ecobrain',
+        kor: '에코브레인',
+        eng: 'ECOBRAIN',
+        logo: 'img/project/logo_ecobrain.svg',
+        description: '에너지·기상재해·대기환경 분야의 기상·환경 정보 솔루션과 \n서비스를 소개하는 기업 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR',
+            'ENG'
+        ],
+        color: 'blue',
+        colorCode: '#0094f3',
+        period: {
+            start: '2022.10.11',
+            end: '2023.02.21'
+        },
+        type: "기업 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '에너지, 기상·재해, 대기환경 메뉴를 팝업으로 구성',
+                '메인은 해당 섹션 이동 후 버튼 클릭 시 팝업 오픈, 서브 페이지는 바로 팝업 노출되도록 구현'
+            ]
+        },
+        link: [
+            {
+                url: 'http://www.ecobrain.net/',
+            }
+        ],
+    },{
+        id: 'kfia',
+        kor: '한국팹리스산업협회',
+        eng: 'KFIA',
+        logo: 'img/project/logo_kfia.svg',
+        description: '국내 시스템반도체 팹리스 기업을 대표하는 협회의 \n소개와 활동을 알리는 협회 웹사이트입니다.',
+        environment: 'PHP',
+        skill: [
+            'HTML5',
+            'CSS3',
+            'jQuery'
+        ],
+        language: [
+            'KOR'
+        ],
+        color: 'blue',
+        colorCode: '#00A8FF',
+        period: {
+            start: '2022.10.11',
+            end: '2022.11.30'
+        },
+        type: "협회 사이트",
+        detail: {
+            responsibility: '웹 퍼블리싱',
+            participation: {
+                main: 100,
+                sub: 100
+            },
+            tasks: [
+                '유지보수를 고려한 화면 구조 설계 및 퍼블리싱',
+                '반응형 웹 페이지 구축 및 디바이스별 레이아웃 대응',
+                '인터랙션 및 UI 동작 구현',
+                '시맨틱 마크업 및 웹 표준을 고려한 페이지 구성',
+                '크로스 브라우징을 고려한 스타일 및 기능 대응',
+                'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
+            ],
+            features: [
+                '오픈 이후 사이트가 리뉴얼됨'
+            ]
+        },
+        link: [
+            
+        ],
     },
 ]
 
