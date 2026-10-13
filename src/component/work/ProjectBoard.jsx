@@ -8,7 +8,6 @@ import ProjectRow from './ProjectRow'
 const PAGE_SIZE = 10;
 
 const ProjectBoard = ({
-  onSelect,
   searchType,
   searchKeyword,
   filters
@@ -154,7 +153,6 @@ const ProjectBoard = ({
                     key={project.id}
                     project={project}
                     num={idx + 1}
-                    onSelect={onSelect}
                   />
                 ))
             }

@@ -29,7 +29,8 @@ function App() {
       <div id="wrap">
         <Routes>
           <Route path="/" element={<Main/>}/>
-          <Route path="/work" element={<Work/>}/>
+          {/* projectId가 있으면 해당 프로젝트 팝업이 열린 상태 (목록 상태 유지를 위해 같은 Work 공유) */}
+          <Route path="/work/:projectId?" element={<Work/>}/>
           <Route path="*" element={<Navigate to="/" replace/>}/>
         </Routes>
         <Floating/>
