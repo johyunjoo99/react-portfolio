@@ -105,7 +105,7 @@ const ProjectList = () => {
                                         </div>
                                         <div className="img">
                                             <figure>
-                                                <img src={item.img} alt={`${item.kor} 메인 화면`} />
+                                                <img src={item.img} alt="" />
                                             </figure>
                                         </div>
                                         <div className="text">

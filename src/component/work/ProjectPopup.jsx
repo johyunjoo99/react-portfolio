@@ -11,9 +11,10 @@ const ProjectPopup = ({ project, titleId, onClose }) => {
   return (
     <article style={{ '--pointColor' : project.colorCode }}>
         <div className="head">
-            <h3 className="logo">
-                <img src={`${BASE_URL}${project.logo}`} alt={`${project.kor} 로고`} />
-            </h3>
+            {/* 프로젝트명이 아래 제목(h3)에 있으므로 로고는 장식 이미지로 처리 */}
+            <div className="logo">
+                <img src={`${BASE_URL}${project.logo}`} alt="" />
+            </div>
             <button type="button" className="popup-close" aria-label="팝업 닫기" onClick={onClose}>
               <i aria-hidden="true"></i>
             </button>
@@ -22,7 +23,7 @@ const ProjectPopup = ({ project, titleId, onClose }) => {
         <div className="body scroll-content" tabIndex={0}>
             <div className="title">
                 <span>{project.eng}</span>
-                <h4 id={titleId}>{project.kor}</h4>
+                <h3 id={titleId}>{project.kor}</h3>
                 <p>{project.description}</p>
             </div>
             <section>

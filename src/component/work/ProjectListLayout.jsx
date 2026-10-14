@@ -3,7 +3,7 @@ const ProjectListLayout = ({ num, title,children }) => {
     <div className="list-layout">
         <div className="num">{num}</div> 
         <div className="tit">
-            <h5>{title}</h5>
+            <h4>{title}</h4>
         </div>
         <div className="content">
             {children}
