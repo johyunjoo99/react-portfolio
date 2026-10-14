@@ -117,3 +117,19 @@ table{
 address{
     font-style: normal;
 }
+
+/* ===== reduced motion ===== */
+// 동작 줄이기 설정 시 애니메이션·트랜지션을 즉시 완료 상태로 표시
+// (AOS의 aos-animate 클래스는 그대로 붙으므로 콘텐츠 노출에는 영향 없음)
+@include reduceMotion{
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+    }
+}

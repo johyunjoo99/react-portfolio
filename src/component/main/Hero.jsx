@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 
+import useReducedMotion from '../../hooks/useReducedMotion'
 import WebPublisher from '../svg/WebPublisher'
 
 const EASE_FACTOR = 0.1;
@@ -14,8 +15,15 @@ function setProgress(target, progress) {
 const Hero = () => {
     const heroRef = useRef(null);
     const dummyRef = useRef(null);
+    const reducedMotion = useReducedMotion();
 
     useEffect(() => {
+        // 동작 줄이기: 스크롤 전환 없이 완료 상태로 고정
+        if (reducedMotion) {
+            if (heroRef.current) setProgress(heroRef.current, 100);
+            return;
+        }
+
         let currentPercent = 0;
         let targetPercent = 0;
         let animationFrameId = null;
@@ -69,7 +77,7 @@ const Hero = () => {
                 cancelAnimationFrame(animationFrameId);
             }
         }
-    }, []);
+    }, [reducedMotion]);
 
     return (
     <section id="hero" ref={heroRef}>

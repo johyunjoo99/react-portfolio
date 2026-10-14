@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+import useReducedMotion from '../../hooks/useReducedMotion'
+
 const Floating = () => {
   const [showTop, setShowTop] = useState(false)
+  const reducedMotion = useReducedMotion();
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const Floating = () => {
   function scrollTop(){
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: reducedMotion ? "auto" : "smooth",
     });
   }
 

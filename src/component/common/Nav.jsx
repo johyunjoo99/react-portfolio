@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 
+import useReducedMotion from '../../hooks/useReducedMotion'
+
 const navItems = [
   { id: 'hero', title: 'Home' },
   { id: 'about', title: 'About' },
@@ -9,6 +11,7 @@ const navItems = [
 
 const Nav = ({ activeSection, onMenuClose }) => {
   const { pathname } = useLocation();
+  const reducedMotion = useReducedMotion();
 
   const handleClick = (e, id) => {
     // 메인: 해당 섹션으로 부드럽게 스크롤
@@ -17,7 +20,7 @@ const Nav = ({ activeSection, onMenuClose }) => {
       e.preventDefault();
 
       document.getElementById(id)?.scrollIntoView({
-        behavior: 'smooth',
+        behavior: reducedMotion ? 'auto' : 'smooth',
         block: 'start',
       });
     }
