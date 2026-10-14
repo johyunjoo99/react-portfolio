@@ -6,6 +6,7 @@ import ViewMore from '../common/ViewMore'
 
 const ProjectPopup = ({ project, titleId, onClose }) => {
   const { detail } = project;
+  const hasFeatures = detail.features?.length > 0;
 
   return (
     <article style={{ '--pointColor' : project.colorCode }}>
@@ -97,22 +98,11 @@ const ProjectPopup = ({ project, titleId, onClose }) => {
                         </li>
                     </ul>
                 </ProjectListLayout>
-                <ProjectListLayout
-                    num="02"
-                    title="주요 작업"
-                >
-                    <ul>
-                        {
-                            detail.tasks.map((item) => (
-                                <li key={item}>{item}</li>
-                            ))
-                        }
-                    </ul>
-                </ProjectListLayout>
+                {/* 프로젝트별 차별점(작업 특징)을 공통 업무(주요 작업)보다 먼저 노출 */}
                 {
-                    detail.features?.length > 0 && (
+                    hasFeatures && (
                         <ProjectListLayout
-                            num="03"
+                            num="02"
                             title="작업 특징"
                         >
                             <ul>
@@ -125,6 +115,19 @@ const ProjectPopup = ({ project, titleId, onClose }) => {
                         </ProjectListLayout>
                     )
                 }
+                {/* 작업 특징이 없으면 주요 작업이 02번 */}
+                <ProjectListLayout
+                    num={hasFeatures ? '03' : '02'}
+                    title="주요 작업"
+                >
+                    <ul>
+                        {
+                            detail.tasks.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </ProjectListLayout>
             </section>
             {
                 project.link.length > 0 && (
