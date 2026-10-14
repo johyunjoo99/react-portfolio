@@ -7,11 +7,9 @@
 - **경력기술서** : [조현주_경력기술서.pdf](https://johyunjoo99.github.io/react-portfolio/file/%EC%A1%B0%ED%98%84%EC%A3%BC_%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C.pdf)
 
 
-<!-- TODO: GIF 최종본 추가 후 주석 해제
 ## 미리보기
 
 ![메인 페이지 미리보기](./docs/preview-main.gif)
--->
 
 
 ## 프로젝트 소개
