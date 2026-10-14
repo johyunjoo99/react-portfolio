@@ -140,8 +140,8 @@ header{
         i{
             flex-shrink: 0;
             display: inline-block;
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             margin-right: 10px;
             @include bgContain;
 
@@ -200,8 +200,8 @@ header{
             padding: 0 12px;
     
             i{
-                width: 26px;
-                height: 26px;
+                width: 22px;
+                height: 22px;
                 margin-right: 7px;
             }
         }
@@ -332,9 +332,21 @@ footer{
     color: #FFF;
     padding: 60px 0;
 
-    .logo{
+    .flex-box{
+        display: flex;
+    }
+
+    .line01{
         border-top: 1px solid rgba(255, 255, 255, 0.5);
-        padding: 50px 0 40px;
+        padding-top: 50px;
+    }
+
+    .line02{
+        align-items: flex-end;
+    }
+
+    .logo{
+        flex: 1 1 auto;
 
         a{
             display: inline-block;
@@ -345,9 +357,50 @@ footer{
         }
     }
 
-    .flex-box{
+    .button{
+        flex-shrink: 0;
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        gap: 15px;
+
+        a{
+            width: 135px;
+            height: var(--navH);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: $color-text;
+            font-size: 15px;
+            font-weight: 700;
+            color: #FFF;
+            text-align: center;
+            padding: 8px;
+
+            &.red{
+                background: $color-main;
+            }
+
+            &.eng{
+                font-weight: 400;
+            }
+
+            i{
+                flex-shrink: 0;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                @include bgContain;
+
+                &.link{
+                    background-image: url("/img/common/icon_link.svg");
+                }
+
+                &.github{
+                    background-image: url("/img/common/icon_github.svg");
+                }
+            }
+        }
     }
 
     address{
@@ -390,9 +443,11 @@ footer{
     @include mediaWidth($media1700){
         padding: 50px 0;
 
-        .logo{    
-            padding: 40px 0 30px;
+        .line01{
+            padding-top: 40px;
+        }
 
+        .logo{
             a{
                 img{
                     height: 36px;
@@ -405,13 +460,21 @@ footer{
         font-size: 15px;
         padding: 40px 0;
 
-        .logo{    
-            padding: 30px 0 25px;
+        .line01{
+            padding-top: 30px;
+        }
 
+        .logo{    
             a{
                 img{
                     height: 32px;
                 }
+            }
+        }
+
+        .button{
+            a{
+                width: 125px;
             }
         }
 
@@ -429,29 +492,21 @@ footer{
     }
 
     @include mediaWidth($media768){
-        .logo{
-            text-align: center;
+        .line01{
+            padding-block: 25px 15px;
         }
 
-        .flex-box{
+        .line02{
             flex-direction: column;
-            align-items: center;
+            align-items: unset;
         }
 
         address{
-            padding: 0;
-
-            dl{
-                justify-content: center;
-
-                dd{
-                    flex: unset;
-                }
-            }
+            padding-right: 0;
         }
 
         .copyright{
-            margin-top: 15px
+            margin-top: 10px;
         }
     }
 }
