@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 // 경로의 첫 번째 구간을 페이지 단위로 사용 (/work, /work/:projectId → 'work')
@@ -11,7 +11,9 @@ const ScrollManager = () => {
   const { pathname, hash } = useLocation();
   const prevPathnameRef = useRef(null);
 
-  useEffect(() => {
+  // AOS가 새 요소의 노출 여부를 판단하기 전에 스크롤을 먼저 초기화해야 함
+  // (useEffect면 이전 페이지 스크롤 위치 기준으로 판단해 애니메이션이 미리 실행됨)
+  useLayoutEffect(() => {
     const prevPathname = prevPathnameRef.current;
     prevPathnameRef.current = pathname;
 
