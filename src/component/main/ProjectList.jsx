@@ -113,19 +113,12 @@ const ProjectList = () => {
                                                 <h2>{item.kor}</h2>
                                                 <p>{item.description}</p>
                                             </div>
+                                            {/* 외부 사이트 링크는 상세 팝업에서 제공 (팝업을 닫으면 Work 목록으로 이동) */}
                                             <div className="btns">
-                                                {
-                                                    item.link.map((el) =>
-                                                        <ViewMore
-                                                            key={el.url}
-                                                            href={el.url}
-                                                            external
-                                                            targetBlank
-                                                        >
-                                                            {el.label || '사이트 보러가기'}
-                                                        </ViewMore>
-                                                    )
-                                                }
+                                                <ViewMore href={`/work/${item.id}`}>
+                                                    프로젝트 상세 보기
+                                                    <span className="blind"> : {item.kor}</span>
+                                                </ViewMore>
                                             </div>
                                         </div>
                                     </div>
