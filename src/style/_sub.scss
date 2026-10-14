@@ -256,6 +256,14 @@
                                         transform: rotate(-45deg);
                                     }
                                 }
+
+                                .participation{
+                                    > li{
+                                        &::before{
+                                            background: $color-text;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }                    
@@ -269,7 +277,6 @@
 
                     .num{
                         font-variant-numeric: tabular-nums;
-                        vertical-align: middle;
                     }
 
                     .title{
@@ -314,6 +321,41 @@
                 width: var(--size);
                 aspect-ratio: 1 / 1;
                 margin: auto;
+            }
+
+            .participation{
+                display: flex;
+                align-items: baseline;
+                gap: 21px;
+
+                > li{
+                    position: relative;
+
+                    &:first-child{
+                        &::before{
+                            display: none;
+                        }
+                    }
+
+                    &::before{
+                        content: "";
+                        width: 1px;
+                        height: 10px;
+                        background: $color-border;
+                        position: absolute;
+                        top: 50%;
+                        left: -10px;
+                        transform: translateY(-50%);
+                        transition-duration: $duration-basic;
+                        transition-property: background;
+                    }
+
+                    span{
+                        width: 35px;
+                        display: inline-block;
+                        text-align: right;
+                    }
+                }
             }
 
             .skill{
@@ -382,7 +424,7 @@
                 tr{
                     display: grid;
                     align-items: center;
-                    grid-template-columns: calc(var(--size) + 15px) minmax(0, 1fr) 60px;
+                    grid-template-columns: calc(var(--size) + 15px) minmax(0, 1fr) 70px;
                     width: 100%;
                     padding: 15px 10px;
 
@@ -428,7 +470,8 @@
                         }
 
                         &:nth-of-type(4), 
-                        &:nth-of-type(5){
+                        &:nth-of-type(5),
+                        &:nth-of-type(6){
                             order: 4;
                             grid-column: auto / span 2;
 
@@ -439,9 +482,9 @@
                             }
                         }
 
-                        &:nth-of-type(6){
+                        &:nth-of-type(7){
                             order: 3;
-                            grid-row: span 3;
+                            grid-row: span 4;
                             padding-top: 0;
                         }
 

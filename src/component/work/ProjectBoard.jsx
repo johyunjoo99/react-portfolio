@@ -128,6 +128,7 @@ const ProjectBoard = ({
             <col />
             <col className="l" />
             <col className="l" />
+            <col className="l" />
             <col className="s"/>
           </colgroup>
           <thead>
@@ -135,16 +136,19 @@ const ProjectBoard = ({
               <th scope="col">No.</th>
               <th scope="col">Color</th>
               <th scope="col">Title</th>
+              <th scope="col">Share</th>
               <th scope="col">Period</th>
               <th scope="col">Skill</th>
-              <th scope="col"><span className="blind">상세 보기</span></th>
+              <th scope="col">
+                <span className="blind">상세 보기</span>
+              </th>
             </tr>
           </thead>
           <tbody ref={tbodyRef}>
             {
               !visibleProjectData.length
               ? <tr className="noData">
-                  <td colSpan="6">
+                  <td colSpan="7">
                     <p>검색 결과가 없습니다.</p>
                   </td>
                 </tr>

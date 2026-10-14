@@ -24,6 +24,12 @@ const ProjectRow = ({ project, num }) => {
         <td>
             <Link to={to} state={linkState} className="title" aria-haspopup="dialog">{project.kor}</Link>
         </td>
+        <td data-th="Share : ">
+            <ul className="participation">
+                <li>Main <span className="num">{project.detail.participation.main}</span>%</li>
+                <li>Sub <span className="num">{project.detail.participation.sub}</span>%</li>
+            </ul>
+        </td>
         <td data-th="Period : ">
             <span className="num">{project.period.start} - {project.period.end}</span>
         </td>
