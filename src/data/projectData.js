@@ -234,7 +234,7 @@ const projectData = [
             ],
             features: [
                 '호버로 노출되는 성공사례 데이터를 모바일에서는 Media Query로 기본 노출 처리',
-                '브라우저 인식을 고려해 이미지로 적용된 과세·환급 정보를 title 속성으로 텍스트 제공',
+                '브라우저 인식을 고려해 이미지로 적용된 과세·환급 정보를 title 속성으로 보조 텍스트 제공',
                 'mix-blend-mode를 활용한 커서 추적 인터랙션 구현'
             ]
         },
@@ -839,7 +839,7 @@ const projectData = [
                 'PM, 디자이너, 개발자와 구현 방향을 조율하며 페이지 완성'
             ],
             features: [
-                'position: sticky; 기반 콘텐츠 겹침 및 배경 고정 후 fade 전환 스크롤 인터랙션 구현',
+                'position: sticky 기반 콘텐츠 겹침 및 배경 고정 후 fade 전환 스크롤 인터랙션 구현',
                 '글로벌 네트워크 지도 SVG 애니메이션 구현'
             ]
         },
@@ -1662,7 +1662,7 @@ const projectData = [
         ],
     },{
         id: 'mpyc',
-        kor: '강원문화재단',
+        kor: '강원문화재단 대관령음악제',
         eng: 'MUSIC IN PYEONGCHANG',
         logo: 'img/project/logo_mpyc.svg',
         description: '콘서트와 찾아가는 음악회, 대관령아카데미 등 \n음악제 프로그램과 공연 일정을 소개하는 웹사이트입니다.',
@@ -1802,7 +1802,7 @@ const projectData = [
     },{
         id: 'taesan-lawfirm',
         kor: '법무법인 태산',
-        eng: 'TAESAN LAWFIRM ',
+        eng: 'TAESAN LAWFIRM',
         logo: 'img/project/logo_taesan-lawfirm.svg',
         description: '개인회생·파산 등 회생파산 분야의 법률 서비스와 \n성공사례를 소개하는 법무법인 웹사이트입니다.',
         environment: 'PHP',
@@ -1848,7 +1848,7 @@ const projectData = [
     },{
         id: 'revation',
         kor: '리베이션',
-        eng: 'REVATION ',
+        eng: 'REVATION',
         logo: 'img/project/logo_revation.svg',
         description: '친환경 패키지 원스톱 솔루션과 소재·제품, \n포트폴리오를 소개하는 기업 웹사이트입니다.',
         environment: 'ASP',
@@ -1985,10 +1985,10 @@ const projectData = [
             }
         ],
     },{
-        id: 'incenia-therapeutics',
+        id: 'ingenia-therapeutics',
         kor: '인제니아테라퓨틱스',
         eng: 'INGENIA THERAPEUTICS',
-        logo: 'img/project/logo_incenia-therapeutics.svg',
+        logo: 'img/project/logo_ingenia-therapeutics.svg',
         description: '미세혈관 질환 항체 신약 파이프라인과 \n연구개발 현황을 소개하는 바이오 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
@@ -2214,7 +2214,7 @@ const projectData = [
         kor: '비에스씨',
         eng: 'BSC',
         logo: 'img/project/logo_bsc.svg',
-        description: '서울여자대학교 총동문회의 소개와 종합소식, \n동문 회원 서비스를 제공하는 동문회 웹사이트입니다.',
+        description: '다면평가·인성검사·적성검사 등 역량평가 솔루션과 \n리더십·채용 서비스를 소개하는 HR 기업 웹사이트입니다.',
         environment: 'PHP',
         skill: [
             'HTML5',
