@@ -120,7 +120,7 @@ const projectData = [
             start: '2023.04.07',
             end: '2023.08.22'
         },
-        type: "기업 사이트",
+        type: "R&D 사이트",
         detail: {
             responsibility: '웹 퍼블리싱',
             participation: {
