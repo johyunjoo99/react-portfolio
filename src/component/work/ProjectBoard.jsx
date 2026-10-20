@@ -88,13 +88,16 @@ const ProjectBoard = ({
 
   //BoardInfo
   // 날짜가 'YYYY.MM.DD' 고정 형식이라 문자열 비교로 정렬
+  // 최신순은 종료일, 오래된순은 시작일 기준 (같으면 나머지 날짜로 비교)
   const sortedProjectData = [...filteredProjectData].sort((a, b) => {
     if(sort === 'latest'){
-      return b.period.end.localeCompare(a.period.end);
+      return b.period.end.localeCompare(a.period.end)
+          || b.period.start.localeCompare(a.period.start);
     }
 
     if(sort === 'oldest'){
-      return a.period.end.localeCompare(b.period.end);
+      return a.period.start.localeCompare(b.period.start)
+          || a.period.end.localeCompare(b.period.end);
     }
 
     if(sort === 'title-asc'){
