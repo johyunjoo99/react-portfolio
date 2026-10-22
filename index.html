@@ -18,6 +18,34 @@
     <meta property="og:image" content="https://johyunjoo99.github.io/react-portfolio/img/common/ogimg.jpg" />
     <!-- Open Graph -->
 
+    <!-- 구조화 데이터 (검색엔진 / AI 검색용) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id" : "https://johyunjoo99.github.io/react-portfolio/#website",
+            "name" : "조현주 React 포트폴리오",
+            "url" : "https://johyunjoo99.github.io/react-portfolio/",
+            "inLanguage" : "ko",
+            "author" : {"@id" : "https://johyunjoo99.github.io/react-portfolio/#person"}
+          },{
+            "@type" : "Person",
+            "@id" : "https://johyunjoo99.github.io/react-portfolio/#person",
+            "name" : "조현주",
+            "alternateName" : "Jo Hyun Joo",
+            "jobTitle" : "웹 퍼블리셔",
+            "email" : "mailto:johyunjoo99@gmail.com",
+            "url" : "https://johyunjoo99.github.io/react-portfolio/",
+            "sameAs" : ["https://github.com/johyunjoo99"],
+            "knowsAbout" : ["HTML5", "CSS3", "SCSS", "JavaScript", "jQuery", "React", "웹 접근성", "반응형 웹"]
+          }
+        ]
+      }
+    </script>
+    <!-- 구조화 데이터 -->
+
     <script>
       const redirect = sessionStorage.redirect;
     

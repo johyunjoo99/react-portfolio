@@ -191,6 +191,57 @@
 - 새 창으로 열리는 링크 안내
 
 
+## SEO / GEO
+
+검색엔진뿐 아니라 생성형 AI 검색에서도 사이트 정보를 정확하게 이해할 수 있도록 구조화 데이터를 적용했습니다.
+
+**문제**
+- 이 사이트는 React 기반 CSR(클라이언트 렌더링) 구조라, 서버가 내려주는 HTML에는 빈 `<div id="root"></div>`만 있고 본문은 JavaScript 실행 후에 그려집니다.
+- JavaScript를 실행하지 않는 크롤러가 받는 초기 HTML을 확인하기 위해 GPTBot User-Agent로 `curl` 요청을 보낸 결과, `title` / `meta description` / Open Graph 외에 본문은 포함되어 있지 않았습니다.
+
+**적용**
+- React 컴포넌트 안에서 렌더링하면 JavaScript 실행 전에는 보이지 않기 때문에, 구조화 데이터(JSON-LD)를 `index.html`의 `<head>`에 직접 작성했습니다.
+- Schema.org 어휘를 사용해 `WebSite`(사이트 정보)와 `Person`(제작자 정보)을 정의했습니다.
+- `@id`로 각 대상에 고유 식별자를 부여하고, `WebSite`의 `author`가 `Person`을 가리키도록 연결해 "이 사이트의 제작자가 누구인지"를 명시했습니다.
+- `alternateName`으로 국문 / 영문 이름을 같은 사람으로 연결하고, `sameAs`로 GitHub 계정을 연결했습니다.
+- JSON-LD는 본문을 대신 제공하는 것이 아니라, 본문이 없는 초기 HTML에서도 사이트와 제작자 정보를 전달하기 위한 보완책입니다.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": ".../react-portfolio/#website",
+      "author": { "@id": ".../react-portfolio/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": ".../react-portfolio/#person",
+      "name": "조현주",
+      "alternateName": "Jo Hyun Joo",
+      "jobTitle": "웹 퍼블리셔",
+      "sameAs": ["https://github.com/johyunjoo99"],
+      "knowsAbout": ["HTML5", "CSS3", "SCSS", "JavaScript", "jQuery", "React", "웹 접근성", "반응형 웹"]
+    }
+  ]
+}
+```
+
+**검증**
+- [Schema Markup Validator](https://validator.schema.org/)로 문법과 Schema.org 속성 인식 여부를 확인했습니다.
+- `@id` 연결에 따라 `Person`이 `WebSite`의 `author`로 인식되는 것을 확인했습니다.
+- 배포 후 실제 URL 기준으로 오류 / 경고 0개를 확인했습니다.
+- 배포 후 `curl`로 초기 HTML을 받아 JSON-LD가 포함된 것을 확인했고, 일반 요청과 GPTBot User-Agent 요청의 응답이 동일한 것도 확인했습니다.
+
+![Schema Markup Validator 검증 결과](./docs/jsonld-validator.png)
+
+**한계 및 개선 방향**
+- `/work` 등 하위 경로는 `404.html` 우회 방식으로 접속되기 때문에, 크롤러에게는 HTTP 404로 응답되어 색인되지 않습니다. (`curl`로 응답 코드 확인)
+- `robots.txt`는 도메인 최상위에 있어야 적용되는데, 이 사이트는 GitHub Pages의 하위 경로(`/react-portfolio/`)에 배포되어 있어 프로젝트 안에서는 적용할 수 없습니다.
+- 실제 운영 사이트라면 빌드 시점에 HTML을 생성하는 SSG / SSR 방식(Next.js 등)으로 페이지별 본문과 구조화 데이터를 함께 제공하는 것이 적합하다고 판단했습니다.
+
+
 ## 폴더 구조
 
 ```
@@ -549,5 +600,13 @@ npm run dev
 **프로젝트 정렬 기준 개선**
 - 오래된순 정렬 기준을 종료일에서 시작일로 변경 (최신순은 종료일 기준 유지)
 - 날짜가 같은 경우 나머지 날짜로 한 번 더 비교하여 정렬 순서 고정
+
+#### 2026.10.22
+**구조화 데이터(JSON-LD) 적용**
+- GPTBot User-Agent로 `curl` 요청을 보내 초기 HTML(JavaScript 실행 전) 확인
+- `index.html`에 Schema.org 기반 JSON-LD 추가 (`WebSite` / `Person`)
+- `@id`와 `author`로 사이트와 제작자 정보 연결
+- Schema Markup Validator로 구조화 데이터 검증 (배포 URL 기준 오류 / 경고 0개)
+- 배포 후 `curl`로 초기 HTML의 JSON-LD 포함 여부 및 하위 경로 응답 코드(404) 확인
 
 </details>
